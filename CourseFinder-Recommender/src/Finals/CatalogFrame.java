@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Finals;
 
 /**
@@ -34,7 +31,10 @@ public class CatalogFrame extends javax.swing.JFrame {
         txtSearchCourse = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
         CoursesPanel = new javax.swing.JPanel();
+        scrollPaneCourses = new javax.swing.JScrollPane();
+        tblCourses = new javax.swing.JTable();
         FooterPanel = new javax.swing.JPanel();
+        btnBackToDashboard = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -78,13 +78,13 @@ public class CatalogFrame extends javax.swing.JFrame {
         SearchPanelLayout.setHorizontalGroup(
             SearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchPanelLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
+                .addGap(114, 114, 114)
                 .addComponent(lblSearchCourse)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(txtSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(34, 34, 34)
                 .addComponent(btnSearch)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SearchPanelLayout.setVerticalGroup(
             SearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,29 +99,59 @@ public class CatalogFrame extends javax.swing.JFrame {
 
         CoursesPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        tblCourses.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        scrollPaneCourses.setViewportView(tblCourses);
+
         javax.swing.GroupLayout CoursesPanelLayout = new javax.swing.GroupLayout(CoursesPanel);
         CoursesPanel.setLayout(CoursesPanelLayout);
         CoursesPanelLayout.setHorizontalGroup(
             CoursesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(CoursesPanelLayout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(scrollPaneCourses, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CoursesPanelLayout.setVerticalGroup(
             CoursesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+            .addComponent(scrollPaneCourses, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
 
         FooterPanel.setBackground(new java.awt.Color(255, 255, 255));
         FooterPanel.setPreferredSize(new java.awt.Dimension(900, 100));
 
+        btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBackToDashboard.setText("BACK TO DASHBOARD");
+        btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackToDashboardActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout FooterPanelLayout = new javax.swing.GroupLayout(FooterPanel);
         FooterPanel.setLayout(FooterPanelLayout);
         FooterPanelLayout.setHorizontalGroup(
             FooterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FooterPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBackToDashboard)
+                .addGap(303, 303, 303))
         );
         FooterPanelLayout.setVerticalGroup(
             FooterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
+            .addGroup(FooterPanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(btnBackToDashboard)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,12 +172,15 @@ public class CatalogFrame extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(CoursesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(FooterPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(FooterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,9 +222,12 @@ public class CatalogFrame extends javax.swing.JFrame {
     private javax.swing.JPanel FooterPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel SearchPanel;
+    private javax.swing.JButton btnBackToDashboard;
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel lblSearchCourse;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JScrollPane scrollPaneCourses;
+    private javax.swing.JTable tblCourses;
     private javax.swing.JTextField txtSearchCourse;
     // End of variables declaration//GEN-END:variables
 }
