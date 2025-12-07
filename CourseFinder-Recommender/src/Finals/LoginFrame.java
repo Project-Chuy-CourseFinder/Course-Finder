@@ -74,13 +74,13 @@ public class LoginFrame extends javax.swing.JFrame {
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
         FormPanel.setPreferredSize(new java.awt.Dimension(800, 330));
 
-        lblUsername.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
-        lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Password:");
 
@@ -104,7 +104,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addGroup(FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
         FormPanelLayout.setVerticalGroup(
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +123,7 @@ public class LoginFrame extends javax.swing.JFrame {
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(800, 70));
 
-        btnSignIn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnSignIn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnSignIn.setText("SIGN IN");
         btnSignIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +131,7 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnCreateAccount.setText("CREATE ACCOUNT");
         btnCreateAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,11 +144,11 @@ public class LoginFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(233, 233, 233)
+                .addGap(207, 207, 207)
                 .addComponent(btnSignIn)
-                .addGap(69, 69, 69)
+                .addGap(58, 58, 58)
                 .addComponent(btnCreateAccount)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
