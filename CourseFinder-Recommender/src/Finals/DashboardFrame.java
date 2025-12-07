@@ -32,8 +32,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         btnSavedSubjects = new javax.swing.JButton();
         btnProfile = new javax.swing.JButton();
         InfoPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblTips = new javax.swing.JLabel();
+        lbl2Tips = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(900, 600));
@@ -106,13 +106,13 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         InfoPanel.setBackground(new java.awt.Color(51, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Tips: Complete the Recommendation Test to generate");
+        lblTips.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblTips.setForeground(new java.awt.Color(0, 0, 0));
+        lblTips.setText("Tips: Complete the Recommendation Test to generate");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("personalized course suggestions.");
+        lbl2Tips.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbl2Tips.setForeground(new java.awt.Color(0, 0, 0));
+        lbl2Tips.setText("personalized course suggestions.");
 
         javax.swing.GroupLayout InfoPanelLayout = new javax.swing.GroupLayout(InfoPanel);
         InfoPanel.setLayout(InfoPanelLayout);
@@ -120,20 +120,20 @@ public class DashboardFrame extends javax.swing.JFrame {
             InfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoPanelLayout.createSequentialGroup()
                 .addGap(271, 271, 271)
-                .addComponent(jLabel2)
+                .addComponent(lbl2Tips)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblTips)
                 .addGap(154, 154, 154))
         );
         InfoPanelLayout.setVerticalGroup(
             InfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoPanelLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel1)
+                .addComponent(lblTips)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lbl2Tips)
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -202,8 +202,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnRecommendationTest;
     private javax.swing.JButton btnSavedSubjects;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lbl2Tips;
     private javax.swing.JLabel lblGreeting;
+    private javax.swing.JLabel lblTips;
     // End of variables declaration//GEN-END:variables
 }
