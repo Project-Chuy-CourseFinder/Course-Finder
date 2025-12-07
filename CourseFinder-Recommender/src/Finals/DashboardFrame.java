@@ -30,10 +30,15 @@ public class DashboardFrame extends javax.swing.JFrame {
         HeaderPanel = new javax.swing.JPanel();
         lblGreeting = new javax.swing.JLabel();
         ButtonPanel = new javax.swing.JPanel();
+        btnCourseCatalog = new javax.swing.JButton();
+        btnRecommendationTest = new javax.swing.JButton();
+        btnSavedSubjects = new javax.swing.JButton();
+        btnProfile = new javax.swing.JButton();
         InfoPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(900, 600));
+        getContentPane().setLayout(null);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
 
@@ -46,30 +51,66 @@ public class DashboardFrame extends javax.swing.JFrame {
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+                .addContainerGap(155, Short.MAX_VALUE)
                 .addComponent(lblGreeting)
-                .addGap(94, 94, 94))
+                .addGap(35, 35, 35))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(46, 46, 46)
                 .addComponent(lblGreeting)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
+        getContentPane().add(HeaderPanel);
+        HeaderPanel.setBounds(0, 0, 900, 140);
+
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnCourseCatalog.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnCourseCatalog.setText("Course Catalog");
+
+        btnRecommendationTest.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnRecommendationTest.setText("Recommendation Test");
+
+        btnSavedSubjects.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnSavedSubjects.setText("Saved Subjects");
+
+        btnProfile.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnProfile.setText("My Profile");
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCourseCatalog)
+                    .addComponent(btnSavedSubjects))
+                .addGap(77, 77, 77)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRecommendationTest)
+                    .addComponent(btnProfile))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addContainerGap(108, Short.MAX_VALUE)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCourseCatalog)
+                    .addComponent(btnRecommendationTest))
+                .addGap(60, 60, 60)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSavedSubjects)
+                    .addComponent(btnProfile))
+                .addGap(104, 104, 104))
         );
+
+        getContentPane().add(ButtonPanel);
+        ButtonPanel.setBounds(0, 140, 1232, 382);
 
         InfoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -84,23 +125,8 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGap(0, 160, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(InfoPanel);
+        InfoPanel.setBounds(0, 522, 900, 160);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,6 +170,10 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel InfoPanel;
+    private javax.swing.JButton btnCourseCatalog;
+    private javax.swing.JButton btnProfile;
+    private javax.swing.JButton btnRecommendationTest;
+    private javax.swing.JButton btnSavedSubjects;
     private javax.swing.JLabel lblGreeting;
     // End of variables declaration//GEN-END:variables
 }
