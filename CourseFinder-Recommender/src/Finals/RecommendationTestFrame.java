@@ -37,6 +37,10 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbICT = new javax.swing.JCheckBox();
         cbResearch = new javax.swing.JCheckBox();
         cbSocialScience = new javax.swing.JCheckBox();
+        lblQ3 = new javax.swing.JLabel();
+        rbBeginner = new javax.swing.JRadioButton();
+        rbIntermediate = new javax.swing.JRadioButton();
+        rbAdvanced = new javax.swing.JRadioButton();
         ButtonPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -101,6 +105,24 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbSocialScience.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cbSocialScience.setText("Social Science");
 
+        lblQ3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblQ3.setForeground(new java.awt.Color(0, 0, 0));
+        lblQ3.setText("3. Preferred course difficulty:");
+
+        rbBeginner.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbBeginner.setText("Beginner");
+
+        rbIntermediate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbIntermediate.setText("Intermediate");
+        rbIntermediate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbIntermediateActionPerformed(evt);
+            }
+        });
+
+        rbAdvanced.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbAdvanced.setText("Advanced");
+
         javax.swing.GroupLayout QuestionsPanelLayout = new javax.swing.GroupLayout(QuestionsPanel);
         QuestionsPanel.setLayout(QuestionsPanelLayout);
         QuestionsPanelLayout.setHorizontalGroup(
@@ -111,22 +133,31 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                         .addGap(74, 74, 74)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblQ1)
-                            .addComponent(lblQ2)))
+                            .addComponent(lblQ2)
+                            .addComponent(lblQ3)))
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(rbTech)
-                                .addGap(55, 55, 55)
-                                .addComponent(rbBusiness, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(47, 47, 47))
-                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                                .addGap(108, 108, 108)
-                                .addComponent(cbMath)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cbEnglish)
-                                .addGap(74, 74, 74)))
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                    .addGap(107, 107, 107)
+                                    .addComponent(rbTech)
+                                    .addGap(55, 55, 55)
+                                    .addComponent(rbBusiness, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(47, 47, 47))
+                                .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                    .addGap(108, 108, 108)
+                                    .addComponent(cbMath)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cbEnglish)
+                                    .addGap(74, 74, 74)))
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addGap(105, 105, 105)
+                                .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(57, 57, 57)
+                                .addComponent(rbIntermediate, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)))
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(QuestionsPanelLayout.createSequentialGroup()
                                 .addComponent(cbICT)
                                 .addGap(83, 83, 83)
@@ -155,7 +186,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(cbICT)
                     .addComponent(cbResearch)
                     .addComponent(cbSocialScience))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(lblQ3)
+                .addGap(18, 18, 18)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbBeginner)
+                    .addComponent(rbIntermediate)
+                    .addComponent(rbAdvanced))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -208,6 +246,10 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void rbIntermediateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbIntermediateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbIntermediateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -255,9 +297,13 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblQ1;
     private javax.swing.JLabel lblQ2;
+    private javax.swing.JLabel lblQ3;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JRadioButton rbAdvanced;
+    private javax.swing.JRadioButton rbBeginner;
     private javax.swing.JRadioButton rbBusiness;
     private javax.swing.JRadioButton rbHumanities;
+    private javax.swing.JRadioButton rbIntermediate;
     private javax.swing.JRadioButton rbTech;
     // End of variables declaration//GEN-END:variables
 }
