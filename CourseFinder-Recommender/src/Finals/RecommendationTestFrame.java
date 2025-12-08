@@ -27,6 +27,10 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         QuestionsPanel = new javax.swing.JPanel();
+        lblQ1 = new javax.swing.JLabel();
+        rbTech = new javax.swing.JRadioButton();
+        rbBusiness = new javax.swing.JRadioButton();
+        rbHumanities = new javax.swing.JRadioButton();
         ButtonPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -59,15 +63,48 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         QuestionsPanel.setBackground(new java.awt.Color(255, 255, 255));
         QuestionsPanel.setPreferredSize(new java.awt.Dimension(900, 450));
 
+        lblQ1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblQ1.setForeground(new java.awt.Color(0, 0, 0));
+        lblQ1.setText("1. What field are you most interested in?");
+
+        rbTech.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbTech.setText("Technology");
+
+        rbBusiness.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbBusiness.setText("Business");
+
+        rbHumanities.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        rbHumanities.setText("Humanities");
+
         javax.swing.GroupLayout QuestionsPanelLayout = new javax.swing.GroupLayout(QuestionsPanel);
         QuestionsPanel.setLayout(QuestionsPanelLayout);
         QuestionsPanelLayout.setHorizontalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(lblQ1))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(rbTech)
+                        .addGap(18, 18, 18)
+                        .addComponent(rbBusiness, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(rbHumanities)))
+                .addContainerGap(463, Short.MAX_VALUE))
         );
         QuestionsPanelLayout.setVerticalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
+            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(lblQ1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbTech)
+                    .addComponent(rbHumanities)
+                    .addComponent(rbBusiness))
+                .addContainerGap(329, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -160,6 +197,10 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel QuestionsPanel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lblQ1;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JRadioButton rbBusiness;
+    private javax.swing.JRadioButton rbHumanities;
+    private javax.swing.JRadioButton rbTech;
     // End of variables declaration//GEN-END:variables
 }
