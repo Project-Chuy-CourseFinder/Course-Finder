@@ -27,7 +27,11 @@ public class ResultsFrame extends javax.swing.JFrame {
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         ListPanel = new javax.swing.JPanel();
+        scrollPaneResults = new javax.swing.JScrollPane();
+        listRecommendedCourses = new javax.swing.JList<>();
         ButtonPanel = new javax.swing.JPanel();
+        btnSaveResults = new javax.swing.JButton();
+        btnBackToDashboard = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,29 +63,58 @@ public class ResultsFrame extends javax.swing.JFrame {
         ListPanel.setPreferredSize(new java.awt.Dimension(900, 400));
         ListPanel.setVerifyInputWhenFocusTarget(false);
 
+        listRecommendedCourses.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        scrollPaneResults.setViewportView(listRecommendedCourses);
+
         javax.swing.GroupLayout ListPanelLayout = new javax.swing.GroupLayout(ListPanel);
         ListPanel.setLayout(ListPanelLayout);
         ListPanelLayout.setHorizontalGroup(
             ListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListPanelLayout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(scrollPaneResults, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85))
         );
         ListPanelLayout.setVerticalGroup(
             ListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListPanelLayout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addComponent(scrollPaneResults, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(900, 120));
 
+        btnSaveResults.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnSaveResults.setText("SAVE RESULTS");
+
+        btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBackToDashboard.setText("BACK TO DASHBOARD");
+
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addContainerGap(174, Short.MAX_VALUE)
+                .addComponent(btnSaveResults)
+                .addGap(98, 98, 98)
+                .addComponent(btnBackToDashboard)
+                .addGap(144, 144, 144))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBackToDashboard)
+                    .addComponent(btnSaveResults))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -148,6 +181,10 @@ public class ResultsFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel ListPanel;
+    private javax.swing.JButton btnBackToDashboard;
+    private javax.swing.JButton btnSaveResults;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JList<String> listRecommendedCourses;
+    private javax.swing.JScrollPane scrollPaneResults;
     // End of variables declaration//GEN-END:variables
 }
