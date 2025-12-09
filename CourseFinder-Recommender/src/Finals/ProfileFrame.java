@@ -26,8 +26,10 @@ public class ProfileFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        ProfileInfoPanel = new javax.swing.JPanel();
+        lblFullName = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        ButtonPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,30 +57,48 @@ public class ProfileFrame extends javax.swing.JFrame {
                 .addGap(37, 37, 37))
         );
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 380));
+        ProfileInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ProfileInfoPanel.setPreferredSize(new java.awt.Dimension(800, 380));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullName.setForeground(new java.awt.Color(0, 0, 0));
+        lblFullName.setText("Full Name:");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("<Name>");
+
+        javax.swing.GroupLayout ProfileInfoPanelLayout = new javax.swing.GroupLayout(ProfileInfoPanel);
+        ProfileInfoPanel.setLayout(ProfileInfoPanelLayout);
+        ProfileInfoPanelLayout.setHorizontalGroup(
+            ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(lblFullName)
+                .addGap(65, 65, 65)
+                .addComponent(jLabel1)
+                .addContainerGap(429, Short.MAX_VALUE))
+        );
+        ProfileInfoPanelLayout.setVerticalGroup(
+            ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFullName)
+                    .addComponent(jLabel1))
+                .addContainerGap(282, Short.MAX_VALUE))
+        );
+
+        ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
+        ButtonPanel.setLayout(ButtonPanelLayout);
+        ButtonPanelLayout.setHorizontalGroup(
+            ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 800, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
-        );
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ButtonPanelLayout.setVerticalGroup(
+            ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
@@ -89,8 +109,8 @@ public class ProfileFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ProfileInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,9 +118,9 @@ public class ProfileFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ProfileInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -142,9 +162,11 @@ public class ProfileFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel ProfileInfoPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblFullName;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }
