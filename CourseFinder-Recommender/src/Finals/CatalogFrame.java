@@ -26,6 +26,7 @@ public class CatalogFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         SearchPanel = new javax.swing.JPanel();
         lblSearchCourse = new javax.swing.JLabel();
         txtSearchCourse = new javax.swing.JTextField();
@@ -46,21 +47,30 @@ public class CatalogFrame extends javax.swing.JFrame {
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Course Catalog");
 
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(322, 322, 322)
+                .addGap(15, 15, 15)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblTitle)
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblTitle)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(lblLogo))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(lblTitle)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         SearchPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -119,7 +129,7 @@ public class CatalogFrame extends javax.swing.JFrame {
             .addGroup(CoursesPanelLayout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addComponent(scrollPaneCourses, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         CoursesPanelLayout.setVerticalGroup(
             CoursesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,6 +234,7 @@ public class CatalogFrame extends javax.swing.JFrame {
     private javax.swing.JPanel SearchPanel;
     private javax.swing.JButton btnBackToDashboard;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblSearchCourse;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JScrollPane scrollPaneCourses;

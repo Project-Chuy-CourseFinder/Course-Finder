@@ -26,6 +26,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         SavedPanel = new javax.swing.JPanel();
         scrollPaneSaved = new javax.swing.JScrollPane();
         tblSavedSubjects = new javax.swing.JTable();
@@ -41,21 +42,31 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Saved Recommendations");
 
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+        lblLogo.setText("jLabel1");
+
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(227, 227, 227)
+                .addGap(49, 49, 49)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(lblTitle)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(lblTitle)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(lblLogo))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(lblTitle)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         SavedPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,17 +112,17 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addGap(380, 380, 380)
                 .addComponent(btnReturn)
-                .addGap(373, 373, 373))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(35, 35, 35)
                 .addComponent(btnReturn)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,6 +190,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel SavedPanel;
     private javax.swing.JButton btnReturn;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JScrollPane scrollPaneSaved;
     private javax.swing.JTable tblSavedSubjects;

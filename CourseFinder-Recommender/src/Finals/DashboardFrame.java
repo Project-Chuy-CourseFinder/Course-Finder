@@ -26,6 +26,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblGreeting = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         ButtonPanel = new javax.swing.JPanel();
         btnCourseCatalog = new javax.swing.JButton();
         btnRecommendationTest = new javax.swing.JButton();
@@ -44,21 +45,30 @@ public class DashboardFrame extends javax.swing.JFrame {
         lblGreeting.setForeground(new java.awt.Color(0, 0, 0));
         lblGreeting.setText("Hello, <StudentName> (ID: <StudentID>)");
 
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addComponent(lblLogo)
+                .addGap(18, 18, 18)
                 .addComponent(lblGreeting)
-                .addGap(35, 35, 35))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(lblGreeting)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
+                        .addComponent(lblLogo)
+                        .addGap(32, 32, 32))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
+                        .addComponent(lblGreeting)
+                        .addGap(47, 47, 47))))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -204,6 +214,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnSavedSubjects;
     private javax.swing.JLabel lbl2Tips;
     private javax.swing.JLabel lblGreeting;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTips;
     // End of variables declaration//GEN-END:variables
 }

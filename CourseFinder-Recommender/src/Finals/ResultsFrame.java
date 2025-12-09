@@ -26,6 +26,7 @@ public class ResultsFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         ListPanel = new javax.swing.JPanel();
         scrollPaneResults = new javax.swing.JScrollPane();
         listRecommendedCourses = new javax.swing.JList<>();
@@ -42,21 +43,30 @@ public class ResultsFrame extends javax.swing.JFrame {
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Your Recommended Courses");
 
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+        lblLogo.setText("jLabel1");
+
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(219, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(lblTitle)
-                .addGap(197, 197, 197))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(24, 24, 24)
+                .addComponent(lblLogo)
+                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitle)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(40, 40, 40))
         );
 
         ListPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -183,6 +193,7 @@ public class ResultsFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ListPanel;
     private javax.swing.JButton btnBackToDashboard;
     private javax.swing.JButton btnSaveResults;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JList<String> listRecommendedCourses;
     private javax.swing.JScrollPane scrollPaneResults;

@@ -26,6 +26,7 @@ public class ProfileFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         ProfileInfoPanel = new javax.swing.JPanel();
         lblFullName = new javax.swing.JLabel();
         lblFullNameValue = new javax.swing.JLabel();
@@ -47,55 +48,64 @@ public class ProfileFrame extends javax.swing.JFrame {
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Profile");
 
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+        lblLogo.setText("jLabel1");
+
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(316, 316, 316)
+                .addGap(32, 32, 32)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
                 .addComponent(lblTitle)
-                .addContainerGap(371, Short.MAX_VALUE))
+                .addContainerGap(547, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(lblLogo)
+                .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitle)
-                .addGap(37, 37, 37))
+                .addGap(32, 32, 32))
         );
 
         ProfileInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
         ProfileInfoPanel.setPreferredSize(new java.awt.Dimension(800, 380));
 
-        lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblFullName.setForeground(new java.awt.Color(0, 0, 0));
         lblFullName.setText("Full Name:");
 
-        lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblFullNameValue.setForeground(new java.awt.Color(0, 0, 0));
         lblFullNameValue.setText("<Name>");
 
-        lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblStudentID.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentID.setText("Student ID:");
 
-        lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblStudentIDValue.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentIDValue.setText("<ID>");
 
-        lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(0, 0, 0));
         lblEmail.setText("Email:");
 
-        lblEmailValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmailValue.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblEmailValue.setForeground(new java.awt.Color(0, 0, 0));
         lblEmailValue.setText("<Email>");
 
-        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Username:");
 
-        lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblUsernameValue.setForeground(new java.awt.Color(0, 0, 0));
         lblUsernameValue.setText("<Username>");
 
@@ -110,13 +120,13 @@ public class ProfileFrame extends javax.swing.JFrame {
                     .addComponent(lblStudentID)
                     .addComponent(lblEmail)
                     .addComponent(lblUsername))
-                .addGap(58, 58, 58)
+                .addGap(36, 36, 36)
                 .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFullNameValue)
                     .addComponent(lblStudentIDValue)
+                    .addComponent(lblFullNameValue)
                     .addComponent(lblEmailValue)
                     .addComponent(lblUsernameValue))
-                .addContainerGap(383, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
         ProfileInfoPanelLayout.setVerticalGroup(
             ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,7 +147,7 @@ public class ProfileFrame extends javax.swing.JFrame {
                 .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUsername)
                     .addComponent(lblUsernameValue))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -151,16 +161,16 @@ public class ProfileFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(340, 340, 340)
+                .addGap(330, 330, 330)
                 .addComponent(btnLogout)
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addContainerGap(342, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(19, 19, 19)
                 .addComponent(btnLogout)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,6 +238,7 @@ public class ProfileFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblEmailValue;
     private javax.swing.JLabel lblFullName;
     private javax.swing.JLabel lblFullNameValue;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblStudentID;
     private javax.swing.JLabel lblStudentIDValue;
     private javax.swing.JLabel lblTitle;

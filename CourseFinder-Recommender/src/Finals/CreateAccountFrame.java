@@ -27,6 +27,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
         FormPanel = new javax.swing.JPanel();
         lblFullName = new javax.swing.JLabel();
         txtFullName = new javax.swing.JTextField();
@@ -48,26 +49,36 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(800, 650));
 
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
+        HeaderPanel.setPreferredSize(new java.awt.Dimension(485, 160));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Student Registration");
+
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
 
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblTitle)
-                .addGap(220, 220, 220))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(lblTitle)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(lblLogo))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(lblTitle)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -76,6 +87,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblFullName.setForeground(new java.awt.Color(0, 0, 0));
         lblFullName.setText("Full Name:");
 
+        txtFullName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFullNameActionPerformed(evt);
@@ -86,21 +98,31 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblStudentID.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentID.setText("Student ID:");
 
+        txtStudentID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(0, 0, 0));
         lblEmail.setText("Email:");
+
+        txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Username:");
 
+        txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Password:");
 
+        txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblConfirmPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblConfirmPassword.setText("Confirm Password:");
+
+        txtConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
         FormPanel.setLayout(FormPanelLayout);
@@ -123,7 +145,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
                     .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         FormPanelLayout.setVerticalGroup(
             FormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +206,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(FormPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(HeaderPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(HeaderPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
                     .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -248,6 +270,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblConfirmPassword;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFullName;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblStudentID;
     private javax.swing.JLabel lblTitle;
