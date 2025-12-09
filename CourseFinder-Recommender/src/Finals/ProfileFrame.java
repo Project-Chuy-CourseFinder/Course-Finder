@@ -29,6 +29,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         ProfileInfoPanel = new javax.swing.JPanel();
         lblFullName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         ButtonPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
 
@@ -69,15 +70,20 @@ public class ProfileFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("<Name>");
 
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout ProfileInfoPanelLayout = new javax.swing.GroupLayout(ProfileInfoPanel);
         ProfileInfoPanel.setLayout(ProfileInfoPanelLayout);
         ProfileInfoPanelLayout.setHorizontalGroup(
             ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
                 .addGap(85, 85, 85)
-                .addComponent(lblFullName)
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1)
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
+                        .addComponent(lblFullName)
+                        .addGap(65, 65, 65)
+                        .addComponent(jLabel1)))
                 .addContainerGap(429, Short.MAX_VALUE))
         );
         ProfileInfoPanelLayout.setVerticalGroup(
@@ -87,7 +93,9 @@ public class ProfileFrame extends javax.swing.JFrame {
                 .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFullName)
                     .addComponent(jLabel1))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel2)
+                .addContainerGap(238, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -175,6 +183,7 @@ public class ProfileFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ProfileInfoPanel;
     private javax.swing.JButton btnLogout;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblFullName;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
