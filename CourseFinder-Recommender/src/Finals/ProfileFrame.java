@@ -28,8 +28,13 @@ public class ProfileFrame extends javax.swing.JFrame {
         lblTitle = new javax.swing.JLabel();
         ProfileInfoPanel = new javax.swing.JPanel();
         lblFullName = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblFullNameValue = new javax.swing.JLabel();
+        lblStudentID = new javax.swing.JLabel();
+        lblStudentIDValue = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
+        lblEmailValue = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
+        lblUsernameValue = new javax.swing.JLabel();
         ButtonPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
 
@@ -66,11 +71,33 @@ public class ProfileFrame extends javax.swing.JFrame {
         lblFullName.setForeground(new java.awt.Color(0, 0, 0));
         lblFullName.setText("Full Name:");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("<Name>");
+        lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullNameValue.setForeground(new java.awt.Color(0, 0, 0));
+        lblFullNameValue.setText("<Name>");
 
-        jLabel2.setText("jLabel2");
+        lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentID.setForeground(new java.awt.Color(0, 0, 0));
+        lblStudentID.setText("Student ID:");
+
+        lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentIDValue.setForeground(new java.awt.Color(0, 0, 0));
+        lblStudentIDValue.setText("<ID>");
+
+        lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(0, 0, 0));
+        lblEmail.setText("Email:");
+
+        lblEmailValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmailValue.setForeground(new java.awt.Color(0, 0, 0));
+        lblEmailValue.setText("<Email>");
+
+        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(0, 0, 0));
+        lblUsername.setText("Username:");
+
+        lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsernameValue.setForeground(new java.awt.Color(0, 0, 0));
+        lblUsernameValue.setText("<Username>");
 
         javax.swing.GroupLayout ProfileInfoPanelLayout = new javax.swing.GroupLayout(ProfileInfoPanel);
         ProfileInfoPanel.setLayout(ProfileInfoPanelLayout);
@@ -79,12 +106,17 @@ public class ProfileFrame extends javax.swing.JFrame {
             .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ProfileInfoPanelLayout.createSequentialGroup()
-                        .addComponent(lblFullName)
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel1)))
-                .addContainerGap(429, Short.MAX_VALUE))
+                    .addComponent(lblFullName)
+                    .addComponent(lblStudentID)
+                    .addComponent(lblEmail)
+                    .addComponent(lblUsername))
+                .addGap(58, 58, 58)
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFullNameValue)
+                    .addComponent(lblStudentIDValue)
+                    .addComponent(lblEmailValue)
+                    .addComponent(lblUsernameValue))
+                .addContainerGap(383, Short.MAX_VALUE))
         );
         ProfileInfoPanelLayout.setVerticalGroup(
             ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,10 +124,20 @@ public class ProfileFrame extends javax.swing.JFrame {
                 .addGap(66, 66, 66)
                 .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFullName)
-                    .addComponent(jLabel1))
+                    .addComponent(lblFullNameValue))
                 .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblStudentID)
+                    .addComponent(lblStudentIDValue))
+                .addGap(28, 28, 28)
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEmail)
+                    .addComponent(lblEmailValue))
+                .addGap(28, 28, 28)
+                .addGroup(ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUsername)
+                    .addComponent(lblUsernameValue))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -182,9 +224,14 @@ public class ProfileFrame extends javax.swing.JFrame {
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel ProfileInfoPanel;
     private javax.swing.JButton btnLogout;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEmailValue;
     private javax.swing.JLabel lblFullName;
+    private javax.swing.JLabel lblFullNameValue;
+    private javax.swing.JLabel lblStudentID;
+    private javax.swing.JLabel lblStudentIDValue;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblUsername;
+    private javax.swing.JLabel lblUsernameValue;
     // End of variables declaration//GEN-END:variables
 }
