@@ -4,15 +4,19 @@ package Finals;
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public class LoginFrame extends javax.swing.JFrame {
+    
+    public static Map<String, Account> accounts = new HashMap<>();
 
     public LoginFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
-    }
 
-    
+        // Add a default account for testing
+        accounts.put("admin", new Account("Admin User", "0001", "admin", "1234"));
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -184,28 +188,20 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
- String username = txtUsername.getText();
-    String password = txtPassword.getText(); // keep JTextField for NetBeans auto-gen
+String username = txtUsername.getText();
+        String password = txtPassword.getText();
 
-    // Temporary in-memory accounts map (replace with persistent storage if needed)
-    HashMap<String, String> accounts = new HashMap<>();
-    accounts.put("admin", "1234"); // default test account
-
-    if (accounts.containsKey(username) && accounts.get(username).equals(password)) {
-        JOptionPane.showMessageDialog(this,
-                "Welcome, " + username + "!",
-                "Login Successful",
-                JOptionPane.INFORMATION_MESSAGE);
-    } else {
-        // Blue-themed error dialog
-        JOptionPane pane = new JOptionPane(
-                "Account not found. Please create an account first.",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-        JDialog dialog = pane.createDialog(this, "Login Error");
-        dialog.getContentPane().setBackground(new Color(0, 0, 50)); // dark blue
-        dialog.setVisible(true);
-    }
+        // Use the class-level accounts map
+        if (accounts.containsKey(username) && accounts.get(username).password.equals(password)) {
+            Account acc = accounts.get(username);
+            new DashboardFrame(acc.fullName, acc.studentID).setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Account not found or incorrect password!",
+                    "Login Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
