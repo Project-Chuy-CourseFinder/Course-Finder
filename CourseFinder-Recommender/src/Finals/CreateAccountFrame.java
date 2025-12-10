@@ -102,6 +102,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblFullName.setText("Full Name:");
 
         txtFullName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtFullName.setForeground(new java.awt.Color(50, 50, 50));
         txtFullName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,13 +115,20 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblStudentID.setText("Student ID:");
 
         txtStudentID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtStudentID.setForeground(new java.awt.Color(50, 50, 50));
         txtStudentID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtStudentID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStudentIDActionPerformed(evt);
+            }
+        });
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(0, 102, 255));
         lblEmail.setText("Email:");
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(50, 50, 50));
         txtEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -128,6 +136,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsername.setForeground(new java.awt.Color(50, 50, 50));
         txtUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -135,6 +144,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblPassword.setText("Password:");
 
         txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(50, 50, 50));
         txtPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -142,6 +152,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         lblConfirmPassword.setText("Confirm Password:");
 
         txtConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtConfirmPassword.setForeground(new java.awt.Color(50, 50, 50));
         txtConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
@@ -279,6 +290,10 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     private void btnRegisterAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterAccountActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegisterAccountActionPerformed
+
+    private void txtStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStudentIDActionPerformed
 
     /**
      * @param args the command line arguments

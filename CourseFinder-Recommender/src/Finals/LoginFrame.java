@@ -1,6 +1,8 @@
 
 package Finals;
 
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.*;
 
 public class LoginFrame extends javax.swing.JFrame {
@@ -9,7 +11,11 @@ public class LoginFrame extends javax.swing.JFrame {
     initComponents();
     this.setLocationRelativeTo(null);
 
-    showpass.setLabel("Show password");
+    // Show Password checkbox styling
+    showpass.setLabel("Show Password");
+    showpass.setForeground(new Color(30, 30, 30));
+    showpass.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+    showpass.setBackground(Color.WHITE);
 
     jPasswordField1Password.setEchoChar('*');
 
