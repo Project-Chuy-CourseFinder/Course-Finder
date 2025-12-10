@@ -2,18 +2,15 @@
 package Finals;
 
 import javax.swing.*;
-import java.awt.*;
-
 
 public class CreateAccountFrame extends javax.swing.JFrame {
-
+public static java.util.HashMap<String, String> accounts = new java.util.HashMap<>();
     
     public CreateAccountFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
         
-     // Inside your REGISTER button action in CreateAccountFrame
-btnRegisterAccount.addActionListener(evt -> {
+     btnRegisterAccount.addActionListener(evt -> {
     String fullName = txtFullName.getText();
     String studentID = txtStudentID.getText();
     String email = txtEmail.getText();
@@ -33,19 +30,16 @@ btnRegisterAccount.addActionListener(evt -> {
             "Error", 
             JOptionPane.ERROR_MESSAGE);
     } else {
-        
-        LoginFrame.accounts.put(username, password);
+        // Use this class's accounts HashMap
+        accounts.put(username, password);
 
-        
         JOptionPane.showMessageDialog(this, 
             "Account created successfully!", 
             "Success", 
             JOptionPane.INFORMATION_MESSAGE);
 
-        
+        // Open LoginFrame
         new LoginFrame().setVisible(true);
-
-        
         this.dispose();
     }
 });
