@@ -9,7 +9,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-     btnRegisterAccount.addActionListener(evt -> {
+       btnRegisterAccount.addActionListener(evt -> {
     String fullName = txtFullName.getText().trim();
     String studentID = txtStudentID.getText().trim();
     String email = txtEmail.getText().trim();
@@ -25,8 +25,9 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     } else if(UserData.accounts.containsKey(username)) {
         JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
     } else {
+        
         // Add to memory
-          Account acc = new Account(fullName, studentID, email, username, password);
+        Account acc = new Account(fullName, studentID, email, username, password);
                 UserData.accounts.put(username, acc);
                 UserData.save();
                 JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
@@ -269,8 +270,10 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new CreateAccountFrame().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CreateAccountFrame().setVisible(true);
+            }
         });
     }
 

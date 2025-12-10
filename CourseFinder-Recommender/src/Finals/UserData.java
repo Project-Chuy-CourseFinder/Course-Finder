@@ -4,9 +4,9 @@ import java.io.*;
 import java.util.HashMap;
 
 public class UserData {
-    private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt.txt";
+    private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt";
 
-    // Key = username, Value = Account object
+    
     public static HashMap<String, Account> accounts = loadAccounts();
 
     // Load accounts from file
@@ -34,7 +34,7 @@ public class UserData {
             for (Account acc : accounts.values()) {
                 pw.println(acc.toString());
             }
-        } catch (Exception e) {
+        } catch (Exception e) {          
         }
     }
 }

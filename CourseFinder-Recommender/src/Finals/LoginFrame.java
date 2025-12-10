@@ -185,7 +185,7 @@ public class LoginFrame extends javax.swing.JFrame {
     String username = txtUsername.getText().trim();
     String password = txtPassword.getText().trim();
 
-    if (username.isEmpty() || password.isEmpty()) {
+      if (username.isEmpty() || password.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please enter both username and password!");
         return;
     }
@@ -210,7 +210,7 @@ public class LoginFrame extends javax.swing.JFrame {
     new DashboardFrame().setVisible(true); 
     this.dispose();
     }//GEN-LAST:event_btnSignInActionPerformed
-    
+
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
          btnSignIn.doClick();
     }//GEN-LAST:event_txtPasswordActionPerformed
