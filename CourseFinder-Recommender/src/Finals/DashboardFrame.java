@@ -1,23 +1,21 @@
 
 package Finals;
-import javax.swing.*;
+
+/**
+ *
+ * @author Dell
+ */
 public class DashboardFrame extends javax.swing.JFrame {
 
-    private String studentName;
-    private String studentID;
-    
-     public DashboardFrame(String studentName, String studentID) {
-        this.studentName = studentName;
-        this.studentID = studentID;
-
+    /**
+     * Creates new form DashboardFrame
+     */
+    public DashboardFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
 
-        lblGreeting.setText("Hello, " + studentName + " (ID: " + studentID + ")");
-    }
-    public DashboardFrame() {
-        this("Test User", "0000"); // default values
-    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -41,7 +39,6 @@ public class DashboardFrame extends javax.swing.JFrame {
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
 
         lblGreeting.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblGreeting.setForeground(new java.awt.Color(0, 0, 0));
         lblGreeting.setText("Hello, <StudentName> (ID: <StudentID>)");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -74,15 +71,35 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnCourseCatalog.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         btnCourseCatalog.setText("Course Catalog");
+        btnCourseCatalog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCourseCatalogActionPerformed(evt);
+            }
+        });
 
         btnRecommendationTest.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         btnRecommendationTest.setText("Recommendation Test");
+        btnRecommendationTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRecommendationTestActionPerformed(evt);
+            }
+        });
 
         btnSavedSubjects.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         btnSavedSubjects.setText("Saved Subjects");
+        btnSavedSubjects.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSavedSubjectsActionPerformed(evt);
+            }
+        });
 
         btnProfile.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         btnProfile.setText("My Profile");
+        btnProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfileActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
@@ -116,11 +133,9 @@ public class DashboardFrame extends javax.swing.JFrame {
         InfoPanel.setBackground(new java.awt.Color(51, 204, 255));
 
         lblTips.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblTips.setForeground(new java.awt.Color(0, 0, 0));
         lblTips.setText("Tips: Complete the Recommendation Test to generate");
 
         lbl2Tips.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbl2Tips.setForeground(new java.awt.Color(0, 0, 0));
         lbl2Tips.setText("personalized course suggestions.");
 
         javax.swing.GroupLayout InfoPanelLayout = new javax.swing.GroupLayout(InfoPanel);
@@ -168,34 +183,27 @@ public class DashboardFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DashboardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DashboardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DashboardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DashboardFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnCourseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseCatalogActionPerformed
+        new CatalogFrame().setVisible(true);
+    }//GEN-LAST:event_btnCourseCatalogActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new DashboardFrame().setVisible(true);
-        });
+    private void btnRecommendationTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecommendationTestActionPerformed
+        new RecommendationTestFrame().setVisible(true);
+    }//GEN-LAST:event_btnRecommendationTestActionPerformed
+
+    private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
+        new SavedSubjectsFrame().setVisible(true);
+    }//GEN-LAST:event_btnSavedSubjectsActionPerformed
+
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
+        new ProfileFrame().setVisible(true);
+    }//GEN-LAST:event_btnProfileActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(() -> new DashboardFrame().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
