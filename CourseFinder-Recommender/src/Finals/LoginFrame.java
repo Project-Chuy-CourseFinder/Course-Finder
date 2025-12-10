@@ -194,19 +194,22 @@ public class LoginFrame extends javax.swing.JFrame {
         return;
     }
 
-    Account acc = UserData.accounts.get(username);
-
-    // Hash entered password and compare
-    String hashedInput = Utils.md5(password);
-    if (!acc.password.equals(hashedInput)) {
-        JOptionPane.showMessageDialog(this, "Incorrect password!");
-        return;
+        Account acc = UserData.accounts.get(username);
+    if (acc == null) {
+    JOptionPane.showMessageDialog(this, "Account not found!");
+    return;
     }
 
-    // SUCCESS LOGIN
-    JOptionPane.showMessageDialog(this, "Login successful!");
-    new DashboardFrame().setVisible(true); 
-    this.dispose();
+    String hashedInput = Utils.md5(password);
+    if (!acc.password.equals(hashedInput)) {
+    JOptionPane.showMessageDialog(this, "Incorrect password!");
+    return;
+    }
+
+// SUCCESS LOGIN
+JOptionPane.showMessageDialog(this, "Login successful!");
+new DashboardFrame().setVisible(true);
+this.dispose();
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
