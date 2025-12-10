@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.HashMap;
 
 public class UserData {
-    private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt";
+private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt";
 
     public static HashMap<String, Account> accounts = loadAccounts();
 

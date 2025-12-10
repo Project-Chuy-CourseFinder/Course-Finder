@@ -25,11 +25,11 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     } else if(UserData.accounts.containsKey(username)) {
         JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
     } else {
-       
-    String hashedPassword = Utils.md5(password);
-        Account acc = new Account(fullName, studentID, email, username, hashedPassword);
-        UserData.accounts.put(username, acc);
+      
+      Account acc = new Account(fullName, studentID, email, username, password); 
+         UserData.accounts.put(username, acc); 
         UserData.save();
+
     
     JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
         new LoginFrame().setVisible(true);
