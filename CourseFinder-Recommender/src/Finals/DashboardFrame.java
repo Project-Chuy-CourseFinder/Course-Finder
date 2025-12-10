@@ -37,6 +37,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         lbl2Tips = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(new java.awt.Dimension(900, 600));
 
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
@@ -52,23 +53,23 @@ public class DashboardFrame extends javax.swing.JFrame {
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(21, 21, 21)
                 .addComponent(lblLogo)
-                .addGap(18, 18, 18)
+                .addGap(39, 39, 39)
                 .addComponent(lblGreeting)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                        .addComponent(lblLogo)
-                        .addGap(32, 32, 32))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                        .addComponent(lblGreeting)
-                        .addGap(47, 47, 47))))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(lblLogo))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(lblGreeting)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));

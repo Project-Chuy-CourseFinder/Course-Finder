@@ -39,6 +39,7 @@ public class CatalogFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 110));
@@ -92,19 +93,19 @@ public class CatalogFrame extends javax.swing.JFrame {
                 .addComponent(lblSearchCourse)
                 .addGap(18, 18, 18)
                 .addComponent(txtSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(35, 35, 35)
                 .addComponent(btnSearch)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SearchPanelLayout.setVerticalGroup(
             SearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SearchPanelLayout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
+            .addGroup(SearchPanelLayout.createSequentialGroup()
+                .addContainerGap(60, Short.MAX_VALUE)
                 .addGroup(SearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSearchCourse)
+                    .addComponent(txtSearchCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch))
-                .addGap(31, 31, 31))
+                .addGap(39, 39, 39))
         );
 
         CoursesPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -126,14 +127,17 @@ public class CatalogFrame extends javax.swing.JFrame {
         CoursesPanel.setLayout(CoursesPanelLayout);
         CoursesPanelLayout.setHorizontalGroup(
             CoursesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CoursesPanelLayout.createSequentialGroup()
-                .addGap(82, 82, 82)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CoursesPanelLayout.createSequentialGroup()
+                .addContainerGap(85, Short.MAX_VALUE)
                 .addComponent(scrollPaneCourses, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(79, 79, 79))
         );
         CoursesPanelLayout.setVerticalGroup(
             CoursesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPaneCourses, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CoursesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneCourses, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         FooterPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -161,7 +165,7 @@ public class CatalogFrame extends javax.swing.JFrame {
             .addGroup(FooterPanelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(btnBackToDashboard)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -182,7 +186,7 @@ public class CatalogFrame extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(CoursesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(FooterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                .addComponent(FooterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
         );
 
         pack();

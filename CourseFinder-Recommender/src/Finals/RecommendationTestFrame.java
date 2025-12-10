@@ -50,6 +50,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 115));
@@ -66,22 +67,23 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(16, 16, 16)
                 .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(26, 26, 26)
                 .addComponent(lblTitle)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(lblLogo)
-                .addContainerGap(17, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblTitle)
-                .addGap(33, 33, 33))
+                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(lblLogo))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(lblTitle)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         QuestionsPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -204,7 +206,8 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                                         .addGap(34, 34, 34)
                                         .addComponent(rbBusiness, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(38, 38, 38)))
-                                .addComponent(rbHumanities))))
+                                .addComponent(rbHumanities))
+                            .addComponent(lblQ1)))
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(rbAdvanced)
@@ -213,9 +216,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addComponent(rbIntermediate))
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(lblQ1))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
                         .addGap(105, 105, 105)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rbModerate)
@@ -223,14 +223,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                                 .addComponent(rbLight)
                                 .addGap(76, 76, 76)
                                 .addComponent(rbFullLoad)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
         QuestionsPanelLayout.setVerticalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(42, 42, 42)
                 .addComponent(lblQ1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbTech)
                     .addComponent(rbBusiness)
@@ -246,20 +246,20 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(cbSocialScience))
                 .addGap(29, 29, 29)
                 .addComponent(lblQ3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbAdvanced)
                     .addComponent(rbBeginner)
                     .addComponent(rbIntermediate))
                 .addGap(29, 29, 29)
                 .addComponent(lblQ4)
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbLight)
                     .addComponent(rbFullLoad))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rbModerate)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -273,16 +273,16 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(256, Short.MAX_VALUE)
+                .addContainerGap(255, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(251, 251, 251))
+                .addGap(252, 252, 252))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(jButton1)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -299,12 +299,12 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(QuestionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         HeaderPanel.getAccessibleContext().setAccessibleName("");
