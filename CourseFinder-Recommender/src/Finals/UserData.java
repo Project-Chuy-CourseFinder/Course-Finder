@@ -24,7 +24,6 @@ public class UserData {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return map;
     }
@@ -36,7 +35,6 @@ public class UserData {
                 pw.println(acc.toString());
             }
         } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
