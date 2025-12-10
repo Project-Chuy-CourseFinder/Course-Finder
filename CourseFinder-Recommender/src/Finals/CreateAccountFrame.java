@@ -40,7 +40,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
 
         HeaderPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
-        lblLogo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         FormPanel = new javax.swing.JPanel();
         lblFullName = new javax.swing.JLabel();
         txtFullName = new javax.swing.JTextField();
@@ -62,43 +62,47 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(800, 650));
 
-        HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
+        HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(485, 160));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setText("Student Registration");
 
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
         HeaderPanel.setLayout(HeaderPanelLayout);
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLogo)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
-                        .addComponent(lblTitle)
-                        .addGap(17, 17, 17)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(lblTitle)
+                .addContainerGap(35, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblFullName.setForeground(new java.awt.Color(0, 102, 204));
         lblFullName.setText("Full Name:");
 
         txtFullName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtFullName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFullNameActionPerformed(evt);
@@ -106,29 +110,39 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblStudentID.setForeground(new java.awt.Color(0, 102, 255));
         lblStudentID.setText("Student ID:");
 
         txtStudentID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtStudentID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(0, 102, 255));
         lblEmail.setText("Email:");
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(0, 102, 255));
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(0, 102, 204));
         lblPassword.setText("Password:");
 
         txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblConfirmPassword.setForeground(new java.awt.Color(0, 102, 204));
         lblConfirmPassword.setText("Confirm Password:");
 
         txtConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
         FormPanel.setLayout(FormPanelLayout);
@@ -185,7 +199,9 @@ public class CreateAccountFrame extends javax.swing.JFrame {
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnRegisterAccount.setBackground(new java.awt.Color(0, 102, 204));
         btnRegisterAccount.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnRegisterAccount.setForeground(new java.awt.Color(255, 255, 255));
         btnRegisterAccount.setText("REGISTER ACCOUNT");
         btnRegisterAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +210,9 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(0, 102, 255));
         btnBack.setText("BACK");
+        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 204), 3));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -207,8 +225,8 @@ public class CreateAccountFrame extends javax.swing.JFrame {
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addGap(104, 104, 104)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
                 .addComponent(btnRegisterAccount)
                 .addGap(165, 165, 165))
         );
@@ -218,7 +236,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegisterAccount)
-                    .addComponent(btnBack))
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(150, Short.MAX_VALUE))
         );
 
@@ -300,10 +318,10 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRegisterAccount;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblConfirmPassword;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFullName;
-    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblStudentID;
     private javax.swing.JLabel lblTitle;
