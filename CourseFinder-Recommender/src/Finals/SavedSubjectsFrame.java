@@ -40,7 +40,6 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 130));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Saved Recommendations");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -107,6 +106,11 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
         btnReturn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnReturn.setText("RETURN");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
@@ -148,6 +152,10 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
      * @param args the command line arguments

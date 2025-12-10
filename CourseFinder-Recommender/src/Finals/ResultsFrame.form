@@ -90,9 +90,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="36" style="1"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Your Recommended Courses"/>
           </Properties>
         </Component>
@@ -208,6 +205,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="SAVE RESULTS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveResultsActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBackToDashboard">
           <Properties>
@@ -216,6 +216,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="BACK TO DASHBOARD"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackToDashboardActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -41,7 +41,6 @@ public class ResultsFrame extends javax.swing.JFrame {
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 130));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Your Recommended Courses");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -103,9 +102,19 @@ public class ResultsFrame extends javax.swing.JFrame {
 
         btnSaveResults.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnSaveResults.setText("SAVE RESULTS");
+        btnSaveResults.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveResultsActionPerformed(evt);
+            }
+        });
 
         btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnBackToDashboard.setText("BACK TO DASHBOARD");
+        btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackToDashboardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
@@ -151,6 +160,14 @@ public class ResultsFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSaveResultsActionPerformed
+
+    private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**
      * @param args the command line arguments

@@ -56,6 +56,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         txtConfirmPassword = new javax.swing.JTextField();
         ButtonPanel = new javax.swing.JPanel();
         btnRegisterAccount = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -65,7 +66,6 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         HeaderPanel.setPreferredSize(new java.awt.Dimension(485, 160));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Student Registration");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -96,7 +96,6 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         FormPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblFullName.setForeground(new java.awt.Color(0, 0, 0));
         lblFullName.setText("Full Name:");
 
         txtFullName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -107,31 +106,26 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblStudentID.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentID.setText("Student ID:");
 
         txtStudentID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblEmail.setForeground(new java.awt.Color(0, 0, 0));
         lblEmail.setText("Email:");
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Password:");
 
         txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblConfirmPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblConfirmPassword.setText("Confirm Password:");
 
         txtConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -193,13 +187,28 @@ public class CreateAccountFrame extends javax.swing.JFrame {
 
         btnRegisterAccount.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnRegisterAccount.setText("REGISTER ACCOUNT");
+        btnRegisterAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterAccountActionPerformed(evt);
+            }
+        });
+
+        btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBack.setText("BACK");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(104, 104, 104)
                 .addComponent(btnRegisterAccount)
                 .addGap(165, 165, 165))
         );
@@ -207,8 +216,10 @@ public class CreateAccountFrame extends javax.swing.JFrame {
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(btnRegisterAccount)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegisterAccount)
+                    .addComponent(btnBack))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -238,6 +249,15 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFullNameActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        new LoginFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnRegisterAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterAccountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegisterAccountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,6 +298,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel FormPanel;
     private javax.swing.JPanel HeaderPanel;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRegisterAccount;
     private javax.swing.JLabel lblConfirmPassword;
     private javax.swing.JLabel lblEmail;

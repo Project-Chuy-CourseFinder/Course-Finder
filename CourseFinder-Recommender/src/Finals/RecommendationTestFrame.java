@@ -47,7 +47,8 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbModerate = new javax.swing.JRadioButton();
         rbFullLoad = new javax.swing.JRadioButton();
         ButtonPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnGenerateRecommendation = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -56,7 +57,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 115));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Academic Recommendation Assessment");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -90,7 +90,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         QuestionsPanel.setPreferredSize(new java.awt.Dimension(900, 450));
 
         lblQ1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblQ1.setForeground(new java.awt.Color(0, 0, 0));
         lblQ1.setText("1. What field are you most interested in?");
 
         rbTech.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -103,7 +102,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbHumanities.setText("Humanities");
 
         lblQ2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblQ2.setForeground(new java.awt.Color(0, 0, 0));
         lblQ2.setText("2. Which subjects do you excel at?");
 
         cbMath.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -132,7 +130,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbSocialScience.setText("Social Science");
 
         lblQ3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblQ3.setForeground(new java.awt.Color(0, 0, 0));
         lblQ3.setText("3. Preferred course difficulty:");
 
         rbBeginner.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -150,7 +147,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbAdvanced.setText("Advanced");
 
         lblQ4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblQ4.setForeground(new java.awt.Color(0, 0, 0));
         lblQ4.setText("4. Preferred credit load per semester:");
 
         rbLight.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -265,23 +261,40 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(900, 123));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton1.setText("GENERATE RECOMMENDATION");
+        btnGenerateRecommendation.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnGenerateRecommendation.setText("GENERATE RECOMMENDATION");
+        btnGenerateRecommendation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerateRecommendationActionPerformed(evt);
+            }
+        });
+
+        btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBack.setText("BACK");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(255, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(252, 252, 252))
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addContainerGap(150, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(105, 105, 105)
+                .addComponent(btnGenerateRecommendation)
+                .addGap(160, 160, 160))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGenerateRecommendation)
+                    .addComponent(btnBack))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
@@ -332,6 +345,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbLightActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -371,12 +392,13 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel QuestionsPanel;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnGenerateRecommendation;
     private javax.swing.JCheckBox cbEnglish;
     private javax.swing.JCheckBox cbICT;
     private javax.swing.JCheckBox cbMath;
     private javax.swing.JCheckBox cbResearch;
     private javax.swing.JCheckBox cbSocialScience;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblQ1;
     private javax.swing.JLabel lblQ2;

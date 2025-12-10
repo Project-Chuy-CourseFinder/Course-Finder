@@ -38,6 +38,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         lblUsernameValue = new javax.swing.JLabel();
         ButtonPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
+        btnBackToDasboard = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -46,7 +47,6 @@ public class ProfileFrame extends javax.swing.JFrame {
         HeaderPanel.setPreferredSize(new java.awt.Dimension(800, 125));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setText("Profile");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -79,35 +79,27 @@ public class ProfileFrame extends javax.swing.JFrame {
         ProfileInfoPanel.setPreferredSize(new java.awt.Dimension(800, 380));
 
         lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblFullName.setForeground(new java.awt.Color(0, 0, 0));
         lblFullName.setText("Full Name:");
 
         lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblFullNameValue.setForeground(new java.awt.Color(0, 0, 0));
         lblFullNameValue.setText("<Name>");
 
         lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblStudentID.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentID.setText("Student ID:");
 
         lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblStudentIDValue.setForeground(new java.awt.Color(0, 0, 0));
         lblStudentIDValue.setText("<ID>");
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblEmail.setForeground(new java.awt.Color(0, 0, 0));
         lblEmail.setText("Email:");
 
         lblEmailValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblEmailValue.setForeground(new java.awt.Color(0, 0, 0));
         lblEmailValue.setText("<Email>");
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername.setText("Username:");
 
         lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblUsernameValue.setForeground(new java.awt.Color(0, 0, 0));
         lblUsernameValue.setText("<Username>");
 
         javax.swing.GroupLayout ProfileInfoPanelLayout = new javax.swing.GroupLayout(ProfileInfoPanel);
@@ -156,21 +148,38 @@ public class ProfileFrame extends javax.swing.JFrame {
 
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnLogout.setText("LOGOUT");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+
+        btnBackToDasboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBackToDasboard.setText("BACK TO DASHBOARD");
+        btnBackToDasboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackToDasboardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ButtonPanelLayout = new javax.swing.GroupLayout(ButtonPanel);
         ButtonPanel.setLayout(ButtonPanelLayout);
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(329, 329, 329)
+                .addGap(104, 104, 104)
+                .addComponent(btnBackToDasboard)
+                .addGap(108, 108, 108)
                 .addComponent(btnLogout)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(btnLogout)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLogout)
+                    .addComponent(btnBackToDasboard))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -194,6 +203,14 @@ public class ProfileFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackToDasboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDasboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackToDasboardActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,6 +251,7 @@ public class ProfileFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel ProfileInfoPanel;
+    private javax.swing.JButton btnBackToDasboard;
     private javax.swing.JButton btnLogout;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmailValue;
