@@ -25,17 +25,20 @@ public class CreateAccountFrame extends javax.swing.JFrame {
     } else if(UserData.accounts.containsKey(username)) {
         JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
     } else {
-        
-        // Add to memory
-        Account acc = new Account(fullName, studentID, email, username, password);
-                UserData.accounts.put(username, acc);
-                UserData.save();
-                JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        // Hash password before storing
+        String hashedPassword = Utils.md5(password);
 
-                new LoginFrame().setVisible(true);
-                this.dispose();
-            }
-        });
+        // Create account and save
+        Account acc = new Account(fullName, studentID, email, username, hashedPassword);
+        UserData.accounts.put(username, acc);
+        UserData.save();
+
+        JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+        new LoginFrame().setVisible(true);
+        this.dispose();
+    }
+    });
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

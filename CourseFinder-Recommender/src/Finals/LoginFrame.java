@@ -181,26 +181,24 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-                                      
     String username = txtUsername.getText().trim();
     String password = txtPassword.getText().trim();
 
-      if (username.isEmpty() || password.isEmpty()) {
+    if (username.isEmpty() || password.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please enter both username and password!");
         return;
     }
 
-    
     if (!UserData.accounts.containsKey(username)) {
         JOptionPane.showMessageDialog(this, "Account not found!");
         return;
     }
 
- 
     Account acc = UserData.accounts.get(username);
 
-    // Check password
-    if (!acc.password.equals(password)) {
+    // Hash entered password and compare
+    String hashedInput = Utils.md5(password);
+    if (!acc.password.equals(hashedInput)) {
         JOptionPane.showMessageDialog(this, "Incorrect password!");
         return;
     }
