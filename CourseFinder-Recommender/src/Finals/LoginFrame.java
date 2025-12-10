@@ -181,30 +181,34 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
+                                      
     String username = txtUsername.getText().trim();
     String password = txtPassword.getText().trim();
 
     if (username.isEmpty() || password.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter both username and password!");
-            return;
-        }
+        JOptionPane.showMessageDialog(this, "Please enter both username and password!");
+        return;
+    }
 
-        // Check if account exists in UserData
-        if (!UserData.accounts.containsKey(username)) {
-            JOptionPane.showMessageDialog(this, "Account not found!");
-            return;
-        }
+    
+    if (!UserData.accounts.containsKey(username)) {
+        JOptionPane.showMessageDialog(this, "Account not found!");
+        return;
+    }
 
-        // Check password
-        if (!UserData.accounts.get(username).equals(password)) {
-            JOptionPane.showMessageDialog(this, "Incorrect password!");
-            return;
-        }
+ 
+    Account acc = UserData.accounts.get(username);
 
-        // SUCCESS LOGIN
-        JOptionPane.showMessageDialog(this, "Login successful!");
-        new DashboardFrame().setVisible(true);
-        this.dispose();
+    // Check password
+    if (!acc.password.equals(password)) {
+        JOptionPane.showMessageDialog(this, "Incorrect password!");
+        return;
+    }
+
+    // SUCCESS LOGIN
+    JOptionPane.showMessageDialog(this, "Login successful!");
+    new DashboardFrame().setVisible(true); 
+    this.dispose();
     }//GEN-LAST:event_btnSignInActionPerformed
     
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed

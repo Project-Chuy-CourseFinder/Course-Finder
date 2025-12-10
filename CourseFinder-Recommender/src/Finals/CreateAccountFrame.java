@@ -10,27 +10,27 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
      btnRegisterAccount.addActionListener(evt -> {
-    String fullName = txtFullName.getText();
-    String studentID = txtStudentID.getText();
-    String email = txtEmail.getText();
-    String username = txtUsername.getText();
-    String password = txtPassword.getText();
-    String confirmPassword = txtConfirmPassword.getText();
+    String fullName = txtFullName.getText().trim();
+    String studentID = txtStudentID.getText().trim();
+    String email = txtEmail.getText().trim();
+    String username = txtUsername.getText().trim();
+    String password = txtPassword.getText().trim();
+    String confirmPassword = txtConfirmPassword.getText().trim();
 
     if(fullName.isEmpty() || studentID.isEmpty() || email.isEmpty() ||
-               username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else if(!password.equals(confirmPassword)) {
-                JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else if(UserData.accounts.containsKey(username)) {
-                JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else {
-                // Save account in shared storage
-                UserData.accounts.put(username, password);
-
+       username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
+    } else if(!password.equals(confirmPassword)) {
+        JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+    } else if(UserData.accounts.containsKey(username)) {
+        JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
+    } else {
+        // Add to memory
+          Account acc = new Account(fullName, studentID, email, username, password);
+                UserData.accounts.put(username, acc);
+                UserData.save();
                 JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
 
-                // Open login page
                 new LoginFrame().setVisible(true);
                 this.dispose();
             }
@@ -269,10 +269,8 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CreateAccountFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new CreateAccountFrame().setVisible(true);
         });
     }
 

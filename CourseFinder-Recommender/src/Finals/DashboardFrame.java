@@ -193,10 +193,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DashboardFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new DashboardFrame().setVisible(true);
         });
     }
 
