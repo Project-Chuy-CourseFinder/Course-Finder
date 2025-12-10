@@ -4,7 +4,6 @@ package Finals;
 import javax.swing.*;
 
 public class CreateAccountFrame extends javax.swing.JFrame {
-public static java.util.HashMap<String, String> accounts = new java.util.HashMap<>();
     
     public CreateAccountFrame() {
         initComponents();
@@ -19,31 +18,24 @@ public static java.util.HashMap<String, String> accounts = new java.util.HashMap
     String confirmPassword = txtConfirmPassword.getText();
 
     if(fullName.isEmpty() || studentID.isEmpty() || email.isEmpty() ||
-       username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-        JOptionPane.showMessageDialog(this, 
-            "Please fill in all fields!", 
-            "Error", 
-            JOptionPane.ERROR_MESSAGE);
-    } else if(!password.equals(confirmPassword)) {
-        JOptionPane.showMessageDialog(this, 
-            "Passwords do not match!", 
-            "Error", 
-            JOptionPane.ERROR_MESSAGE);
-    } else {
-        // Use this class's accounts HashMap
-        accounts.put(username, password);
+               username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if(!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if(UserData.accounts.containsKey(username)) {
+                JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                // Save account in shared storage
+                UserData.accounts.put(username, password);
 
-        JOptionPane.showMessageDialog(this, 
-            "Account created successfully!", 
-            "Success", 
-            JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
 
-        // Open LoginFrame
-        new LoginFrame().setVisible(true);
-        this.dispose();
+                // Open login page
+                new LoginFrame().setVisible(true);
+                this.dispose();
+            }
+        });
     }
-});
-}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

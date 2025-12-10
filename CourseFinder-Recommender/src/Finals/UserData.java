@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Finals;
 
-/**
- *
- * @author user
- */
+import java.util.HashMap;
+
 public class UserData {
-    
+    public static HashMap<String, String> accounts = new HashMap<>();
 }

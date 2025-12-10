@@ -2,21 +2,17 @@
 package Finals;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.HashMap;
-import java.util.Map;
 
 public class LoginFrame extends javax.swing.JFrame {
-    
-    public static Map<String, Account> accounts = new HashMap<>();
 
+
+    private static HashMap<String, String> accounts = new HashMap<>();
     public LoginFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
-
-        // Add a default account for testing
-        accounts.put("admin", new Account("Admin User", "0001", "admin", "1234"));
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -188,65 +184,46 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-String username = txtUsername.getText();
-        String password = txtPassword.getText();
+    String username = txtUsername.getText().trim();
+    String password = txtPassword.getText().trim();
 
-        // Use the class-level accounts map
-        if (accounts.containsKey(username) && accounts.get(username).password.equals(password)) {
-            Account acc = accounts.get(username);
-            new DashboardFrame(acc.fullName, acc.studentID).setVisible(true);
-            this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(this,
-                    "Account not found or incorrect password!",
-                    "Login Error",
-                    JOptionPane.ERROR_MESSAGE);
-        }
+    if (username.isEmpty() || password.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter both username and password!");
+        return;
+    }
+
+    // Check if account exists
+    if (!accounts.containsKey(username)) {
+        JOptionPane.showMessageDialog(this, "Account not found!");
+        return;
+    }
+
+    // Check password
+    if (!accounts.get(username).equals(password)) {
+        JOptionPane.showMessageDialog(this, "Incorrect password!");
+        return;
+    }
+
+    JOptionPane.showMessageDialog(this, "Login successful!");
+
+    // Go to dashboard frame
+    DashboardFrame db = new DashboardFrame();
+    db.setVisible(true);
+    this.dispose();  
     }//GEN-LAST:event_btnSignInActionPerformed
-
+    
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-         btnSignInActionPerformed(evt);
+         btnSignIn.doClick();
     }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
          CreateAccountFrame createAccount = new CreateAccountFrame();
     createAccount.setVisible(true);
-    this.dispose(); // close current login frame
+    this.dispose();
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LoginFrame().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new LoginFrame().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
