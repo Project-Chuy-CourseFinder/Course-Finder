@@ -2,17 +2,14 @@
 package Finals;
 
 import javax.swing.*;
-import java.util.HashMap;
 
 public class LoginFrame extends javax.swing.JFrame {
 
-
-    private static HashMap<String, String> accounts = new HashMap<>();
     public LoginFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
+       
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -188,28 +185,26 @@ public class LoginFrame extends javax.swing.JFrame {
     String password = txtPassword.getText().trim();
 
     if (username.isEmpty() || password.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please enter both username and password!");
-        return;
-    }
+            JOptionPane.showMessageDialog(this, "Please enter both username and password!");
+            return;
+        }
 
-    // Check if account exists
-    if (!accounts.containsKey(username)) {
-        JOptionPane.showMessageDialog(this, "Account not found!");
-        return;
-    }
+        // Check if account exists in UserData
+        if (!UserData.accounts.containsKey(username)) {
+            JOptionPane.showMessageDialog(this, "Account not found!");
+            return;
+        }
 
-    // Check password
-    if (!accounts.get(username).equals(password)) {
-        JOptionPane.showMessageDialog(this, "Incorrect password!");
-        return;
-    }
+        // Check password
+        if (!UserData.accounts.get(username).equals(password)) {
+            JOptionPane.showMessageDialog(this, "Incorrect password!");
+            return;
+        }
 
-    JOptionPane.showMessageDialog(this, "Login successful!");
-
-    // Go to dashboard frame
-    DashboardFrame db = new DashboardFrame();
-    db.setVisible(true);
-    this.dispose();  
+        // SUCCESS LOGIN
+        JOptionPane.showMessageDialog(this, "Login successful!");
+        new DashboardFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSignInActionPerformed
     
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
@@ -217,9 +212,9 @@ public class LoginFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
-         CreateAccountFrame createAccount = new CreateAccountFrame();
-    createAccount.setVisible(true);
-    this.dispose();
+         new CreateAccountFrame().setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     public static void main(String args[]) {
