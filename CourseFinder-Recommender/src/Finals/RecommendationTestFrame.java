@@ -346,7 +346,8 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_rbLightActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed

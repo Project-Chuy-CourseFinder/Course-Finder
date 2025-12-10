@@ -154,7 +154,8 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**

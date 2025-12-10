@@ -193,7 +193,8 @@ public class CatalogFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
-        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**
