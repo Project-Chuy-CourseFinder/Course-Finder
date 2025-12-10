@@ -1,6 +1,7 @@
 package Finals;
 
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Utils {
     public static String md5(String input) {
@@ -12,8 +13,7 @@ public class Utils {
                 sb.append(String.format("%02x", b));
             }
             return sb.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             return "";
         }
     }

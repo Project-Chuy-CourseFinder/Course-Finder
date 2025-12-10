@@ -1,15 +1,17 @@
 package Finals;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class UserData {
-private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt";
+    private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\CourseFinder-Recommender\\src\\accounts.txt";
 
-    public static HashMap<String, Account> accounts = loadAccounts();
+    // Key = username, Value = Account object
+    public static LinkedHashMap<String, Account> accounts = loadAccounts();
 
-    public static HashMap<String, Account> loadAccounts() {
-        HashMap<String, Account> map = new HashMap<>();
+    // Load all accounts from file
+    private static LinkedHashMap<String, Account> loadAccounts() {
+        LinkedHashMap<String, Account> map = new LinkedHashMap<>();
         File file = new File(FILE_PATH);
         if (!file.exists()) return map;
 
@@ -22,18 +24,16 @@ private static final String FILE_PATH = "C:\\Users\\user\\Course-Finder-2\\Cours
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return map;
     }
 
-    public static void save() {
-        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH))) {
-            for (Account acc : accounts.values()) {
-                pw.println(acc.toString());
-            }
+    // Append a new account to the file
+    public static void saveAccount(Account acc) {
+        accounts.put(acc.username, acc);
+        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH, true))) { // append mode
+            pw.println(acc.toString());
         } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

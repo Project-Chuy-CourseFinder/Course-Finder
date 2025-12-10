@@ -1,33 +1,24 @@
 package Finals;
 
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Account {
     public String fullName;
     public String studentID;
     public String email;
     public String username;
-    public String password; // stored as hashed
+    public String password; // hashed
 
-    // Constructor for new accounts (hashes password)
     public Account(String fullName, String studentID, String email, String username, String password) {
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
         this.username = username;
-        this.password = hashPassword(password); // hash password for new accounts
+        this.password = hashPassword(password); 
     }
 
-    // Constructor for loading accounts from file (password already hashed)
-    public Account(String fullName, String studentID, String email, String username, String password, boolean isHashed) {
-        this.fullName = fullName;
-        this.studentID = studentID;
-        this.email = email;
-        this.username = username;
-        this.password = isHashed ? password : hashPassword(password);
-    }
-
-    // Hash password using MD5
+    
     public static String hashPassword(String password) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -37,23 +28,23 @@ public class Account {
                 sb.append(String.format("%02x", b));
             }
             return sb.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return password; // fallback
+        } catch (NoSuchAlgorithmException e) {
+            return password; 
         }
     }
 
     @Override
     public String toString() {
-        // Format for accounts.txt: student|hashedPassword|FullName|StudentID|Email
-        return "student|" + password + "|" + fullName + "|" + studentID + "|" + email;
+        // Format: student|hashedPassword|FullName|StudentID|Email
+        return "student | " + password + " | " + fullName + " | " + studentID + " | " + email;
     }
 
-    // Create an Account object from a line in accounts.txt
     public static Account fromString(String data) {
-        String[] parts = data.split("\\|"); // split by |
+        String[] parts = data.split("\\|");
         if (parts.length != 5) return null;
-        // parts[1] = hashed password, so use constructor with isHashed=true
-        return new Account(parts[2], parts[3], parts[4], parts[0], parts[1], true);
+        // The second param is hashed password; assign directly
+        Account acc = new Account(parts[2], parts[3], parts[4], parts[0], "");
+        acc.password = parts[1]; 
+        return acc;
     }
 }

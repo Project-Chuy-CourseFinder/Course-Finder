@@ -9,34 +9,30 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-       btnRegisterAccount.addActionListener(evt -> {
-    String fullName = txtFullName.getText().trim();
-    String studentID = txtStudentID.getText().trim();
-    String email = txtEmail.getText().trim();
-    String username = txtUsername.getText().trim();
-    String password = txtPassword.getText().trim();
-    String confirmPassword = txtConfirmPassword.getText().trim();
+        btnRegisterAccount.addActionListener(evt -> {
+            String fullName = txtFullName.getText().trim();
+            String studentID = txtStudentID.getText().trim();
+            String email = txtEmail.getText().trim();
+            String username = txtUsername.getText().trim();
+            String password = txtPassword.getText().trim();
+            String confirmPassword = txtConfirmPassword.getText().trim();
 
-    if(fullName.isEmpty() || studentID.isEmpty() || email.isEmpty() ||
-       username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
-    } else if(!password.equals(confirmPassword)) {
-        JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
-    } else if(UserData.accounts.containsKey(username)) {
-        JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
-    } else {
-      
-      Account acc = new Account(fullName, studentID, email, username, password); 
-         UserData.accounts.put(username, acc); 
-        UserData.save();
+            if(fullName.isEmpty() || studentID.isEmpty() || email.isEmpty() ||
+               username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if(!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if(UserData.accounts.containsKey(username)) {
+                JOptionPane.showMessageDialog(this, "Username already exists!", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                Account acc = new Account(fullName, studentID, email, username, password);
+                UserData.saveAccount(acc); // append new account
+                JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
 
-    
-    JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-        new LoginFrame().setVisible(true);
-        this.dispose();
-
-    }
-    });
+                new LoginFrame().setVisible(true);
+                this.dispose();
+            }
+        });
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
