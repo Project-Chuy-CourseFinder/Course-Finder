@@ -19,7 +19,23 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         // Set greeting with real user info
         lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
-    }
+        lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
+     
+        String subTextColor = "#333333"; // dark grey
+        String subTextSize = "14px";      // moderate size
+
+    btnCourseCatalog.setText("<html><center>COURSE CATALOG<br>"
+            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>Browse available subjects and details</small></center></html>");
+
+    btnRecommendationTest.setText("<html><center>RECOMMENDATION TEST<br>"
+            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>Generate personalized courses</small></center></html>");
+
+    btnSavedSubjects.setText("<html><center>SAVED SUBJECTS<br>"
+            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>View saved courses</small></center></html>");
+
+    btnProfile.setText("<html><center>MY PROFILE<br>"
+            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>View or edit your info</small></center></html>");
+}
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
