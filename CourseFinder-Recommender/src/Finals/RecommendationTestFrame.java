@@ -134,14 +134,17 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbHospitality_Tourism.setForeground(new java.awt.Color(0, 102, 204));
         rbHospitality_Tourism.setText("Hospitality / Tourism");
+        rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbCriminology.setForeground(new java.awt.Color(0, 102, 204));
         rbCriminology.setText("Criminology");
+        rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbEngineering_Architecture_Mechanical.setForeground(new java.awt.Color(0, 102, 204));
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
+        rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblQ2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ2.setForeground(new java.awt.Color(0, 102, 204));
@@ -200,10 +203,12 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbEnglish.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbEnglish.setForeground(new java.awt.Color(0, 102, 204));
         cbEnglish.setText("English");
+        cbEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbSocialScience.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbSocialScience.setForeground(new java.awt.Color(0, 102, 204));
         cbSocialScience.setText("Social Science");
+        cbSocialScience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblQ3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ3.setForeground(new java.awt.Color(0, 102, 204));
@@ -242,6 +247,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbICT_Coding.setForeground(new java.awt.Color(0, 102, 204));
         cbICT_Coding.setText("ICT / Coding");
+        cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblQ4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ4.setForeground(new java.awt.Color(0, 102, 204));
