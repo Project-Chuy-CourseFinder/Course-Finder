@@ -85,6 +85,7 @@ public class CatalogFrame extends javax.swing.JFrame {
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
+        btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout SearchPanelLayout = new javax.swing.GroupLayout(SearchPanel);
         SearchPanel.setLayout(SearchPanelLayout);
@@ -148,6 +149,7 @@ public class CatalogFrame extends javax.swing.JFrame {
         btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnBackToDashboard.setForeground(new java.awt.Color(0, 102, 255));
         btnBackToDashboard.setText("BACK TO DASHBOARD");
+        btnBackToDashboard.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackToDashboardActionPerformed(evt);
