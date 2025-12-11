@@ -1,6 +1,9 @@
 
 package Finals;
 
+import javax.swing.*;
+import java.util.ArrayList;
+
 public class RecommendationTestFrame extends javax.swing.JFrame {
 
     private final String fullName;
@@ -401,7 +404,61 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
-        // TODO add your handling code here:
+        ArrayList<String> recommendations = new ArrayList<>();
+
+        // Field-based recommendation
+        if (rbTechnology_IT_CS.isSelected()) {
+            recommendations.add("BSIT101 - Introduction to Computing");
+            recommendations.add("BSIT102 - Computer Programming 1");
+            recommendations.add("BSIT201 - Data Structures & Algorithms");
+            recommendations.add("BSIT202 - Database Management Systems");
+            recommendations.add("BSIT301 - Object-Oriented Programming");
+            recommendations.add("BSIT302 - Web Development");
+            recommendations.add("BSCS101 - Discrete Mathematics");
+            recommendations.add("BSCS205 - Computer Architecture");
+        }
+        if (rbBusiness_Management_Marketing.isSelected()) {
+            recommendations.add("BSBA101 - Principles of Management");
+            recommendations.add("BSBA110 - Marketing Management");
+        }
+        if (rbEducation_Teaching.isSelected()) {
+            recommendations.add("BSEd101 - Foundations of Education");
+            recommendations.add("BSEd201 - Child & Adolescent Development");
+        }
+        if (rbHospitality_Tourism.isSelected()) {
+            recommendations.add("BSHM101 - Front Office Procedures");
+            recommendations.add("BSHM201 - Food & Beverage Services");
+        }
+        if (rbCriminology.isSelected()) {
+            recommendations.add("CRIM101 - Introduction to Criminology");
+            recommendations.add("CRIM205 - Forensic Photography");
+        }
+        if (rbEngineering_Architecture_Mechanical.isSelected()) {
+            recommendations.add("ARCH101 - Introduction to Architecture");
+            recommendations.add("MECH101 - Mechanical Engineering Basics");
+        }
+
+        // Subject-based fine-tuning
+        if (cbICT_Coding.isSelected() && !recommendations.contains("BSIT102 - Computer Programming 1")) {
+            recommendations.add("BSIT102 - Computer Programming 1");
+        }
+        if (cbMath.isSelected() && !recommendations.contains("BSCS101 - Discrete Mathematics")) {
+            recommendations.add("BSCS101 - Discrete Mathematics");
+        }
+        if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
+            recommendations.add("BSBA110 - Marketing Management");
+        }
+
+        // Display recommendations
+        if (recommendations.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No recommendations found. Please select your interests and subjects.");
+        } else {
+            StringBuilder sb = new StringBuilder("Recommended Courses:\n");
+            for (String course : recommendations) {
+                sb.append("- ").append(course).append("\n");
+            }
+            JOptionPane.showMessageDialog(this, sb.toString(), "Recommendation Result", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
     public static void main(String[] args) {
