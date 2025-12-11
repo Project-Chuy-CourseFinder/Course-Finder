@@ -222,7 +222,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(0, 102, 255));
+        btnBack.setForeground(new java.awt.Color(0, 102, 204));
         btnBack.setText("BACK");
         btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 204), 3));
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

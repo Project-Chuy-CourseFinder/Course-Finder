@@ -1,19 +1,72 @@
 
 package Finals;
 
-/**
- *
- * @author Dell
- */
+import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
+
+
 public class CatalogFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CatalogFrame
-     */
+    ArrayList<String[]> courseList = new ArrayList<>();
+
     public CatalogFrame() {
         initComponents();
+        loadCourses();
+        displayCourses(courseList);
+
         this.setLocationRelativeTo(null);
     }
+    
+    private void loadCourses() {
+    courseList.clear();
+
+    courseList.add(new String[]{"BSIT101", "Introduction to Computing", "IT"});
+    courseList.add(new String[]{"BSIT102", "Computer Programming 1", "IT"});
+    courseList.add(new String[]{"BSIT201", "Data Structures & Algorithms", "IT"});
+    courseList.add(new String[]{"BSIT202", "Database Management Systems", "IT"});
+    courseList.add(new String[]{"BSIT301", "Object-Oriented Programming", "IT"});
+    courseList.add(new String[]{"BSIT302", "Web Development", "IT"});
+
+    courseList.add(new String[]{"BSCS101", "Discrete Mathematics", "CS"});
+    courseList.add(new String[]{"BSCS205", "Computer Architecture", "CS"});
+
+    courseList.add(new String[]{"BSEd101", "Foundations of Education", "Education"});
+    courseList.add(new String[]{"BSEd201", "Child & Adolescent Development", "Education"});
+
+    courseList.add(new String[]{"BSBA101", "Principles of Management", "Business"});
+    courseList.add(new String[]{"BSBA110", "Marketing Management", "Business"});
+
+    courseList.add(new String[]{"BSHM101", "Front Office Procedures", "Hospitality"});
+    courseList.add(new String[]{"BSHM201", "Food & Beverage Services", "Hospitality"});
+
+    courseList.add(new String[]{"CRIM101", "Introduction to Criminology", "Criminology"});
+    courseList.add(new String[]{"CRIM205", "Forensic Photography", "Criminology"});
+}
+
+    private void displayCourses(ArrayList<String[]> list) {
+    DefaultTableModel model = (DefaultTableModel) tblCourses.getModel();
+    model.setRowCount(0);
+
+    for (String[] course : list) {
+        model.addRow(course);
+    }
+}
+
+        private ArrayList<String[]> searchCourses(String keyword) {
+    ArrayList<String[]> results = new ArrayList<>();
+    keyword = keyword.toLowerCase();
+
+    for (String[] course : courseList) {
+        if (course[0].toLowerCase().contains(keyword) ||
+            course[1].toLowerCase().contains(keyword) ||
+            course[2].toLowerCase().contains(keyword)) {
+            
+            results.add(course);
+        }
+    }
+    return results;
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -81,11 +134,22 @@ public class CatalogFrame extends javax.swing.JFrame {
         lblSearchCourse.setForeground(new java.awt.Color(0, 102, 204));
         lblSearchCourse.setText("Search Course:");
 
+        txtSearchCourse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchCourseActionPerformed(evt);
+            }
+        });
+
         btnSearch.setBackground(new java.awt.Color(0, 102, 204));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
         btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout SearchPanelLayout = new javax.swing.GroupLayout(SearchPanel);
         SearchPanel.setLayout(SearchPanelLayout);
@@ -115,13 +179,25 @@ public class CatalogFrame extends javax.swing.JFrame {
 
         tblCourses.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"BSIT101", "Introduction to Computing", "IT"},
+                {"BSIT102", "Computer Programming 1", "IT"},
+                {"BSIT201", "Data Structures & Algorithms", "IT"},
+                {"BSIT202", "Database Management Systems", "IT"},
+                {"BSIT301", "Object-Oriented Programming", "IT"},
+                {"BSIT302", "Web Development", "IT"},
+                {"BSCS101", "Discrete Mathematics", "CS"},
+                {"BSCS205", "Computer Architecture", "CS"},
+                {"BSEd101", "Foundations of Education", "Education"},
+                {"BSEd201", "Child & Adolescent Development", "Education"},
+                {"BSBA101", "Principles of Management", "Business"},
+                {"BSBA110", "Marketing Management", "Business"},
+                {"BSHM101", "Front Office Procedures", "Hospitality"},
+                {"BSHM201", "Food & Beverage Services", "Hospitality"},
+                {"CRIM101", "Introduction to Criminology", "Criminology"},
+                {"CRIM205", "Forensic Photography", "Criminology"}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Code", "Course Title", "Category"
             }
         ));
         scrollPaneCourses.setViewportView(tblCourses);
@@ -201,6 +277,22 @@ public class CatalogFrame extends javax.swing.JFrame {
         new DashboardFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
+
+    private void txtSearchCourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchCourseActionPerformed
+        btnSearchActionPerformed(evt);
+    }//GEN-LAST:event_txtSearchCourseActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        String keyword = txtSearchCourse.getText().trim();
+
+    if (keyword.isEmpty()) {
+        displayCourses(courseList); // Show all
+        return;
+    }
+
+    ArrayList<String[]> searchResult = searchCourses(keyword);
+    displayCourses(searchResult);
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments

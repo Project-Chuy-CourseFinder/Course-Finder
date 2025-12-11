@@ -160,6 +160,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSearchCourse">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSearchCourseActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSearch">
           <Properties>
@@ -177,6 +180,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -214,13 +220,30 @@
           <SubComponents>
             <Component class="javax.swing.JTable" name="tblCourses">
               <Properties>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                  </Table>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {&quot;BSIT101&quot;, &quot;Introduction to Computing&quot;, &quot;IT&quot;},&#xa;        {&quot;BSIT102&quot;, &quot;Computer Programming 1&quot;, &quot;IT&quot;},&#xa;        {&quot;BSIT201&quot;, &quot;Data Structures &amp; Algorithms&quot;, &quot;IT&quot;},&#xa;        {&quot;BSIT202&quot;, &quot;Database Management Systems&quot;, &quot;IT&quot;},&#xa;        {&quot;BSIT301&quot;, &quot;Object-Oriented Programming&quot;, &quot;IT&quot;},&#xa;        {&quot;BSIT302&quot;, &quot;Web Development&quot;, &quot;IT&quot;},&#xa;        {&quot;BSCS101&quot;, &quot;Discrete Mathematics&quot;, &quot;CS&quot;},&#xa;        {&quot;BSCS205&quot;, &quot;Computer Architecture&quot;, &quot;CS&quot;},&#xa;        {&quot;BSEd101&quot;, &quot;Foundations of Education&quot;, &quot;Education&quot;},&#xa;        {&quot;BSEd201&quot;, &quot;Child &amp; Adolescent Development&quot;, &quot;Education&quot;},&#xa;        {&quot;BSBA101&quot;, &quot;Principles of Management&quot;, &quot;Business&quot;},&#xa;        {&quot;BSBA110&quot;, &quot;Marketing Management&quot;, &quot;Business&quot;},&#xa;        {&quot;BSHM101&quot;, &quot;Front Office Procedures&quot;, &quot;Hospitality&quot;},&#xa;        {&quot;BSHM201&quot;, &quot;Food &amp; Beverage Services&quot;, &quot;Hospitality&quot;},&#xa;        {&quot;CRIM101&quot;, &quot;Introduction to Criminology&quot;, &quot;Criminology&quot;},&#xa;        {&quot;CRIM205&quot;, &quot;Forensic Photography&quot;, &quot;Criminology&quot;}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Code&quot;, &quot;Course Title&quot;, &quot;Category&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
             </Component>
