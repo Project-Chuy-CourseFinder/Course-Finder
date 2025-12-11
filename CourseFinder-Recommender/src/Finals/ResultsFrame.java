@@ -1,15 +1,24 @@
 
 package Finals;
 
-/**
- *
- * @author Dell
- */
+import javax.swing.DefaultListModel;
+
 public class ResultsFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ResultsFrame
-     */
+    public ResultsFrame(String[] recommendedCourses) {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        showRecommendations(recommendedCourses);
+    }
+
+    private void showRecommendations(String[] courses) {
+        DefaultListModel<String> model = new DefaultListModel<>();
+        for (String course : courses) {
+            model.addElement(course);
+        }
+        listRecommendedCourses.setModel(model);
+    }
+    
     public ResultsFrame() {
         initComponents();
         this.setLocationRelativeTo(null);

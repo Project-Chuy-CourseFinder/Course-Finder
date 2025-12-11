@@ -58,6 +58,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         btnGenerateRecommendation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(900, 782));
         setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
@@ -101,33 +102,33 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ1.setForeground(new java.awt.Color(0, 102, 204));
         lblQ1.setText("1. What field are you most interested in?");
 
-        rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbTechnology_IT_CS.setForeground(new java.awt.Color(0, 102, 204));
+        rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbTechnology_IT_CS.setForeground(new java.awt.Color(0, 0, 0));
         rbTechnology_IT_CS.setText("Technology / IT / CS");
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbBusiness_Management_Marketing.setForeground(new java.awt.Color(0, 102, 204));
+        rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbBusiness_Management_Marketing.setForeground(new java.awt.Color(0, 0, 0));
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbEducation_Teaching.setForeground(new java.awt.Color(0, 102, 204));
+        rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbEducation_Teaching.setForeground(new java.awt.Color(0, 0, 0));
         rbEducation_Teaching.setText("Education / Teaching");
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbHospitality_Tourism.setForeground(new java.awt.Color(0, 102, 204));
+        rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbHospitality_Tourism.setForeground(new java.awt.Color(0, 0, 0));
         rbHospitality_Tourism.setText("Hospitality / Tourism");
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbCriminology.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbCriminology.setForeground(new java.awt.Color(0, 102, 204));
+        rbCriminology.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbCriminology.setForeground(new java.awt.Color(0, 0, 0));
         rbCriminology.setText("Criminology");
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbEngineering_Architecture_Mechanical.setForeground(new java.awt.Color(0, 102, 204));
+        rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbEngineering_Architecture_Mechanical.setForeground(new java.awt.Color(0, 0, 0));
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -135,43 +136,43 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ2.setForeground(new java.awt.Color(0, 102, 204));
         lblQ2.setText("2. Which subjects do you excel at?");
 
-        cbMath.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbMath.setForeground(new java.awt.Color(0, 102, 204));
+        cbMath.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbMath.setForeground(new java.awt.Color(0, 0, 0));
         cbMath.setText("Math");
         cbMath.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbResearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbResearch.setForeground(new java.awt.Color(0, 102, 204));
+        cbResearch.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbResearch.setForeground(new java.awt.Color(0, 0, 0));
         cbResearch.setText("Research");
         cbResearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbManagement_Marketing.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbManagement_Marketing.setForeground(new java.awt.Color(0, 102, 204));
+        cbManagement_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbManagement_Marketing.setForeground(new java.awt.Color(0, 0, 0));
         cbManagement_Marketing.setText("Management / Marketing");
         cbManagement_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbHospitality_FoodServices.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbHospitality_FoodServices.setForeground(new java.awt.Color(0, 102, 204));
+        cbHospitality_FoodServices.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbHospitality_FoodServices.setForeground(new java.awt.Color(0, 0, 0));
         cbHospitality_FoodServices.setText("Hospitality / Food Services");
         cbHospitality_FoodServices.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbPhysics_EngineeringConcepts.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbPhysics_EngineeringConcepts.setForeground(new java.awt.Color(0, 102, 204));
+        cbPhysics_EngineeringConcepts.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbPhysics_EngineeringConcepts.setForeground(new java.awt.Color(0, 0, 0));
         cbPhysics_EngineeringConcepts.setText("Physics / Engineering Concepts");
         cbPhysics_EngineeringConcepts.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbEnglish.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbEnglish.setForeground(new java.awt.Color(0, 102, 204));
+        cbEnglish.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbEnglish.setForeground(new java.awt.Color(0, 0, 0));
         cbEnglish.setText("English");
         cbEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbSocialScience.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbSocialScience.setForeground(new java.awt.Color(0, 102, 204));
+        cbSocialScience.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbSocialScience.setForeground(new java.awt.Color(0, 0, 0));
         cbSocialScience.setText("Social Science");
         cbSocialScience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbICT_Coding.setForeground(new java.awt.Color(0, 102, 204));
+        cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cbICT_Coding.setForeground(new java.awt.Color(0, 0, 0));
         cbICT_Coding.setText("ICT / Coding");
         cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -179,18 +180,18 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ3.setForeground(new java.awt.Color(0, 102, 204));
         lblQ3.setText("3. Preferred course difficulty:");
 
-        rbBeginner.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbBeginner.setForeground(new java.awt.Color(0, 102, 204));
+        rbBeginner.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbBeginner.setForeground(new java.awt.Color(0, 0, 0));
         rbBeginner.setText("Beginner");
         rbBeginner.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbIntermediate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbIntermediate.setForeground(new java.awt.Color(0, 102, 204));
+        rbIntermediate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbIntermediate.setForeground(new java.awt.Color(0, 0, 0));
         rbIntermediate.setText("Intermediate");
         rbIntermediate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbAdvanced.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbAdvanced.setForeground(new java.awt.Color(0, 102, 204));
+        rbAdvanced.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbAdvanced.setForeground(new java.awt.Color(0, 0, 0));
         rbAdvanced.setText("Advanced");
         rbAdvanced.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -198,18 +199,18 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ4.setForeground(new java.awt.Color(0, 102, 204));
         lblQ4.setText("4. Preferred credit load per semester:");
 
-        rbLight.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbLight.setForeground(new java.awt.Color(0, 102, 204));
+        rbLight.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbLight.setForeground(new java.awt.Color(0, 0, 0));
         rbLight.setText("Light (9-12 units)");
         rbLight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbModerate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbModerate.setForeground(new java.awt.Color(0, 102, 204));
+        rbModerate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbModerate.setForeground(new java.awt.Color(0, 0, 0));
         rbModerate.setText("Moderate (12-18 units)");
         rbModerate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        rbFullLoad.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        rbFullLoad.setForeground(new java.awt.Color(0, 102, 204));
+        rbFullLoad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        rbFullLoad.setForeground(new java.awt.Color(0, 0, 0));
         rbFullLoad.setText("Full Load (18-24 units)");
         rbFullLoad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -218,72 +219,75 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         QuestionsPanelLayout.setHorizontalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(lblQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(rbTechnology_IT_CS, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(178, 178, 178)
-                .addComponent(rbHospitality_Tourism, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(rbBusiness_Management_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(rbCriminology, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(rbEducation_Teaching, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(165, 165, 165)
-                .addComponent(rbEngineering_Architecture_Mechanical, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(lblQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(cbMath, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
-                .addComponent(cbHospitality_FoodServices, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110)
-                .addComponent(cbEnglish, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(cbResearch, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(cbPhysics_EngineeringConcepts, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(cbSocialScience, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(cbManagement_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(280, 280, 280)
-                .addComponent(cbICT_Coding))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(lblQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(rbIntermediate)
-                .addGap(57, 57, 57)
-                .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(lblQ4))
-            .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(rbLight, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(rbModerate, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(rbFullLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(rbIntermediate)
+                        .addGap(57, 57, 57)
+                        .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(lblQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(rbTechnology_IT_CS, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(171, 171, 171)
+                        .addComponent(rbHospitality_Tourism, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(rbBusiness_Management_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(rbCriminology, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(rbEducation_Teaching, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(165, 165, 165)
+                        .addComponent(rbEngineering_Architecture_Mechanical, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lblQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lblQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lblQ4))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(rbLight, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(rbModerate, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(rbFullLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbResearch, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addComponent(cbManagement_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(280, 280, 280)
+                                .addComponent(cbICT_Coding))))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(cbMath, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbHospitality_FoodServices, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbPhysics_EngineeringConcepts, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(72, 72, 72)
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbSocialScience, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbEnglish, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(55, 55, 55))
         );
         QuestionsPanelLayout.setVerticalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(26, 26, 26)
                 .addComponent(lblQ1)
-                .addGap(7, 7, 7)
+                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbTechnology_IT_CS)
                     .addComponent(rbHospitality_Tourism))
@@ -295,43 +299,45 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbEducation_Teaching)
                     .addComponent(rbEngineering_Architecture_Mechanical))
-                .addGap(20, 20, 20)
+                .addGap(22, 22, 22)
                 .addComponent(lblQ2)
-                .addGap(15, 15, 15)
+                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbMath)
                     .addComponent(cbHospitality_FoodServices)
                     .addComponent(cbEnglish))
-                .addGap(11, 11, 11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbResearch)
-                    .addComponent(cbPhysics_EngineeringConcepts)
-                    .addComponent(cbSocialScience))
-                .addGap(11, 11, 11)
+                    .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cbPhysics_EngineeringConcepts)
+                        .addComponent(cbSocialScience))
+                    .addComponent(cbResearch))
+                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbManagement_Marketing)
                     .addComponent(cbICT_Coding))
-                .addGap(31, 31, 31)
+                .addGap(22, 22, 22)
                 .addComponent(lblQ3)
-                .addGap(15, 15, 15)
+                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbBeginner)
                     .addComponent(rbIntermediate)
                     .addComponent(rbAdvanced))
-                .addGap(30, 30, 30)
+                .addGap(22, 22, 22)
                 .addComponent(lblQ4)
-                .addGap(15, 15, 15)
+                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbLight)
                     .addComponent(rbModerate)
-                    .addComponent(rbFullLoad)))
+                    .addComponent(rbFullLoad))
+                .addGap(0, 29, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(900, 123));
 
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(0, 102, 255));
+        btnBack.setForeground(new java.awt.Color(0, 0, 0));
         btnBack.setText("BACK");
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -356,20 +362,20 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(163, Short.MAX_VALUE)
+                .addContainerGap(184, Short.MAX_VALUE)
                 .addComponent(btnBack)
-                .addGap(120, 120, 120)
+                .addGap(101, 101, 101)
                 .addComponent(btnGenerateRecommendation)
-                .addGap(132, 132, 132))
+                .addGap(130, 130, 130))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(20, 20, 20)
                 .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(btnGenerateRecommendation))
-                .addContainerGap(53, Short.MAX_VALUE))
+                    .addComponent(btnGenerateRecommendation)
+                    .addComponent(btnBack))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -388,9 +394,10 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(QuestionsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                .addComponent(QuestionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         HeaderPanel.getAccessibleContext().setAccessibleName("");
@@ -406,64 +413,60 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
         ArrayList<String> recommendations = new ArrayList<>();
 
-        // Field-based recommendation
-        if (rbTechnology_IT_CS.isSelected()) {
-            recommendations.add("BSIT101 - Introduction to Computing");
-            recommendations.add("BSIT102 - Computer Programming 1");
-            recommendations.add("BSIT201 - Data Structures & Algorithms");
-            recommendations.add("BSIT202 - Database Management Systems");
-            recommendations.add("BSIT301 - Object-Oriented Programming");
-            recommendations.add("BSIT302 - Web Development");
-            recommendations.add("BSCS101 - Discrete Mathematics");
-            recommendations.add("BSCS205 - Computer Architecture");
-        }
-        if (rbBusiness_Management_Marketing.isSelected()) {
-            recommendations.add("BSBA101 - Principles of Management");
-            recommendations.add("BSBA110 - Marketing Management");
-        }
-        if (rbEducation_Teaching.isSelected()) {
-            recommendations.add("BSEd101 - Foundations of Education");
-            recommendations.add("BSEd201 - Child & Adolescent Development");
-        }
-        if (rbHospitality_Tourism.isSelected()) {
-            recommendations.add("BSHM101 - Front Office Procedures");
-            recommendations.add("BSHM201 - Food & Beverage Services");
-        }
-        if (rbCriminology.isSelected()) {
-            recommendations.add("CRIM101 - Introduction to Criminology");
-            recommendations.add("CRIM205 - Forensic Photography");
-        }
-        if (rbEngineering_Architecture_Mechanical.isSelected()) {
-            recommendations.add("ARCH101 - Introduction to Architecture");
-            recommendations.add("MECH101 - Mechanical Engineering Basics");
-        }
+    // Field-based recommendation
+    if (rbTechnology_IT_CS.isSelected()) {
+        recommendations.add("BSIT101 - Introduction to Computing");
+        recommendations.add("BSIT102 - Computer Programming 1");
+        recommendations.add("BSIT201 - Data Structures & Algorithms");
+        recommendations.add("BSIT202 - Database Management Systems");
+        recommendations.add("BSIT301 - Object-Oriented Programming");
+        recommendations.add("BSIT302 - Web Development");
+        recommendations.add("BSCS101 - Discrete Mathematics");
+        recommendations.add("BSCS205 - Computer Architecture");
+    }
+    if (rbBusiness_Management_Marketing.isSelected()) {
+        recommendations.add("BSBA101 - Principles of Management");
+        recommendations.add("BSBA110 - Marketing Management");
+    }
+    if (rbEducation_Teaching.isSelected()) {
+        recommendations.add("BSEd101 - Foundations of Education");
+        recommendations.add("BSEd201 - Child & Adolescent Development");
+    }
+    if (rbHospitality_Tourism.isSelected()) {
+        recommendations.add("BSHM101 - Front Office Procedures");
+        recommendations.add("BSHM201 - Food & Beverage Services");
+    }
+    if (rbCriminology.isSelected()) {
+        recommendations.add("CRIM101 - Introduction to Criminology");
+        recommendations.add("CRIM205 - Forensic Photography");
+    }
+    if (rbEngineering_Architecture_Mechanical.isSelected()) {
+        recommendations.add("ARCH101 - Introduction to Architecture");
+        recommendations.add("MECH101 - Mechanical Engineering Basics");
+    }
 
-        // Subject-based fine-tuning
-        if (cbICT_Coding.isSelected() && !recommendations.contains("BSIT102 - Computer Programming 1")) {
-            recommendations.add("BSIT102 - Computer Programming 1");
-        }
-        if (cbMath.isSelected() && !recommendations.contains("BSCS101 - Discrete Mathematics")) {
-            recommendations.add("BSCS101 - Discrete Mathematics");
-        }
-        if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
-            recommendations.add("BSBA110 - Marketing Management");
-        }
+    // Subject-based fine-tuning
+    if (cbICT_Coding.isSelected() && !recommendations.contains("BSIT102 - Computer Programming 1")) {
+        recommendations.add("BSIT102 - Computer Programming 1");
+    }
+    if (cbMath.isSelected() && !recommendations.contains("BSCS101 - Discrete Mathematics")) {
+        recommendations.add("BSCS101 - Discrete Mathematics");
+    }
+    if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
+        recommendations.add("BSBA110 - Marketing Management");
+    }
 
-        // Display recommendations
-        if (recommendations.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No recommendations found. Please select your interests and subjects.");
-        } else {
-            StringBuilder sb = new StringBuilder("Recommended Courses:\n");
-            for (String course : recommendations) {
-                sb.append("- ").append(course).append("\n");
-            }
-            JOptionPane.showMessageDialog(this, sb.toString(), "Recommendation Result", JOptionPane.INFORMATION_MESSAGE);
-        }
+    // Convert ArrayList to array
+    String[] resultArray = recommendations.toArray(new String[0]);
+
+    // Open ResultsFrame
+    new ResultsFrame(resultArray).setVisible(true);
+    this.dispose(); // optional: close current frame
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
     public static void main(String[] args) {
         // Sample data for testing
-        String fullName = "Juan Dela Cruz";
+        String fullName = "John Mark Germinal";
         String studentID = "2025-00123";
         String email = "juan.delacruz@example.com";
         String username = "jdelacruz";
