@@ -41,11 +41,11 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbPhysics_EngineeringConcepts = new javax.swing.JCheckBox();
         cbEnglish = new javax.swing.JCheckBox();
         cbSocialScience = new javax.swing.JCheckBox();
+        cbICT_Coding = new javax.swing.JCheckBox();
         lblQ3 = new javax.swing.JLabel();
         rbBeginner = new javax.swing.JRadioButton();
         rbIntermediate = new javax.swing.JRadioButton();
         rbAdvanced = new javax.swing.JRadioButton();
-        cbICT_Coding = new javax.swing.JCheckBox();
         lblQ4 = new javax.swing.JLabel();
         rbLight = new javax.swing.JRadioButton();
         rbModerate = new javax.swing.JRadioButton();
@@ -102,61 +102,31 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbTechnology_IT_CS.setForeground(new java.awt.Color(0, 102, 204));
         rbTechnology_IT_CS.setText("Technology / IT / CS");
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbTechnology_IT_CS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbTechnology_IT_CSActionPerformed(evt);
-            }
-        });
 
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbBusiness_Management_Marketing.setForeground(new java.awt.Color(0, 102, 204));
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbBusiness_Management_Marketing.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbBusiness_Management_MarketingActionPerformed(evt);
-            }
-        });
 
         rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbEducation_Teaching.setForeground(new java.awt.Color(0, 102, 204));
         rbEducation_Teaching.setText("Education / Teaching");
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbEducation_Teaching.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbEducation_TeachingActionPerformed(evt);
-            }
-        });
 
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbHospitality_Tourism.setForeground(new java.awt.Color(0, 102, 204));
         rbHospitality_Tourism.setText("Hospitality / Tourism");
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbHospitality_Tourism.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbHospitality_TourismActionPerformed(evt);
-            }
-        });
 
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbCriminology.setForeground(new java.awt.Color(0, 102, 204));
         rbCriminology.setText("Criminology");
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbCriminology.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbCriminologyActionPerformed(evt);
-            }
-        });
 
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbEngineering_Architecture_Mechanical.setForeground(new java.awt.Color(0, 102, 204));
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbEngineering_Architecture_Mechanical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbEngineering_Architecture_MechanicalActionPerformed(evt);
-            }
-        });
 
         lblQ2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ2.setForeground(new java.awt.Color(0, 102, 204));
@@ -166,71 +136,41 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         cbMath.setForeground(new java.awt.Color(0, 102, 204));
         cbMath.setText("Math");
         cbMath.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbMath.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbMathActionPerformed(evt);
-            }
-        });
 
         cbResearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbResearch.setForeground(new java.awt.Color(0, 102, 204));
         cbResearch.setText("Research");
         cbResearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbResearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbResearchActionPerformed(evt);
-            }
-        });
 
         cbManagement_Marketing.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbManagement_Marketing.setForeground(new java.awt.Color(0, 102, 204));
         cbManagement_Marketing.setText("Management / Marketing");
         cbManagement_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbManagement_Marketing.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbManagement_MarketingActionPerformed(evt);
-            }
-        });
 
         cbHospitality_FoodServices.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbHospitality_FoodServices.setForeground(new java.awt.Color(0, 102, 204));
         cbHospitality_FoodServices.setText("Hospitality / Food Services");
         cbHospitality_FoodServices.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbHospitality_FoodServices.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbHospitality_FoodServicesActionPerformed(evt);
-            }
-        });
 
         cbPhysics_EngineeringConcepts.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbPhysics_EngineeringConcepts.setForeground(new java.awt.Color(0, 102, 204));
         cbPhysics_EngineeringConcepts.setText("Physics / Engineering Concepts");
         cbPhysics_EngineeringConcepts.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbPhysics_EngineeringConcepts.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbPhysics_EngineeringConceptsActionPerformed(evt);
-            }
-        });
 
         cbEnglish.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbEnglish.setForeground(new java.awt.Color(0, 102, 204));
         cbEnglish.setText("English");
         cbEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbEnglish.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbEnglishActionPerformed(evt);
-            }
-        });
 
         cbSocialScience.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         cbSocialScience.setForeground(new java.awt.Color(0, 102, 204));
         cbSocialScience.setText("Social Science");
         cbSocialScience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbSocialScience.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbSocialScienceActionPerformed(evt);
-            }
-        });
+
+        cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        cbICT_Coding.setForeground(new java.awt.Color(0, 102, 204));
+        cbICT_Coding.setText("ICT / Coding");
+        cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblQ3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ3.setForeground(new java.awt.Color(0, 102, 204));
@@ -238,43 +178,18 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
 
         rbBeginner.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbBeginner.setForeground(new java.awt.Color(0, 102, 204));
-        rbBeginner.setText("Intermediate");
+        rbBeginner.setText("Beginner");
         rbBeginner.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbBeginner.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbBeginnerActionPerformed(evt);
-            }
-        });
 
         rbIntermediate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbIntermediate.setForeground(new java.awt.Color(0, 102, 204));
-        rbIntermediate.setText("Advanced");
+        rbIntermediate.setText("Intermediate");
         rbIntermediate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbIntermediate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbIntermediateActionPerformed(evt);
-            }
-        });
 
         rbAdvanced.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbAdvanced.setForeground(new java.awt.Color(0, 102, 204));
-        rbAdvanced.setText("Beginner");
+        rbAdvanced.setText("Advanced");
         rbAdvanced.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbAdvanced.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbAdvancedActionPerformed(evt);
-            }
-        });
-
-        cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        cbICT_Coding.setForeground(new java.awt.Color(0, 102, 204));
-        cbICT_Coding.setText("ICT / Coding");
-        cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cbICT_Coding.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbICT_CodingActionPerformed(evt);
-            }
-        });
 
         lblQ4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ4.setForeground(new java.awt.Color(0, 102, 204));
@@ -284,31 +199,16 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbLight.setForeground(new java.awt.Color(0, 102, 204));
         rbLight.setText("Light (9-12 units)");
         rbLight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbLight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbLightActionPerformed(evt);
-            }
-        });
 
         rbModerate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbModerate.setForeground(new java.awt.Color(0, 102, 204));
         rbModerate.setText("Moderate (12-18 units)");
         rbModerate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbModerate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbModerateActionPerformed(evt);
-            }
-        });
 
         rbFullLoad.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rbFullLoad.setForeground(new java.awt.Color(0, 102, 204));
         rbFullLoad.setText("Full Load (18-24 units)");
         rbFullLoad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rbFullLoad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbFullLoadActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout QuestionsPanelLayout = new javax.swing.GroupLayout(QuestionsPanel);
         QuestionsPanel.setLayout(QuestionsPanelLayout);
@@ -359,11 +259,11 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                 .addComponent(lblQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
-                .addComponent(rbBeginner)
+                .addComponent(rbIntermediate)
                 .addGap(57, 57, 57)
-                .addComponent(rbIntermediate, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(lblQ4))
@@ -412,9 +312,9 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                 .addComponent(lblQ3)
                 .addGap(15, 15, 15)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbAdvanced)
                     .addComponent(rbBeginner)
-                    .addComponent(rbIntermediate))
+                    .addComponent(rbIntermediate)
+                    .addComponent(rbAdvanced))
                 .addGap(30, 30, 30)
                 .addComponent(lblQ4)
                 .addGap(15, 15, 15)
@@ -495,26 +395,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rbIntermediateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbIntermediateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbIntermediateActionPerformed
-
-    private void cbHospitality_FoodServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHospitality_FoodServicesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbHospitality_FoodServicesActionPerformed
-
-    private void rbModerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbModerateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbModerateActionPerformed
-
-    private void cbResearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbResearchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbResearchActionPerformed
-
-    private void rbLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbLightActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbLightActionPerformed
-
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
        this.dispose();
@@ -524,29 +404,17 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
-    private void rbHospitality_TourismActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbHospitality_TourismActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbHospitality_TourismActionPerformed
+    public static void main(String[] args) {
+        // Sample data for testing
+        String fullName = "Juan Dela Cruz";
+        String studentID = "2025-00123";
+        String email = "juan.delacruz@example.com";
+        String username = "jdelacruz";
 
-    private void rbCriminologyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCriminologyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbCriminologyActionPerformed
-
-    private void rbEngineering_Architecture_MechanicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEngineering_Architecture_MechanicalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbEngineering_Architecture_MechanicalActionPerformed
-
-    private void cbEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEnglishActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbEnglishActionPerformed
-
-    private void cbSocialScienceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSocialScienceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbSocialScienceActionPerformed
-
-    private void cbICT_CodingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbICT_CodingActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbICT_CodingActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            new RecommendationTestFrame(fullName, studentID, email, username).setVisible(true);
+        });
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
