@@ -5,12 +5,23 @@ package Finals;
 import javax.swing.DefaultListModel;
 
 public class ResultsFrame extends javax.swing.JFrame {
+    
+    private String fullName;
+    private String studentID;
+    private String email;
+    private String username;
 
-    public ResultsFrame(String[] recommendedCourses) {
-        initComponents();
-        this.setLocationRelativeTo(null);
-        showRecommendations(recommendedCourses);
-    }
+
+    public ResultsFrame(String fullName, String studentID, String email, String username) {
+    initComponents();
+    this.setLocationRelativeTo(null);
+
+    this.fullName = fullName;
+    this.studentID = studentID;
+    this.email = email;
+    this.username = username;
+}
+
 
     private void showRecommendations(String[] courses) {
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -24,16 +35,16 @@ public class ResultsFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    
+
     public void setRecommendations(java.util.ArrayList<String> courses) {
-    DefaultListModel<String> model = new DefaultListModel<>();
+        DefaultListModel<String> model = new DefaultListModel<>();
 
-    for (String course : courses) {
-        model.addElement(course);
+        for (String course : courses) {
+            model.addElement(course);
+        }
+
+        listRecommendedCourses.setModel(model);
     }
-
-    listRecommendedCourses.setModel(model);
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -179,11 +190,28 @@ public class ResultsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
-        
+        javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
+    fileChooser.setDialogTitle("Save Recommended Courses");
+
+    int userSelection = fileChooser.showSaveDialog(this);
+
+    if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
+        java.io.File fileToSave = fileChooser.getSelectedFile();
+
+        try (java.io.PrintWriter writer = new java.io.PrintWriter(fileToSave)) {
+            for (int i = 0; i < listRecommendedCourses.getModel().getSize(); i++) {
+                writer.println(listRecommendedCourses.getModel().getElementAt(i));
+            }
+            javax.swing.JOptionPane.showMessageDialog(this, "Results saved successfully!");
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error saving results: " + e.getMessage());
+        }
+    }
     }//GEN-LAST:event_btnSaveResultsActionPerformed
 
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
-        
+        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**

@@ -1,6 +1,7 @@
 
 package Finals;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class RecommendationTestFrame extends javax.swing.JFrame {
@@ -389,8 +390,48 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
-        ArrayList<String> recommendations = new ArrayList<>();
         
+        // Q1 – Field of Interest
+    if (!rbTechnology_IT_CS.isSelected() &&
+        !rbBusiness_Management_Marketing.isSelected() &&
+        !rbEducation_Teaching.isSelected() &&
+        !rbHospitality_Tourism.isSelected() &&
+        !rbCriminology.isSelected() &&
+        !rbEngineering_Architecture_Mechanical.isSelected()) {
+
+        JOptionPane.showMessageDialog(this,
+            "Please select your field of interest (Question 1).",
+            "Missing Answer",
+            JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // Q3 – Difficulty
+    if (!rbBeginner.isSelected() &&
+        !rbIntermediate.isSelected() &&
+        !rbAdvanced.isSelected()) {
+
+        JOptionPane.showMessageDialog(this,
+            "Please select your preferred course difficulty (Question 3).",
+            "Missing Answer",
+            JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // Q4 – Credit Load
+    if (!rbLight.isSelected() &&
+        !rbModerate.isSelected() &&
+        !rbFullLoad.isSelected()) {
+
+        JOptionPane.showMessageDialog(this,
+            "Please select your preferred credit load (Question 4).",
+            "Missing Answer",
+            JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+        
+        
+        ArrayList<String> recommendations = new ArrayList<>();
 
     // Field-based recommendation
     if (rbTechnology_IT_CS.isSelected()) {
@@ -441,9 +482,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     resultsFrame.setRecommendations(recommendations);
     resultsFrame.setVisible(true);
     this.dispose();
-
-    
-    
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
     public static void main(String[] args) {
