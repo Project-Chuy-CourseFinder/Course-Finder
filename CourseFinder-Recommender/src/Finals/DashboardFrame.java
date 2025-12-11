@@ -1,18 +1,29 @@
 
 package Finals;
 
-/**
- *
- * @author Dell
- */
 public class DashboardFrame extends javax.swing.JFrame {
+    
+    private final String fullName;
+    private final String studentID;
+    private final String email;
+    private final String username;
 
-    /**
-     * Creates new form DashboardFrame
-     */
-    public DashboardFrame() {
+    public DashboardFrame(String fullName, String studentID, String email, String username) {
+        this.fullName = fullName;
+        this.studentID = studentID;
+        this.email = email;
+        this.username = username;
+
         initComponents();
         this.setLocationRelativeTo(null);
+
+        // Set greeting with real user info
+        lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
+    }
+
+    // Default constructor (optional, for design view)
+    public DashboardFrame() {
+        this("Student Name", "ID0000", "email@example.com", "username");
     }
 
     

@@ -1,34 +1,20 @@
 
 package Finals;
 
-/**
- *
- * @author Dell
- */
 public class ProfileFrame extends javax.swing.JFrame {
 
     // ============================
     // 1. VARIABLES TO HOLD DATA
     // ============================
-    private String fullName;
-    private String studentID;
-    private String email;
-    private String username;
+    private final String fullName;
+    private final String studentID;
+    private final String email;
+    private final String username;
 
     // ============================
-    // 2. DEFAULT CONSTRUCTOR
+    // 2. CONSTRUCTOR WITH USER DATA
     // ============================
-    public ProfileFrame() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
-
-    // ============================================
-    // 3. CONSTRUCTOR THAT ACCEPTS USER INFORMATION
-    // ============================================
     public ProfileFrame(String fullName, String studentID, String email, String username) {
-
-        // store user info
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
@@ -37,12 +23,18 @@ public class ProfileFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
 
-        // display user data
+        // Display user info
         lblFullNameValue.setText(fullName);
         lblStudentIDValue.setText(studentID);
         lblEmailValue.setText(email);
         lblUsernameValue.setText(username);
     }
+
+    // Optional default constructor for design preview
+    public ProfileFrame() {
+        this("Student Name", "ID0000", "email@example.com", "username");
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
