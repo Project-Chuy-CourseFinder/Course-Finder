@@ -7,27 +7,27 @@ import javax.swing.*;
 
 public class LoginFrame extends javax.swing.JFrame {
 
-    public LoginFrame() {
-    initComponents();
-    this.setLocationRelativeTo(null);
+     public LoginFrame() {
+        initComponents();
+        this.setLocationRelativeTo(null);
 
-    // Show Password checkbox styling
-    showpass.setLabel("Show Password");
-    showpass.setForeground(new Color(50, 50, 50));
-    showpass.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-    showpass.setBackground(Color.WHITE);
+        // Show Password checkbox styling
+        showpass.setLabel("Show Password");
+        showpass.setForeground(new Color(50, 50, 50));
+        showpass.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        showpass.setBackground(Color.WHITE);
 
-    jPasswordField1Password.setEchoChar('*');
+        jPasswordField1Password.setEchoChar('*');
 
-    // SHOW/HIDE PASSWORD FUNCTION
-    showpass.addItemListener(e -> {
-        if (showpass.getState()) {
-            jPasswordField1Password.setEchoChar((char) 0); // show
-        } else {
-            jPasswordField1Password.setEchoChar('*'); // hide
-        }
-    });
-}
+        // SHOW/HIDE PASSWORD FUNCTION
+        showpass.addItemListener(e -> {
+            if (showpass.getState()) {
+                jPasswordField1Password.setEchoChar((char) 0); // show
+            } else {
+                jPasswordField1Password.setEchoChar('*'); // hide
+            }
+        });
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -229,35 +229,36 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-    String username = txtUsername.getText().trim();
-    String password = jPasswordField1Password.getText().trim();
+   String username = txtUsername.getText().trim();
+        String password = new String(jPasswordField1Password.getPassword()).trim();
 
-    if (username.isEmpty() || password.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please enter both username and password!");
-        return;
-    }
+        if (username.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter both username and password!");
+            return;
+        }
 
-    if (!UserData.accounts.containsKey(username)) {
-        JOptionPane.showMessageDialog(this, "Account not found!");
-        return;
-    }
+        if (!UserData.accounts.containsKey(username)) {
+            JOptionPane.showMessageDialog(this, "Account not found!");
+            return;
+        }
 
         Account acc = UserData.accounts.get(username);
-    if (acc == null) {
-    JOptionPane.showMessageDialog(this, "Account not found!");
-    return;
-    }
+        if (acc == null) {
+            JOptionPane.showMessageDialog(this, "Account not found!");
+            return;
+        }
 
-    String hashedInput = Utils.md5(password);
-    if (!acc.password.equals(hashedInput)) {
-    JOptionPane.showMessageDialog(this, "Incorrect password!");
-    return;
-    }
+        String hashedInput = Utils.md5(password);
+        if (!acc.password.equals(hashedInput)) {
+            JOptionPane.showMessageDialog(this, "Incorrect password!");
+            return;
+        }
 
-    // SUCCESS LOGIN
-    JOptionPane.showMessageDialog(this, "Login successful!");
-    new DashboardFrame().setVisible(true);
-    this.dispose();
+        // SUCCESS LOGIN
+        JOptionPane.showMessageDialog(this, "Login successful!");
+        // Pass real user info to DashboardFrame
+        new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed

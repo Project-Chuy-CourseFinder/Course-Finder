@@ -6,10 +6,19 @@ import java.util.ArrayList;
 
 
 public class CatalogFrame extends javax.swing.JFrame {
+    private final String fullName;
+    private final String studentID;
+    private final String email;
+    private final String username;
 
     ArrayList<String[]> courseList = new ArrayList<>();
+    
+    public CatalogFrame(String fullName, String studentID, String email, String username) {
+        this.fullName = fullName;
+        this.studentID = studentID;
+        this.email = email;
+        this.username = username;
 
-    public CatalogFrame() {
         initComponents();
         loadCourses();
         displayCourses(courseList);
@@ -44,13 +53,12 @@ public class CatalogFrame extends javax.swing.JFrame {
 }
 
     private void displayCourses(ArrayList<String[]> list) {
-    DefaultTableModel model = (DefaultTableModel) tblCourses.getModel();
-    model.setRowCount(0);
-
-    for (String[] course : list) {
-        model.addRow(course);
+      DefaultTableModel model = (DefaultTableModel) tblCourses.getModel();
+        model.setRowCount(0);
+        for (String[] course : list) {
+            model.addRow(course);
+        }
     }
-}
 
         private ArrayList<String[]> searchCourses(String keyword) {
     ArrayList<String[]> results = new ArrayList<>();
@@ -274,8 +282,8 @@ public class CatalogFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
-        new DashboardFrame().setVisible(true);
-        this.dispose();
+         new DashboardFrame(fullName, studentID, email, username).setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     private void txtSearchCourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchCourseActionPerformed
@@ -289,45 +297,12 @@ public class CatalogFrame extends javax.swing.JFrame {
         displayCourses(courseList); // Show all
         return;
     }
-
+    
     ArrayList<String[]> searchResult = searchCourses(keyword);
     displayCourses(searchResult);
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CatalogFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CatalogFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CatalogFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CatalogFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CatalogFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CoursesPanel;

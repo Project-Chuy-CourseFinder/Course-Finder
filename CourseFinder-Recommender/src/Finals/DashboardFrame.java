@@ -1,21 +1,26 @@
 
 package Finals;
 
-/**
- *
- * @author Dell
- */
 public class DashboardFrame extends javax.swing.JFrame {
+    
+    private final String fullName;
+    private final String studentID;
+    private final String email;
+    private final String username;
 
-    /**
-     * Creates new form DashboardFrame
-     */
-    public DashboardFrame() {
+    public DashboardFrame(String fullName, String studentID, String email, String username) {
+        this.fullName = fullName;
+        this.studentID = studentID;
+        this.email = email;
+        this.username = username;
+
         initComponents();
         this.setLocationRelativeTo(null);
+
+        // Set greeting with real user info
+        lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -198,17 +203,17 @@ public class DashboardFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCourseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseCatalogActionPerformed
-        new CatalogFrame().setVisible(true);
-        this.dispose();
+       new CatalogFrame(fullName, studentID, email, username).setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btnCourseCatalogActionPerformed
 
     private void btnRecommendationTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecommendationTestActionPerformed
-        new RecommendationTestFrame().setVisible(true);
-        this.dispose();
+         new RecommendationTestFrame(fullName, studentID, email, username).setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_btnRecommendationTestActionPerformed
 
     private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
-        new SavedSubjectsFrame().setVisible(true);
+        new SavedSubjectsFrame(fullName, studentID, email, username).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSavedSubjectsActionPerformed
 
@@ -220,8 +225,9 @@ public class DashboardFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> new DashboardFrame().setVisible(true));
+    public static void main(String[] args) {
+        // Example usage:
+        java.awt.EventQueue.invokeLater(() -> new DashboardFrame("John Mark","2025001","john@example.com","johnmark").setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
