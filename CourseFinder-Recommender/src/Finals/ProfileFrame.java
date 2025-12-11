@@ -30,7 +30,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         lblUsernameValue.setText(username);
     }
 
-    // Optional default constructor for design preview
+    
     public ProfileFrame() {
         this("Student Name", "ID0000", "email@example.com", "username");
     }
@@ -225,7 +225,7 @@ public class ProfileFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackToDasboardActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
@@ -256,10 +256,8 @@ public class ProfileFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ProfileFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ProfileFrame().setVisible(true);
         });
     }
 

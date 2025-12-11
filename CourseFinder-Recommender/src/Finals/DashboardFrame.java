@@ -106,7 +106,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                     .addComponent(lblGreeting))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Signout)
-                .addGap(36, 36, 36))
+                .addGap(46, 46, 46))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +124,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(Signout)
-                .addGap(50, 50, 50))
+                .addGap(52, 52, 52))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));

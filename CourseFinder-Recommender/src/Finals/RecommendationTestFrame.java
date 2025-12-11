@@ -1,7 +1,6 @@
 
 package Finals;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class RecommendationTestFrame extends javax.swing.JFrame {
@@ -103,32 +102,26 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ1.setText("1. What field are you most interested in?");
 
         rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbTechnology_IT_CS.setForeground(new java.awt.Color(0, 0, 0));
         rbTechnology_IT_CS.setText("Technology / IT / CS");
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbBusiness_Management_Marketing.setForeground(new java.awt.Color(0, 0, 0));
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbEducation_Teaching.setForeground(new java.awt.Color(0, 0, 0));
         rbEducation_Teaching.setText("Education / Teaching");
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbHospitality_Tourism.setForeground(new java.awt.Color(0, 0, 0));
         rbHospitality_Tourism.setText("Hospitality / Tourism");
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbCriminology.setForeground(new java.awt.Color(0, 0, 0));
         rbCriminology.setText("Criminology");
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbEngineering_Architecture_Mechanical.setForeground(new java.awt.Color(0, 0, 0));
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -137,42 +130,34 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ2.setText("2. Which subjects do you excel at?");
 
         cbMath.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbMath.setForeground(new java.awt.Color(0, 0, 0));
         cbMath.setText("Math");
         cbMath.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbResearch.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbResearch.setForeground(new java.awt.Color(0, 0, 0));
         cbResearch.setText("Research");
         cbResearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbManagement_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbManagement_Marketing.setForeground(new java.awt.Color(0, 0, 0));
         cbManagement_Marketing.setText("Management / Marketing");
         cbManagement_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbHospitality_FoodServices.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbHospitality_FoodServices.setForeground(new java.awt.Color(0, 0, 0));
         cbHospitality_FoodServices.setText("Hospitality / Food Services");
         cbHospitality_FoodServices.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbPhysics_EngineeringConcepts.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbPhysics_EngineeringConcepts.setForeground(new java.awt.Color(0, 0, 0));
         cbPhysics_EngineeringConcepts.setText("Physics / Engineering Concepts");
         cbPhysics_EngineeringConcepts.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbEnglish.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbEnglish.setForeground(new java.awt.Color(0, 0, 0));
         cbEnglish.setText("English");
         cbEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbSocialScience.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbSocialScience.setForeground(new java.awt.Color(0, 0, 0));
         cbSocialScience.setText("Social Science");
         cbSocialScience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cbICT_Coding.setForeground(new java.awt.Color(0, 0, 0));
         cbICT_Coding.setText("ICT / Coding");
         cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -181,17 +166,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ3.setText("3. Preferred course difficulty:");
 
         rbBeginner.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbBeginner.setForeground(new java.awt.Color(0, 0, 0));
         rbBeginner.setText("Beginner");
         rbBeginner.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbIntermediate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbIntermediate.setForeground(new java.awt.Color(0, 0, 0));
         rbIntermediate.setText("Intermediate");
         rbIntermediate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbAdvanced.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbAdvanced.setForeground(new java.awt.Color(0, 0, 0));
         rbAdvanced.setText("Advanced");
         rbAdvanced.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -200,17 +182,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ4.setText("4. Preferred credit load per semester:");
 
         rbLight.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbLight.setForeground(new java.awt.Color(0, 0, 0));
         rbLight.setText("Light (9-12 units)");
         rbLight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbModerate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbModerate.setForeground(new java.awt.Color(0, 0, 0));
         rbModerate.setText("Moderate (12-18 units)");
         rbModerate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbFullLoad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        rbFullLoad.setForeground(new java.awt.Color(0, 0, 0));
         rbFullLoad.setText("Full Load (18-24 units)");
         rbFullLoad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -337,7 +316,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         ButtonPanel.setPreferredSize(new java.awt.Dimension(900, 123));
 
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(0, 0, 0));
         btnBack.setText("BACK");
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
