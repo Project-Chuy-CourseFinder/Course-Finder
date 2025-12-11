@@ -1,6 +1,7 @@
 
 package Finals;
 
+
 import javax.swing.DefaultListModel;
 
 public class ResultsFrame extends javax.swing.JFrame {
@@ -23,6 +24,16 @@ public class ResultsFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+    
+    public void setRecommendations(java.util.ArrayList<String> courses) {
+    DefaultListModel<String> model = new DefaultListModel<>();
+
+    for (String course : courses) {
+        model.addElement(course);
+    }
+
+    listRecommendedCourses.setModel(model);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,11 +93,8 @@ public class ResultsFrame extends javax.swing.JFrame {
         ListPanel.setPreferredSize(new java.awt.Dimension(900, 400));
         ListPanel.setVerifyInputWhenFocusTarget(false);
 
-        listRecommendedCourses.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        listRecommendedCourses.setModel(new javax.swing.DefaultListModel<>()
+        );
         scrollPaneResults.setViewportView(listRecommendedCourses);
 
         javax.swing.GroupLayout ListPanelLayout = new javax.swing.GroupLayout(ListPanel);
@@ -171,11 +179,11 @@ public class ResultsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnSaveResultsActionPerformed
 
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**

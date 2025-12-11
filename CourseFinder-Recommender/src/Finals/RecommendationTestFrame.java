@@ -412,6 +412,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
         ArrayList<String> recommendations = new ArrayList<>();
+        
 
     // Field-based recommendation
     if (rbTechnology_IT_CS.isSelected()) {
@@ -455,13 +456,16 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
         recommendations.add("BSBA110 - Marketing Management");
     }
+    
+    
 
-    // Convert ArrayList to array
-    String[] resultArray = recommendations.toArray(new String[0]);
+    ResultsFrame resultsFrame = new ResultsFrame();
+    resultsFrame.setRecommendations(recommendations);
+    resultsFrame.setVisible(true);
+    this.dispose();
 
-    // Open ResultsFrame
-    new ResultsFrame(resultArray).setVisible(true);
-    this.dispose(); // optional: close current frame
+    
+    
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
     public static void main(String[] args) {
