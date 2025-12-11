@@ -1,54 +1,52 @@
 
 package Finals;
 
+import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
 public class DashboardFrame extends javax.swing.JFrame {
-    
+
     private final String fullName;
     private final String studentID;
     private final String email;
     private final String username;
-    // added as class variable
-    
-   public DashboardFrame(String fullName, String studentID, String email, String username) {
-    this.fullName = fullName;
-    this.studentID = studentID;
-    this.email = email;
-    this.username = username;
 
-    initComponents();
-    this.setLocationRelativeTo(null);
+    public DashboardFrame(String fullName, String studentID, String email, String username) {
+        this.fullName = fullName;
+        this.studentID = studentID;
+        this.email = email;
+        this.username = username;
 
-       lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
-    lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
+        initComponents();
+        this.setLocationRelativeTo(null);
 
-  
-    String mainFont = "Segoe UI Light";
-    String subTextSize = "14px"; // moderate size
+        lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
+        lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
 
-    btnCourseCatalog.setText("<html><center>COURSE CATALOG<br>"
-            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#007BFF;'>Explore Saved →</small></center></html>");
+        String mainFont = "Segoe UI Light";
+        String subTextSize = "14px";
 
-    btnRecommendationTest.setText("<html><center>RECOMMENDATION TEST<br>"
-            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#28A745;'>Start Assessment →</small></center></html>");
+        btnCourseCatalog.setText("<html><center>COURSE CATALOG<br>"
+                + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#007BFF;'>Explore Saved →</small></center></html>");
 
-    btnSavedSubjects.setText("<html><center>SAVED SUBJECTS<br>"
-            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#6F42C1;'>View Saved →</small></center></html>");
+        btnRecommendationTest.setText("<html><center>RECOMMENDATION TEST<br>"
+                + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#28A745;'>Start Assessment →</small></center></html>");
 
-    btnProfile.setText("<html><center>MY PROFILE<br>"
-            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#FD7E14;'>View Profile →</small></center></html>");
+        btnSavedSubjects.setText("<html><center>SAVED SUBJECTS<br>"
+                + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#6F42C1;'>View Saved →</small></center></html>");
 
-   
-    jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 30)); 
-    jLabel2.setForeground(new Color(51, 51, 51));
-    jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
-    jLabel2.setText("<html><center>"
-            + "<font size='10'><b>Welcome to Your Learning PATH</b></font><br>"
-            + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
-            + "</center></html>");
-}
+        btnProfile.setText("<html><center>MY PROFILE<br>"
+                + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#FD7E14;'>View Profile →</small></center></html>");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 30));
+        jLabel2.setForeground(new Color(51, 51, 51));
+        jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel2.setText("<html><center>"
+                + "<font size='10'><b>Welcome to Your Learning PATH</b></font><br>"
+                + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
+                + "</center></html>");
+    }
 
 
     @SuppressWarnings("unchecked")
@@ -267,16 +265,18 @@ public class DashboardFrame extends javax.swing.JFrame {
 
     private void btnCourseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseCatalogActionPerformed
        new CatalogFrame(fullName, studentID, email, username).setVisible(true);
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_btnCourseCatalogActionPerformed
 
     private void btnRecommendationTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecommendationTestActionPerformed
          new RecommendationTestFrame(fullName, studentID, email, username).setVisible(true);
-         this.dispose();
+        this.dispose();
     }//GEN-LAST:event_btnRecommendationTestActionPerformed
 
     private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
-        new SavedSubjectsFrame(fullName, studentID, email, username).setVisible(true);
+        // Here we can pass an empty ArrayList or a real list from saved results
+        ArrayList<String> savedCourses = new ArrayList<>();
+        new SavedSubjectsFrame(fullName, studentID, email, username, savedCourses).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSavedSubjectsActionPerformed
 
@@ -286,10 +286,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProfileActionPerformed
 
     private void SignoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignoutActionPerformed
-
-    this.dispose();
-    
-    new LoginFrame().setVisible(true);
+        this.dispose();
+        new LoginFrame().setVisible(true);
     }//GEN-LAST:event_SignoutActionPerformed
 
     /**

@@ -1,6 +1,9 @@
 
 package Finals;
 
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 public class SavedSubjectsFrame extends javax.swing.JFrame {
 
     private final String fullName;
@@ -9,9 +12,16 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     private final String username;
 
     /**
-     * Constructor with user info
+     * Constructor with user info only
      */
     public SavedSubjectsFrame(String fullName, String studentID, String email, String username) {
+        this(fullName, studentID, email, username, new ArrayList<>()); // call main constructor with empty list
+    }
+
+    /**
+     * Constructor with user info + saved courses
+     */
+    public SavedSubjectsFrame(String fullName, String studentID, String email, String username, ArrayList<String> savedCourses) {
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
@@ -19,7 +29,34 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
         initComponents();
         this.setLocationRelativeTo(null);
+
+        populateTable(savedCourses);
     }
+
+    /**
+     * Populates the JTable with saved courses
+     */
+    private void populateTable(ArrayList<String> courses) {
+        DefaultTableModel model = (DefaultTableModel) tblSavedSubjects.getModel();
+        model.setRowCount(0); // clear existing rows
+
+        int colCount = model.getColumnCount();
+        int rowCount = (int) Math.ceil((double) courses.size() / colCount);
+
+        for (int i = 0; i < rowCount; i++) {
+            Object[] row = new Object[colCount];
+            for (int j = 0; j < colCount; j++) {
+                int index = i * colCount + j;
+                if (index < courses.size()) {
+                    row[j] = courses.get(index);
+                } else {
+                    row[j] = "";
+                }
+            }
+            model.addRow(row);
+        }
+    }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -50,23 +87,23 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(12, 12, 12)
+                .addComponent(lblLogo)
+                .addGap(18, 18, 18)
                 .addComponent(lblTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(345, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
                 .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HeaderPanelLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(lblLogo))
-                    .addGroup(HeaderPanelLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(lblTitle)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addComponent(lblTitle))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLogo)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         SavedPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -160,10 +197,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> {
-            // Example usage:
-            new SavedSubjectsFrame("John Mark","2025001","john@example.com","johnmark").setVisible(true);
-        });
+        java.awt.EventQueue.invokeLater(() -> new SavedSubjectsFrame("John Mark","2025001","john@example.com","johnmark", new ArrayList<>()).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

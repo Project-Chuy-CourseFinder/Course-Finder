@@ -3,6 +3,8 @@ package Finals;
 
 
 import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
 
 public class ResultsFrame extends javax.swing.JFrame {
     
@@ -11,6 +13,7 @@ public class ResultsFrame extends javax.swing.JFrame {
     private String email;
     private String username;
 
+    private ArrayList<String> savedCourses = new ArrayList<>();
 
     public ResultsFrame(String fullName, String studentID, String email, String username) {
     initComponents();
@@ -209,6 +212,19 @@ public class ResultsFrame extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_btnSaveResultsActionPerformed
 
+    private void saveResultsAction() {
+        savedCourses.clear();
+        for (int i = 0; i < listRecommendedCourses.getModel().getSize(); i++) {
+            savedCourses.add(listRecommendedCourses.getModel().getElementAt(i));
+        }
+
+        // Open SavedSubjectsFrame and pass savedCourses
+        SavedSubjectsFrame savedFrame = new SavedSubjectsFrame(fullName, studentID, email, username, savedCourses);
+        savedFrame.setVisible(true);
+        this.dispose();
+    }
+    
+    
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
         new DashboardFrame(fullName, studentID, email, username).setVisible(true);
         this.dispose();
@@ -218,35 +234,7 @@ public class ResultsFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ResultsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ResultsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ResultsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ResultsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ResultsFrame().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new ResultsFrame("John Mark","2025001","john@example.com","johnmark").setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
