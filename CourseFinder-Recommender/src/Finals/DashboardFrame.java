@@ -38,7 +38,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
 
-        lblGreeting.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblGreeting.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblGreeting.setForeground(new java.awt.Color(255, 255, 255));
         lblGreeting.setText("Hello, <StudentName> (ID: <StudentID>)");
 
@@ -51,9 +51,9 @@ public class DashboardFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(lblGreeting)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,7 +63,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(jLabel1))
                     .addGroup(HeaderPanelLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addGap(56, 56, 56)
                         .addComponent(lblGreeting)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -162,7 +162,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addComponent(lbl2Tips)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addComponent(lblTips)
                 .addGap(154, 154, 154))
         );

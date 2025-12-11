@@ -41,11 +41,11 @@ public class CatalogFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
-        HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
+        HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 110));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setText("Course Catalog");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -55,33 +55,35 @@ public class CatalogFrame extends javax.swing.JFrame {
         HeaderPanelLayout.setHorizontalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(9, 9, 9)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderPanelLayout.createSequentialGroup()
                 .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HeaderPanelLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(lblLogo))
-                    .addGroup(HeaderPanelLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(lblTitle)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addComponent(lblTitle))
+                    .addGroup(HeaderPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLogo)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         SearchPanel.setBackground(new java.awt.Color(255, 255, 255));
         SearchPanel.setPreferredSize(new java.awt.Dimension(900, 140));
 
         lblSearchCourse.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblSearchCourse.setForeground(new java.awt.Color(0, 0, 0));
+        lblSearchCourse.setForeground(new java.awt.Color(0, 102, 204));
         lblSearchCourse.setText("Search Course:");
 
+        btnSearch.setBackground(new java.awt.Color(0, 102, 204));
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
 
         javax.swing.GroupLayout SearchPanelLayout = new javax.swing.GroupLayout(SearchPanel);
@@ -144,6 +146,7 @@ public class CatalogFrame extends javax.swing.JFrame {
         FooterPanel.setPreferredSize(new java.awt.Dimension(900, 100));
 
         btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBackToDashboard.setForeground(new java.awt.Color(0, 102, 255));
         btnBackToDashboard.setText("BACK TO DASHBOARD");
         btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
