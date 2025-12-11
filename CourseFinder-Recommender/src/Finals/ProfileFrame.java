@@ -220,8 +220,8 @@ public class ProfileFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackToDasboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDasboardActionPerformed
-        new DashboardFrame().setVisible(true);
-        this.dispose();
+        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_btnBackToDasboardActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
