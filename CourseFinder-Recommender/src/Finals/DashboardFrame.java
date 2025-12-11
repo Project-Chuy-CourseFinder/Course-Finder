@@ -20,21 +20,22 @@ public class DashboardFrame extends javax.swing.JFrame {
         // Set greeting with real user info
         lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
         lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
-     
-        String subTextColor = "#333333"; // dark grey
-        String subTextSize = "14px";      // moderate size
+
+    // BUTTONS WITH SUBTEXT, COLORS & ARROWS
+    String mainFont = "Segoe UI Light";
+    String subTextSize = "14px"; // moderate size
 
     btnCourseCatalog.setText("<html><center>COURSE CATALOG<br>"
-            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>Browse available subjects and details</small></center></html>");
+            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#007BFF;'>Explore Saved →</small></center></html>");
 
     btnRecommendationTest.setText("<html><center>RECOMMENDATION TEST<br>"
-            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>Generate personalized courses</small></center></html>");
+            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#28A745;'>Start Assessment →</small></center></html>");
 
     btnSavedSubjects.setText("<html><center>SAVED SUBJECTS<br>"
-            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>View saved courses</small></center></html>");
+            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#6F42C1;'>View Saved →</small></center></html>");
 
     btnProfile.setText("<html><center>MY PROFILE<br>"
-            + "<small style='font-family:Segoe UI Light; font-size:" + subTextSize + "; color:" + subTextColor + ";'>View or edit your info</small></center></html>");
+            + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#FD7E14;'>View Profile →</small></center></html>");
 }
 
     @SuppressWarnings("unchecked")
@@ -91,7 +92,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnCourseCatalog.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnCourseCatalog.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnCourseCatalog.setForeground(new java.awt.Color(0, 102, 204));
         btnCourseCatalog.setText("Course Catalog");
         btnCourseCatalog.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -102,7 +103,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        btnRecommendationTest.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnRecommendationTest.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnRecommendationTest.setForeground(new java.awt.Color(0, 102, 204));
         btnRecommendationTest.setText("Recommendation Test");
         btnRecommendationTest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -113,7 +114,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        btnSavedSubjects.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnSavedSubjects.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnSavedSubjects.setForeground(new java.awt.Color(0, 102, 204));
         btnSavedSubjects.setText("Saved Subjects");
         btnSavedSubjects.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -124,7 +125,7 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        btnProfile.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnProfile.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnProfile.setForeground(new java.awt.Color(0, 102, 204));
         btnProfile.setText("My Profile");
         btnProfile.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
