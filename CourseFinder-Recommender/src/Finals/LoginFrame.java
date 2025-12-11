@@ -13,9 +13,9 @@ public class LoginFrame extends javax.swing.JFrame {
 
     // Show Password checkbox styling
     showpass.setLabel("Show Password");
-    showpass.setForeground(new Color(30, 30, 30));
+    showpass.setForeground(new Color(255, 255, 255));
     showpass.setFont(new Font("Segoe UI", Font.PLAIN, 12));
-    showpass.setBackground(Color.WHITE);
+    showpass.setBackground(Color.BLACK);
 
     jPasswordField1Password.setEchoChar('*');
 
@@ -47,10 +47,11 @@ public class LoginFrame extends javax.swing.JFrame {
         btnSignIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(800, 580));
 
-        HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
+        HeaderPanel.setBackground(new java.awt.Color(0, 0, 0));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(800, 140));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -92,11 +93,11 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addGap(229, 229, 229))
         );
 
-        FormPanel.setBackground(new java.awt.Color(255, 255, 255));
+        FormPanel.setBackground(new java.awt.Color(0, 0, 0));
         FormPanel.setPreferredSize(new java.awt.Dimension(800, 330));
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(0, 102, 204));
+        lblUsername.setForeground(new java.awt.Color(255, 255, 255));
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -104,7 +105,7 @@ public class LoginFrame extends javax.swing.JFrame {
         txtUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(0, 102, 204));
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
         lblPassword.setText("Password:");
 
         jPasswordField1Password.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -116,6 +117,7 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
+        showpass.setForeground(new java.awt.Color(255, 255, 255));
         showpass.setLabel("checkbox1");
 
         javax.swing.GroupLayout FormPanelLayout = new javax.swing.GroupLayout(FormPanel);
@@ -149,7 +151,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
-        ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(800, 70));
 
         btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -199,14 +201,12 @@ public class LoginFrame extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(469, 469, 469)
-                .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(FormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
