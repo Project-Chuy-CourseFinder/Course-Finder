@@ -17,3 +17,26 @@ BSBA110 - Marketing Management
 CRIM101 - Introduction to Criminology
 CRIM205 - Forensic Photography
 -----------------------------------
+BSBA101 - Principles of Management
+BSBA110 - Marketing Management
+-----------------------------------
+BSHM101 - Front Office Procedures
+BSHM201 - Food & Beverage Services
+-----------------------------------
+-----------------------------------
+BSBA101 - Principles of Management
+BSBA110 - Marketing Management
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
+CRIM101 - Introduction to Criminology
+CRIM205 - Forensic Photography
+-----------------------------------
+BSEd101 - Foundations of Education
+BSEd201 - Child & Adolescent Development
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
+-----------------------------------

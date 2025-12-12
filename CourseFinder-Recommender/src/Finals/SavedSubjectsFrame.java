@@ -6,22 +6,31 @@ import javax.swing.table.DefaultTableModel;
 
 public class SavedSubjectsFrame extends javax.swing.JFrame {
 
-    private final String fullName;
+     private final String fullName;
     private final String studentID;
     private final String email;
     private final String username;
 
-    /**
-     * Constructor with user info only
-     */
-    public SavedSubjectsFrame(String fullName, String studentID, String email, String username) {
-        this(fullName, studentID, email, username, new ArrayList<>()); // call main constructor with empty list
+    // =============================
+    // Default constructor uses CurrentUser
+    // =============================
+    public SavedSubjectsFrame() {
+        this.fullName = CurrentUser.fullName;
+        this.studentID = CurrentUser.studentID;
+        this.email = CurrentUser.email;
+        this.username = CurrentUser.username;
+
+        initComponents();
+        this.setLocationRelativeTo(null);
+
+        tblSavedSubjects.setModel(new DefaultTableModel(new Object[]{"Course"}, 0));
+        populateTable(CurrentUser.savedCourses);
     }
 
-    /**
-     * Constructor with user info + saved courses
-     */
-    public SavedSubjectsFrame(String fullName, String studentID, String email, String username, ArrayList<String> savedCourses) {
+    // =============================
+    // Constructor with parameters
+    // =============================
+    public SavedSubjectsFrame(String fullName, String studentID, String email, String username, ArrayList<String> courses) {
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
@@ -30,33 +39,27 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
 
-        populateTable(savedCourses);
+        tblSavedSubjects.setModel(new DefaultTableModel(new Object[]{"Course"}, 0));
+        populateTable(courses);
     }
 
-    /**
-     * Populates the JTable with saved courses
-     */
+    // =============================
+    // Populate JTable from a list
+    // =============================
     private void populateTable(ArrayList<String> courses) {
         DefaultTableModel model = (DefaultTableModel) tblSavedSubjects.getModel();
         model.setRowCount(0); // clear existing rows
 
-        int colCount = model.getColumnCount();
-        int rowCount = (int) Math.ceil((double) courses.size() / colCount);
+        if (courses == null || courses.isEmpty()) {
+            model.addRow(new Object[]{"No saved courses"});
+            return;
+        }
 
-        for (int i = 0; i < rowCount; i++) {
-            Object[] row = new Object[colCount];
-            for (int j = 0; j < colCount; j++) {
-                int index = i * colCount + j;
-                if (index < courses.size()) {
-                    row[j] = courses.get(index);
-                } else {
-                    row[j] = "";
-                }
-            }
-            model.addRow(row);
+        for (String course : courses) {
+            model.addRow(new Object[]{course});
         }
     }
-
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -192,14 +195,15 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
+                                               
+    DashboardFrame dashboard = new DashboardFrame(fullName, studentID, email, username);
+        dashboard.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnReturnActionPerformed
 
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> new SavedSubjectsFrame("John Mark","2025001","john@example.com","johnmark", new ArrayList<>()).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new SavedSubjectsFrame().setVisible(true));
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;

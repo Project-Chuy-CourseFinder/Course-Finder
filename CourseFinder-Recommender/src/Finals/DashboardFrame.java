@@ -1,12 +1,8 @@
 
 package Finals;
 
-import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.SwingConstants;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class DashboardFrame extends javax.swing.JFrame {
 
@@ -27,7 +23,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         this.email = email;
         this.username = username;
 
-        initComponents();
+        initComponents();         
         this.setLocationRelativeTo(null);
 
         // Set greeting label
@@ -58,22 +54,11 @@ public class DashboardFrame extends javax.swing.JFrame {
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
     }
-
     // =========================
     // Load saved subjects from file
     // =========================
-    private ArrayList<String> loadSavedSubjects() {
-        ArrayList<String> subjects = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("saved_courses.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                if (!line.trim().isEmpty()) subjects.add(line);
-            }
-        } catch (IOException e) {
-            System.out.println("No saved courses found yet.");
-        }
-        return subjects;
-    }
+
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -299,9 +284,14 @@ public class DashboardFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRecommendationTestActionPerformed
 
     private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
-        ArrayList<String> saved = loadSavedSubjects();
-        new SavedSubjectsFrame(fullName, studentID, email, username, saved).setVisible(true);
-        this.dispose();
+        new SavedSubjectsFrame(
+        fullName, 
+        studentID, 
+        email, 
+        username, 
+        CurrentUser.savedCourses
+    ).setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_btnSavedSubjectsActionPerformed
 
     private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
@@ -338,4 +328,5 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblGreeting;
     private javax.swing.JLabel lblTips;
     // End of variables declaration//GEN-END:variables
+
 }
