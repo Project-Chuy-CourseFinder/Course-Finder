@@ -10,11 +10,17 @@ import java.io.IOException;
 
 public class DashboardFrame extends javax.swing.JFrame {
 
+   // =========================
+    // User info variables
+    // =========================
     private final String fullName;
     private final String studentID;
     private final String email;
     private final String username;
 
+    // =========================
+    // Constructor
+    // =========================
     public DashboardFrame(String fullName, String studentID, String email, String username) {
         this.fullName = fullName;
         this.studentID = studentID;
@@ -24,9 +30,11 @@ public class DashboardFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
 
+        // Set greeting label
         lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
         lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
 
+        // Buttons styling with subtext
         String mainFont = "Segoe UI Light";
         String subTextSize = "14px";
 
@@ -50,25 +58,22 @@ public class DashboardFrame extends javax.swing.JFrame {
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
     }
-    
+
+    // =========================
+    // Load saved subjects from file
+    // =========================
     private ArrayList<String> loadSavedSubjects() {
         ArrayList<String> subjects = new ArrayList<>();
-
         try (BufferedReader br = new BufferedReader(new FileReader("saved_courses.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
-                if (!line.trim().isEmpty()) {
-                    subjects.add(line);
-                }
+                if (!line.trim().isEmpty()) subjects.add(line);
             }
         } catch (IOException e) {
             System.out.println("No saved courses found yet.");
         }
-
         return subjects;
     }
-
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

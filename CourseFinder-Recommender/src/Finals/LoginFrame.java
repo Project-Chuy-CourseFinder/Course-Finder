@@ -255,10 +255,15 @@ public class LoginFrame extends javax.swing.JFrame {
         }
 
         // SUCCESS LOGIN
-        JOptionPane.showMessageDialog(this, "Login successful!");
-        // Pass real user info to DashboardFrame
-        new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
-        this.dispose();
+     JOptionPane.showMessageDialog(this, "Login successful!");
+
+        // Save current user info
+      CurrentUser.setUser(acc.fullName, acc.studentID, acc.email, username);
+
+         // Open dashboard
+     new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
+     this.dispose();
+
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed

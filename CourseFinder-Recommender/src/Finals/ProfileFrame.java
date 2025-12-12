@@ -3,36 +3,15 @@ package Finals;
 
 public class ProfileFrame extends javax.swing.JFrame {
 
-    // ============================
-    // 1. VARIABLES TO HOLD DATA
-    // ============================
-    private final String fullName;
-    private final String studentID;
-    private final String email;
-    private final String username;
-
-    // ============================
-    // 2. CONSTRUCTOR WITH USER DATA
-    // ============================
-    public ProfileFrame(String fullName, String studentID, String email, String username) {
-        this.fullName = fullName;
-        this.studentID = studentID;
-        this.email = email;
-        this.username = username;
-
+    public ProfileFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
 
-        // Display user info
-        lblFullNameValue.setText(fullName);
-        lblStudentIDValue.setText(studentID);
-        lblEmailValue.setText(email);
-        lblUsernameValue.setText(username);
-    }
-
-    
-    public ProfileFrame() {
-        this("Student Name", "ID0000", "email@example.com", "username");
+        // Automatically detect logged-in user
+        lblFullNameValue.setText(CurrentUser.fullName);
+        lblStudentIDValue.setText(CurrentUser.studentID);
+        lblEmailValue.setText(CurrentUser.email);
+        lblUsernameValue.setText(CurrentUser.username);
     }
 
     @SuppressWarnings("unchecked")
@@ -220,7 +199,13 @@ public class ProfileFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackToDasboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDasboardActionPerformed
-        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
+         new DashboardFrame(
+        CurrentUser.fullName,
+        CurrentUser.studentID,
+        CurrentUser.email,
+        CurrentUser.username
+    ).setVisible(true);
+
     this.dispose();
     }//GEN-LAST:event_btnBackToDasboardActionPerformed
 
