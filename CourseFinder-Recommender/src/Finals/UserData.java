@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.LinkedHashMap;
 
 public class UserData {
-    private static final String FILE_PATH = "C:\\Users\\Dell\\OneDrive\\Documents\\IT20-Project\\Course-Finder\\CourseFinder-Recommender\\src\\Data";
+   private static final String FILE_PATH = "C:\\CourseFinder\\CourseFinder-Recommender\\src\\Data\\accounts.txt";
 
     // Key = username, Value = Account object
     public static LinkedHashMap<String, Account> accounts = loadAccounts();

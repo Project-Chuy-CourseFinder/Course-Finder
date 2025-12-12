@@ -40,3 +40,9 @@ ARCH101 - Introduction to Architecture
 MECH101 - Mechanical Engineering Basics
 -----------------------------------
 -----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------

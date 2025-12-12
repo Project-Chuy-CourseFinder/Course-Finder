@@ -6,8 +6,8 @@ import java.awt.Font;
 import javax.swing.*;
 
 public class LoginFrame extends javax.swing.JFrame {
-
-     public LoginFrame() {
+    
+    public LoginFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
 
