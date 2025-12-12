@@ -1,0 +1,16 @@
+BSIT101 - Introduction to Computing
+BSIT102 - Computer Programming 1
+BSIT201 - Data Structures & Algorithms
+BSIT202 - Database Management Systems
+BSIT301 - Object-Oriented Programming
+BSIT302 - Web Development
+BSCS101 - Discrete Mathematics
+BSCS205 - Computer Architecture
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+BSIT102 - Computer Programming 1
+-----------------------------------
+BSBA101 - Principles of Management
+BSBA110 - Marketing Management
+-----------------------------------
