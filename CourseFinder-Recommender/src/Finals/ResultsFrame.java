@@ -3,7 +3,7 @@ package Finals;
 
 
 import javax.swing.DefaultListModel;
-import javax.swing.table.DefaultTableModel;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ResultsFrame extends javax.swing.JFrame {
@@ -26,20 +26,13 @@ public class ResultsFrame extends javax.swing.JFrame {
 }
 
 
-    private void showRecommendations(String[] courses) {
-        DefaultListModel<String> model = new DefaultListModel<>();
-        for (String course : courses) {
-            model.addElement(course);
-        }
-        listRecommendedCourses.setModel(model);
-    }
-    
     public ResultsFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-    public void setRecommendations(java.util.ArrayList<String> courses) {
+    // Set recommended courses passed from RecommendationTestFrame
+    public void setRecommendations(ArrayList<String> courses) {
         DefaultListModel<String> model = new DefaultListModel<>();
 
         for (String course : courses) {
@@ -47,6 +40,55 @@ public class ResultsFrame extends javax.swing.JFrame {
         }
 
         listRecommendedCourses.setModel(model);
+    }
+
+    // ============================================================
+    //                SAVE TO TXT FUNCTION
+    // ============================================================
+    private void saveToTxt() {
+        try {
+            File file = new File("src/Finals/saved_courses.txt");
+
+            PrintWriter writer = new PrintWriter(new FileWriter(file, true)); // append = true
+
+            for (int i = 0; i < listRecommendedCourses.getModel().getSize(); i++) {
+                String course = listRecommendedCourses.getModel().getElementAt(i);
+                writer.println(course);
+            }
+
+            writer.println("-----------------------------------");
+            writer.close();
+
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error saving to file: " + e.getMessage());
+        }
+    }
+
+    // ============================================================
+    //           LOAD TXT RESULTS INTO ARRAY LIST
+    // ============================================================
+    private ArrayList<String> loadSavedResultsFromTxt() {
+        ArrayList<String> list = new ArrayList<>();
+
+        try {
+            File file = new File("src/Finals/saved_courses.txt");
+            if (!file.exists()) return list;
+
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                if (!line.trim().equals("-----------------------------------"))
+                    list.add(line);
+            }
+
+            br.close();
+
+        } catch (Exception e) {
+            System.out.println("Error reading saved subjects: " + e.getMessage());
+        }
+
+        return list;
     }
 
     /**
@@ -193,36 +235,14 @@ public class ResultsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
-        javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
-    fileChooser.setDialogTitle("Save Recommended Courses");
+        saveToTxt(); // Save to TXT
+        ArrayList<String> loaded = loadSavedResultsFromTxt();
 
-    int userSelection = fileChooser.showSaveDialog(this);
-
-    if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
-        java.io.File fileToSave = fileChooser.getSelectedFile();
-
-        try (java.io.PrintWriter writer = new java.io.PrintWriter(fileToSave)) {
-            for (int i = 0; i < listRecommendedCourses.getModel().getSize(); i++) {
-                writer.println(listRecommendedCourses.getModel().getElementAt(i));
-            }
-            javax.swing.JOptionPane.showMessageDialog(this, "Results saved successfully!");
-        } catch (Exception e) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Error saving results: " + e.getMessage());
-        }
-    }
-    }//GEN-LAST:event_btnSaveResultsActionPerformed
-
-    private void saveResultsAction() {
-        savedCourses.clear();
-        for (int i = 0; i < listRecommendedCourses.getModel().getSize(); i++) {
-            savedCourses.add(listRecommendedCourses.getModel().getElementAt(i));
-        }
-
-        // Open SavedSubjectsFrame and pass savedCourses
-        SavedSubjectsFrame savedFrame = new SavedSubjectsFrame(fullName, studentID, email, username, savedCourses);
+        SavedSubjectsFrame savedFrame = new SavedSubjectsFrame(fullName, studentID, email, username, loaded);
         savedFrame.setVisible(true);
         this.dispose();
-    }
+    }//GEN-LAST:event_btnSaveResultsActionPerformed
+
     
     
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
@@ -234,7 +254,8 @@ public class ResultsFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> new ResultsFrame("John Mark","2025001","john@example.com","johnmark").setVisible(true));
+        java.awt.EventQueue.invokeLater(() ->
+                new ResultsFrame("John Mark", "2025001", "john@example.com", "johnmark").setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
