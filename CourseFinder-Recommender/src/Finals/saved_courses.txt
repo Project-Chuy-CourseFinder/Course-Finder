@@ -14,3 +14,6 @@ BSIT102 - Computer Programming 1
 BSBA101 - Principles of Management
 BSBA110 - Marketing Management
 -----------------------------------
+CRIM101 - Introduction to Criminology
+CRIM205 - Forensic Photography
+-----------------------------------
