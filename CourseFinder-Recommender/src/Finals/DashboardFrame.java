@@ -4,6 +4,9 @@ package Finals;
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class DashboardFrame extends javax.swing.JFrame {
 
@@ -46,6 +49,23 @@ public class DashboardFrame extends javax.swing.JFrame {
                 + "<font size='10'><b>Welcome to Your Learning PATH</b></font><br>"
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
+    }
+    
+    private ArrayList<String> loadSavedSubjects() {
+        ArrayList<String> subjects = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("saved_courses.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (!line.trim().isEmpty()) {
+                    subjects.add(line);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("No saved courses found yet.");
+        }
+
+        return subjects;
     }
 
 
@@ -274,9 +294,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRecommendationTestActionPerformed
 
     private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
-        // Here we can pass an empty ArrayList or a real list from saved results
-        ArrayList<String> savedCourses = new ArrayList<>();
-        new SavedSubjectsFrame(fullName, studentID, email, username, savedCourses).setVisible(true);
+        ArrayList<String> saved = loadSavedSubjects();
+        new SavedSubjectsFrame(fullName, studentID, email, username, saved).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSavedSubjectsActionPerformed
 
