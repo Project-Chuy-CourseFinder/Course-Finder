@@ -59,7 +59,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         btnGenerateRecommendation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 850));
+        setPreferredSize(new java.awt.Dimension(920, 850));
         setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
@@ -111,7 +111,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbBusiness_Management_Marketing.setBackground(new java.awt.Color(255, 255, 255));
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
-        rbBusiness_Management_Marketing.setBorderPainted(true);
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEducation_Teaching.setBackground(new java.awt.Color(255, 255, 255));
@@ -404,16 +403,16 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                 .addComponent(btnBack)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGenerateRecommendation)
-                .addGap(100, 100, 100))
+                .addGap(96, 96, 96))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
+                .addGap(0, 24, Short.MAX_VALUE)
                 .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerateRecommendation)
                     .addComponent(btnBack))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
