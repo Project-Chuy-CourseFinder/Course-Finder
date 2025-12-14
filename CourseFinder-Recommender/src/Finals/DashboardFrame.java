@@ -28,7 +28,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         // Set greeting label
         lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
-        lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
+        lblTips.setText("<html><center>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</center></html>");
 
         // Buttons styling with subtext
         String mainFont = "Segoe UI Light";
@@ -271,6 +271,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCourseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseCatalogActionPerformed
