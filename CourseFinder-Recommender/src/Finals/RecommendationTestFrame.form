@@ -125,80 +125,66 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="rbEducation_Teaching" min="-2" pref="340" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="rbEngineering_Architecture_Mechanical" min="-2" pref="370" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="lblQ1" alignment="0" min="-2" pref="360" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="rbEducation_Teaching" min="-2" pref="340" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="rbEngineering_Architecture_Mechanical" min="-2" pref="370" max="-2" attributes="0"/>
+                              <Component id="rbTechnology_IT_CS" alignment="1" min="-2" pref="340" max="-2" attributes="0"/>
+                              <Component id="rbBusiness_Management_Marketing" min="-2" pref="340" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="rbCriminology" max="32767" attributes="0"/>
+                              <Component id="rbHospitality_Tourism" pref="370" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="lblQ2" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cbResearch" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="cbMath" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="cbEnglish" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cbHospitality_FoodServices" alignment="1" min="-2" pref="298" max="-2" attributes="0"/>
+                                  <Component id="cbPhysics_EngineeringConcepts" alignment="0" min="-2" pref="298" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="lblQ1" alignment="0" min="-2" pref="360" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="rbTechnology_IT_CS" alignment="1" min="-2" pref="340" max="-2" attributes="0"/>
-                                      <Component id="rbBusiness_Management_Marketing" min="-2" pref="340" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="rbCriminology" max="32767" attributes="0"/>
-                                      <Component id="rbHospitality_Tourism" pref="370" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="cbManagement_Marketing" min="-2" pref="250" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cbICT_Coding" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbSocialScience" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblQ2" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="lblQ3" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cbResearch" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="cbMath" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <Component id="cbEnglish" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cbHospitality_FoodServices" alignment="1" min="-2" pref="298" max="-2" attributes="0"/>
-                                          <Component id="cbPhysics_EngineeringConcepts" alignment="0" min="-2" pref="298" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="cbManagement_Marketing" min="-2" pref="250" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cbICT_Coding" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cbSocialScience" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblQ3" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="rbBeginner" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                          <Component id="rbIntermediate" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="rbBeginner" min="-2" pref="108" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Component id="rbAdvanced" min="-2" pref="119" max="-2" attributes="0"/>
+                                  <Component id="rbIntermediate" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="rbAdvanced" min="-2" pref="119" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblQ4" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="rbLight" min="-2" pref="180" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="rbModerate" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="rbFullLoad" min="-2" pref="240" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                      <Component id="lblQ4" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="rbLight" min="-2" pref="180" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="rbModerate" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="rbFullLoad" min="-2" pref="240" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -246,17 +232,12 @@
                       <Component id="cbSocialScience" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cbHospitality_FoodServices" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cbEnglish" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cbPhysics_EngineeringConcepts" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="cbEnglish" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbPhysics_EngineeringConcepts" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>

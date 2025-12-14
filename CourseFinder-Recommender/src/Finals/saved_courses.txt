@@ -108,3 +108,7 @@ BSCS101 - Discrete Mathematics
 BSCS205 - Computer Architecture
 BSBA110 - Marketing Management
 -----------------------------------
+BSEd101 - Foundations of Education
+BSEd201 - Child & Adolescent Development
+BSBA110 - Marketing Management
+-----------------------------------
