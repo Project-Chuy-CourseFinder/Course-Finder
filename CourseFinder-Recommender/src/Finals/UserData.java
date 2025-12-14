@@ -45,9 +45,8 @@ public class UserData {
         return map;
     }
 
-    // =========================
-    // 💾 Save or update ONE account
-    // =========================
+
+    //  Save or update ONE account
     public static void saveAccount(Account acc) {
         accounts.put(acc.username, acc); // add or update
         saveAllAccounts();
