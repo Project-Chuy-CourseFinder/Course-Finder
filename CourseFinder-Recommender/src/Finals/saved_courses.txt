@@ -61,3 +61,9 @@ BSCS205 - Computer Architecture
 ARCH101 - Introduction to Architecture
 MECH101 - Mechanical Engineering Basics
 -----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
+CRIM101 - Introduction to Criminology
+CRIM205 - Forensic Photography
+-----------------------------------

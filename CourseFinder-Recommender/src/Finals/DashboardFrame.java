@@ -2,6 +2,7 @@
 package Finals;
 
 import java.awt.Color;
+import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
 public class DashboardFrame extends javax.swing.JFrame {
@@ -17,7 +18,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     // =========================
     // Constructor
     // =========================
-    public DashboardFrame(String fullName, String studentID, String email, String username) {
+     public DashboardFrame(String fullName, String studentID, String email, String username) {
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
@@ -28,22 +29,21 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         // Set greeting label
         lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
-        lblTips.setText("<html>Tips: Complete the <span style='color:yellow;'>Recommendation Test</span> to generate</html>");
 
         // Buttons styling with subtext
         String mainFont = "Segoe UI Light";
         String subTextSize = "14px";
 
-        btnCourseCatalog.setText("<html><center>COURSE CATALOG<br>"
+        btnCourseCatalog.setText("<html><center>COURSE<br>CATALOG<br>"
                 + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#007BFF;'>Explore Saved →</small></center></html>");
 
-        btnRecommendationTest.setText("<html><center>RECOMMENDATION TEST<br>"
+        btnRecommendationTest.setText("<html><center>RECOMMENDATION<br>TEST<br>"
                 + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#28A745;'>Start Assessment →</small></center></html>");
 
-        btnSavedSubjects.setText("<html><center>SAVED SUBJECTS<br>"
+        btnSavedSubjects.setText("<html><center>SAVED<br>SUBJECTS<br>"
                 + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#6F42C1;'>View Saved →</small></center></html>");
 
-        btnProfile.setText("<html><center>MY PROFILE<br>"
+        btnProfile.setText("<html><center>MY<br>PROFILE<br>"
                 + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#FD7E14;'>View Profile →</small></center></html>");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 30));
@@ -53,7 +53,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 + "<font size='10'><b>Welcome to Your Learning PATH</b></font><br>"
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
-    }
+}
     // =========================
     // Load saved subjects from file
     // =========================
@@ -115,7 +115,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGroup(HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(lblGreeting))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                 .addComponent(Signout)
                 .addGap(46, 46, 46))
         );
@@ -142,6 +142,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnCourseCatalog.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnCourseCatalog.setForeground(new java.awt.Color(51, 51, 51));
+        btnCourseCatalog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course.png"))); // NOI18N
         btnCourseCatalog.setText("Course Catalog");
         btnCourseCatalog.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCourseCatalog.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -153,6 +154,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnRecommendationTest.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnRecommendationTest.setForeground(new java.awt.Color(51, 51, 51));
+        btnRecommendationTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/test.png"))); // NOI18N
         btnRecommendationTest.setText("Recommendation Test");
         btnRecommendationTest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRecommendationTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -164,6 +166,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnSavedSubjects.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnSavedSubjects.setForeground(new java.awt.Color(51, 51, 51));
+        btnSavedSubjects.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/saved.png"))); // NOI18N
         btnSavedSubjects.setText("Saved Subjects");
         btnSavedSubjects.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSavedSubjects.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -175,6 +178,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnProfile.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         btnProfile.setForeground(new java.awt.Color(51, 51, 51));
+        btnProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/profile.png"))); // NOI18N
         btnProfile.setText("My Profile");
         btnProfile.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnProfile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -194,17 +198,18 @@ public class DashboardFrame extends javax.swing.JFrame {
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(ButtonPanelLayout.createSequentialGroup()
-                        .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCourseCatalog, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
-                            .addComponent(btnSavedSubjects, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnProfile, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
-                            .addComponent(btnRecommendationTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(40, 40, 40))
+            .addGroup(ButtonPanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCourseCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSavedSubjects, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRecommendationTest, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +234,7 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         lbl2Tips.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lbl2Tips.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2Tips.setText("personalized course suggestions.");
+        lbl2Tips.setText("       personalized course suggestions.");
 
         javax.swing.GroupLayout InfoPanelLayout = new javax.swing.GroupLayout(InfoPanel);
         InfoPanel.setLayout(InfoPanelLayout);
@@ -332,5 +337,9 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblGreeting;
     private javax.swing.JLabel lblTips;
     // End of variables declaration//GEN-END:variables
+
+    private void setButtonIcon(JButton btnCourseCatalog, String iconcoursepng) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
