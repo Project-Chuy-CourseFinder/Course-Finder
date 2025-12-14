@@ -19,6 +19,7 @@ public class Account {
         this.password = Utils.caesarEncrypt(password, 3);
     }
 
+    
     // Verify password (used in Login)
     public boolean checkPassword(String inputPassword) {
         String encryptedInput = Utils.caesarEncrypt(inputPassword, 3);
