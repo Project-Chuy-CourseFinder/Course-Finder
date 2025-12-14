@@ -11,7 +11,7 @@ public class LoginFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
 
-        // Show Password checkbox styling
+        // makita ang password 
         showpass.setLabel("Show Password");
         showpass.setForeground(new Color(50, 50, 50));
         showpass.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -22,9 +22,9 @@ public class LoginFrame extends javax.swing.JFrame {
         // SHOW/HIDE PASSWORD FUNCTION
         showpass.addItemListener(e -> {
             if (showpass.getState()) {
-                jPasswordField1Password.setEchoChar((char) 0); // show
+                jPasswordField1Password.setEchoChar((char) 0); // makita
             } else {
-                jPasswordField1Password.setEchoChar('*'); // hide
+                jPasswordField1Password.setEchoChar('*'); // dili makita
             }
         });
     }
