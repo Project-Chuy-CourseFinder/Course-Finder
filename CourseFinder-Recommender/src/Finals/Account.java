@@ -8,31 +8,26 @@ public class Account {
     public String username;
     public String password; // encrypted (Caesar Cipher)
 
-    // =========================
-    // 🧾 Constructor
-    // =========================
+    //  Constructor
     public Account(String fullName, String studentID, String email, String username, String password) {
         this.fullName = fullName;
         this.studentID = studentID;
         this.email = email;
         this.username = username;
 
-        // 🔐 Encrypt password before saving
+        //  Encrypt password before saving
         this.password = Utils.caesarEncrypt(password, 3);
     }
 
-    // =========================
-    // 🔓 Verify password (used in Login)
-    // =========================
+    // Verify password (used in Login)
     public boolean checkPassword(String inputPassword) {
         String encryptedInput = Utils.caesarEncrypt(inputPassword, 3);
         return encryptedInput.equals(this.password);
     }
 
-    // =========================
-    // 💾 Save format (DO NOT CHANGE)
+
+    // Save format (DO NOT CHANGE)
     // username|password|fullName|studentID|email
-    // =========================
     @Override
     public String toString() {
         return username + "|" + password + "|" + fullName + "|" + studentID + "|" + email;
