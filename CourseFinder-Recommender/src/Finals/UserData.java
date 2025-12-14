@@ -5,16 +5,15 @@ import java.util.LinkedHashMap;
 
 public class UserData {
 
-    // 📁 Use centralized file path from Utils
+    // Use centralized file path from Utils
     private static final String FILE_DIR = "C:\\Users\\Dell\\OneDrive\\Documents\\CF-Project\\Course-Finder\\CourseFinder-Recommender\\Data";
     private static final String FILE_PATH = FILE_DIR + "\\accounts.txt";
 
-    // 🔑 Key = username, Value = Account object
+    // Key = username, Value = Account object
     public static LinkedHashMap<String, Account> accounts = loadAccounts();
 
-    // =========================
-    // 📂 Load accounts from file
-    // =========================
+
+    // Load accounts from file
     private static LinkedHashMap<String, Account> loadAccounts() {
         LinkedHashMap<String, Account> map = new LinkedHashMap<>();
 
