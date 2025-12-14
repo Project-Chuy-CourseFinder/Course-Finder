@@ -97,6 +97,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         Signout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Signout.setForeground(new java.awt.Color(255, 0, 51));
         Signout.setText("Sign Out");
+        Signout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Signout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SignoutActionPerformed(evt);

@@ -172,6 +172,7 @@ public class ResultsFrame extends javax.swing.JFrame {
         btnSaveResults.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnSaveResults.setForeground(new java.awt.Color(0, 102, 204));
         btnSaveResults.setText("SAVE RESULTS");
+        btnSaveResults.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSaveResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveResultsActionPerformed(evt);
@@ -181,6 +182,7 @@ public class ResultsFrame extends javax.swing.JFrame {
         btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnBackToDashboard.setForeground(new java.awt.Color(0, 102, 204));
         btnBackToDashboard.setText("BACK TO DASHBOARD");
+        btnBackToDashboard.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackToDashboardActionPerformed(evt);

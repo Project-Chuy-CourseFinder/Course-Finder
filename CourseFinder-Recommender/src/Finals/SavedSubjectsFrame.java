@@ -75,6 +75,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         btnReturn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(900, 646));
         setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
@@ -149,6 +150,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         btnReturn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnReturn.setForeground(new java.awt.Color(0, 102, 204));
         btnReturn.setText("RETURN");
+        btnReturn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
@@ -160,16 +162,16 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(375, 375, 375)
+                .addGap(372, 372, 372)
                 .addComponent(btnReturn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
                 .addComponent(btnReturn)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

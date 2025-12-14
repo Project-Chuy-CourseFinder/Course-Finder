@@ -148,6 +148,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 0, 51));
         btnLogout.setText("LOGOUT");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -157,6 +158,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         btnBackToDasboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnBackToDasboard.setForeground(new java.awt.Color(0, 102, 204));
         btnBackToDasboard.setText("BACK TO DASHBOARD");
+        btnBackToDasboard.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBackToDasboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackToDasboardActionPerformed(evt);
