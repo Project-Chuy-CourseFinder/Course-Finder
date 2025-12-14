@@ -106,31 +106,43 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbTechnology_IT_CS.setBackground(new java.awt.Color(255, 255, 255));
         rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbTechnology_IT_CS.setText("Technology / IT / CS");
+        rbTechnology_IT_CS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbTechnology_IT_CS.setBorderPainted(true);
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbBusiness_Management_Marketing.setBackground(new java.awt.Color(255, 255, 255));
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
+        rbBusiness_Management_Marketing.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbBusiness_Management_Marketing.setBorderPainted(true);
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEducation_Teaching.setBackground(new java.awt.Color(255, 255, 255));
         rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEducation_Teaching.setText("Education / Teaching");
+        rbEducation_Teaching.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbEducation_Teaching.setBorderPainted(true);
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbHospitality_Tourism.setBackground(new java.awt.Color(255, 255, 255));
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbHospitality_Tourism.setText("Hospitality / Tourism");
+        rbHospitality_Tourism.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbHospitality_Tourism.setBorderPainted(true);
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbCriminology.setBackground(new java.awt.Color(255, 255, 255));
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbCriminology.setText("Criminology");
+        rbCriminology.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbCriminology.setBorderPainted(true);
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbEngineering_Architecture_Mechanical.setBackground(new java.awt.Color(255, 255, 255));
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
+        rbEngineering_Architecture_Mechanical.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        rbEngineering_Architecture_Mechanical.setBorderPainted(true);
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         rbEngineering_Architecture_Mechanical.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,7 +379,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(rbLight)
                     .addComponent(rbModerate)
                     .addComponent(rbFullLoad))
-                .addGap(0, 27, Short.MAX_VALUE))
+                .addGap(0, 36, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));

@@ -118,3 +118,25 @@ BSBA110 - Marketing Management
 ARCH101 - Introduction to Architecture
 MECH101 - Mechanical Engineering Basics
 -----------------------------------
+BSIT101 - Introduction to Computing
+BSIT102 - Computer Programming 1
+BSIT201 - Data Structures & Algorithms
+BSIT202 - Database Management Systems
+BSIT301 - Object-Oriented Programming
+BSIT302 - Web Development
+BSCS101 - Discrete Mathematics
+BSCS205 - Computer Architecture
+BSBA101 - Principles of Management
+BSBA110 - Marketing Management
+BSEd101 - Foundations of Education
+BSEd201 - Child & Adolescent Development
+BSHM101 - Front Office Procedures
+BSHM201 - Food & Beverage Services
+CRIM101 - Introduction to Criminology
+CRIM205 - Forensic Photography
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
