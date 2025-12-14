@@ -37,10 +37,11 @@ public class ProfileFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
+        HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(800, 125));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setText("Profile");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
@@ -141,6 +142,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         ButtonPanel.setPreferredSize(new java.awt.Dimension(800, 116));
 
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 0, 51));
         btnLogout.setText("LOGOUT");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,20 +163,20 @@ public class ProfileFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(111, 111, 111)
                 .addComponent(btnBackToDasboard)
-                .addGap(108, 108, 108)
+                .addGap(100, 100, 100)
                 .addComponent(btnLogout)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogout)
                     .addComponent(btnBackToDasboard))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

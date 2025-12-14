@@ -77,10 +77,11 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        HeaderPanel.setBackground(new java.awt.Color(0, 204, 255));
+        HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
         HeaderPanel.setPreferredSize(new java.awt.Dimension(900, 130));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setText("Saved Recommendations");
 
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/course-logo (1).png"))); // NOI18N
