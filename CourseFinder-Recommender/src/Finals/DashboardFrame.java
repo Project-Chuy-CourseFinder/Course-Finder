@@ -2,32 +2,29 @@
 package Finals;
 
 import java.awt.Color;
-import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
-public class DashboardFrame extends javax.swing.JFrame {
+    public class DashboardFrame extends javax.swing.JFrame {
 
-    // User info variables
-    private final String fullName;
-    private final String studentID;
-    private final String email;
-    private final String username;
-
-
-    // Constructor
-     public DashboardFrame(String fullName, String studentID, String email, String username) {
-        this.fullName = fullName;
-        this.studentID = studentID;
-        this.email = email;
-        this.username = username;
-
-        initComponents();         
+    public DashboardFrame() {
+        initComponents();
         this.setLocationRelativeTo(null);
 
-        // Set greeting label
-        lblGreeting.setText("Hello, " + fullName + " (ID: " + studentID + ")");
+        loadUserInfo();
+        styleButtons();
+    }
 
-        // Buttons styling with subtext
+    // Load current user info
+    private void loadUserInfo() {
+        if (CurrentUser.fullName != null && !CurrentUser.fullName.isEmpty()) {
+            lblGreeting.setText("Hello, " + CurrentUser.fullName + " (ID: " + CurrentUser.studentID + ")");
+        } else {
+            lblGreeting.setText("Hello, Student (ID: N/A)");
+        }
+    }
+
+    // Style the dashboard buttons
+    private void styleButtons() {
         String mainFont = "Segoe UI Light";
         String subTextSize = "14px";
 
@@ -42,15 +39,15 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnProfile.setText("<html><center>MY<br>PROFILE<br>"
                 + "<small style='font-family:" + mainFont + "; font-size:" + subTextSize + "; color:#FD7E14;'>View Profile →</small></center></html>");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 30));
+   
+     jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 30));
         jLabel2.setForeground(new Color(51, 51, 51));
         jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel2.setText("<html><center>"
                 + "<font size='10'><b>Welcome to Your Learning PATH</b></font><br>"
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
-}
+    }
 
   
     @SuppressWarnings("unchecked")
@@ -280,24 +277,24 @@ public class DashboardFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCourseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseCatalogActionPerformed
-       new CatalogFrame(fullName, studentID, email, username).setVisible(true);
+        new CatalogFrame(
+                CurrentUser.fullName,
+                CurrentUser.studentID,
+                CurrentUser.email,
+                CurrentUser.username
+        ).setVisible(true);
         this.dispose();
+
     }//GEN-LAST:event_btnCourseCatalogActionPerformed
 
     private void btnRecommendationTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecommendationTestActionPerformed
-         new RecommendationTestFrame(fullName, studentID, email, username).setVisible(true);
-        this.dispose();
+         new RecommendationTestFrame().setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_btnRecommendationTestActionPerformed
 
     private void btnSavedSubjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavedSubjectsActionPerformed
-        new SavedSubjectsFrame(
-        fullName, 
-        studentID, 
-        email, 
-        username, 
-        CurrentUser.savedCourses
-    ).setVisible(true);
-    this.dispose();
+        new SavedSubjectsFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSavedSubjectsActionPerformed
 
     private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
@@ -313,9 +310,8 @@ public class DashboardFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // Example usage:
-        java.awt.EventQueue.invokeLater(() -> new DashboardFrame("John Mark","2025001","john@example.com","johnmark").setVisible(true));
+     public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(() -> new DashboardFrame().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

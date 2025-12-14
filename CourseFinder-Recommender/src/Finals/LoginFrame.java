@@ -301,7 +301,7 @@ public class LoginFrame extends JFrame {
         CurrentUser.setUser(acc.fullName, acc.studentID, acc.email, username);
 
         // Open dashboard
-        new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
+        new DashboardFrame().setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_btnSignInActionPerformed

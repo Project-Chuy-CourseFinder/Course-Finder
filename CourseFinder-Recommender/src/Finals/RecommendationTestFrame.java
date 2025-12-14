@@ -16,10 +16,23 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         this.studentID = studentID;
         this.email = email;
         this.username = username;
+        
+        CurrentUser.setUser(fullName, studentID, email, username);
 
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
+     RecommendationTestFrame() {
+        // Use CurrentUser directly
+        this.fullName = CurrentUser.fullName;
+        this.studentID = CurrentUser.studentID;
+        this.email = CurrentUser.email;
+        this.username = CurrentUser.username;
+
+        initComponents();
+        this.setLocationRelativeTo(null);
+     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -453,8 +466,9 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-       new DashboardFrame(fullName, studentID, email, username).setVisible(true);
-       this.dispose();
+      new DashboardFrame().setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
@@ -580,15 +594,12 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbLightActionPerformed
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         // Sample data for testing
-        String fullName = "John Mark Germinal";
-        String studentID = "2025-00123";
-        String email = "juan.delacruz@example.com";
-        String username = "jdelacruz";
+        CurrentUser.setUser("John Mark Germinal", "2025-00123", "juan.delacruz@example.com", "jdelacruz");
 
         java.awt.EventQueue.invokeLater(() -> {
-            new RecommendationTestFrame(fullName, studentID, email, username).setVisible(true);
+            new RecommendationTestFrame().setVisible(true);
         });
     }
 

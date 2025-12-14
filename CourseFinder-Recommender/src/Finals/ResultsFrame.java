@@ -252,8 +252,7 @@ public class ResultsFrame extends javax.swing.JFrame {
     
     
     private void btnBackToDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToDashboardActionPerformed
-        new DashboardFrame(fullName, studentID, email, username).setVisible(true);
-        this.dispose();
+        new DashboardFrame().setVisible(true);
     }//GEN-LAST:event_btnBackToDashboardActionPerformed
 
     /**

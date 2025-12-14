@@ -6,17 +6,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class SavedSubjectsFrame extends javax.swing.JFrame {
 
-     private final String fullName;
-    private final String studentID;
-    private final String email;
-    private final String username;
-
     // Default constructor uses CurrentUser
     public SavedSubjectsFrame() {
-        this.fullName = CurrentUser.fullName;
-        this.studentID = CurrentUser.studentID;
-        this.email = CurrentUser.email;
-        this.username = CurrentUser.username;
 
         initComponents();
         this.setLocationRelativeTo(null);
@@ -27,10 +18,6 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
     // Constructor with parameters
     public SavedSubjectsFrame(String fullName, String studentID, String email, String username, ArrayList<String> courses) {
-        this.fullName = fullName;
-        this.studentID = studentID;
-        this.email = email;
-        this.username = username;
 
         initComponents();
         this.setLocationRelativeTo(null);
@@ -195,9 +182,9 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
                                                
-    DashboardFrame dashboard = new DashboardFrame(fullName, studentID, email, username);
-        dashboard.setVisible(true);
-        this.dispose();
+    DashboardFrame dashboard = new DashboardFrame();
+    dashboard.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_btnReturnActionPerformed
 
     public static void main(String args[]) {
