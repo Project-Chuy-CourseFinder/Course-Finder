@@ -227,7 +227,7 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-   String username = txtUsername.getText().trim();
+        String username = txtUsername.getText().trim();
         String password = new String(jPasswordField1Password.getPassword()).trim();
 
         if (username.isEmpty() || password.isEmpty()) {
@@ -246,21 +246,21 @@ public class LoginFrame extends javax.swing.JFrame {
             return;
         }
 
-        String hashedInput = Utils.md5(password);
-        if (!acc.password.equals(hashedInput)) {
+        // 🔐 Use Caesar Cipher for password check
+        if (!acc.checkPassword(password)) {
             JOptionPane.showMessageDialog(this, "Incorrect password!");
             return;
         }
 
         // SUCCESS LOGIN
-     JOptionPane.showMessageDialog(this, "Login successful!");
+        JOptionPane.showMessageDialog(this, "Login successful!");
 
         // Save current user info
-      CurrentUser.setUser(acc.fullName, acc.studentID, acc.email, username);
+        CurrentUser.setUser(acc.fullName, acc.studentID, acc.email, username);
 
-         // Open dashboard
-     new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
-     this.dispose();
+        // Open dashboard
+        new DashboardFrame(acc.fullName, acc.studentID, acc.email, username).setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_btnSignInActionPerformed
 
