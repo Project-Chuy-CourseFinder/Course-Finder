@@ -18,7 +18,6 @@ public class Account {
         this.password = hashPassword(password); 
     }
 
-    
     public static String hashPassword(String password) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -35,15 +34,14 @@ public class Account {
 
     @Override
     public String toString() {
-        // Format: student|hashedPassword|FullName|StudentID|Email
-        return "student | " + password + " | " + fullName + " | " + studentID + " | " + email;
+        // Format: username|hashedPassword|FullName|StudentID|Email
+        return username + "|" + password + "|" + fullName + "|" + studentID + "|" + email;
     }
 
     public static Account fromString(String data) {
         String[] parts = data.split("\\|");
         if (parts.length != 5) return null;
-        // The second param is hashed password; assign directly
-        Account acc = new Account(parts[2], parts[3], parts[4], parts[0], "");
+        Account acc = new Account(parts[2], parts[3], parts[4], parts[0], ""); // password will be overwritten
         acc.password = parts[1]; 
         return acc;
     }

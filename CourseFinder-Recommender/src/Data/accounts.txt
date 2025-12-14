@@ -1,9 +1,0 @@
-student|caf1a3dfb505ffed0d024130f58c5cfa|321`|321|321
-student|4035bbc636d3f53363b5a1209c3ffe1b|123|123|123
-student | 8b28406c698875d68169c0f2fea77af7 | xander | xander | xander
-student | 964d72e72d053d501f2949969849b96c | ass | ass | ass
-student | b74c873c157a99278ae689fa9bdafce0 | jum | jum | jum
-student | 8b28406c698875d68169c0f2fea77af7 | xander | xander | xander
-student | d20caec3b48a1eef164cb4ca81ba2587 | l | L | L
-student | 9b14fd50dc7c262c5871fd91c3902f31 | CARL XANDER | 20241073 | XANDER@GMAIL.,CON
-student | 8b28406c698875d68169c0f2fea77af7 | xander | xander | xander
