@@ -123,7 +123,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbHospitality_Tourism.setBackground(new java.awt.Color(255, 255, 255));
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbHospitality_Tourism.setText("Hospitality / Tourism");
-        rbHospitality_Tourism.setBorderPainted(true);
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbCriminology.setBackground(new java.awt.Color(255, 255, 255));
