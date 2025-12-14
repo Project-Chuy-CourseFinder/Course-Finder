@@ -175,3 +175,15 @@ BSIT302 - Web Development
 BSCS101 - Discrete Mathematics
 BSCS205 - Computer Architecture
 -----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+ENGR201 - Statics and Dynamics
+ENGR301 - Thermodynamics
+ENGR305 - Fluid Mechanics
+ARCH201 - Building Materials and Construction
+ART101 - Fundamentals of Drawing
+ART201 - Digital Illustration
+ART301 - Graphic Design Principles
+ART305 - Photography Basics
+ART401 - Advanced Visual Arts
+-----------------------------------

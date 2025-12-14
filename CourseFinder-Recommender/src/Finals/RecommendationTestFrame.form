@@ -162,7 +162,7 @@
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbICT_Coding" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                              <Component id="arts" min="-2" max="-2" attributes="0"/>
                               <Component id="cbSocialScience" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -234,7 +234,7 @@
                   </Group>
                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="arts" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="cbEnglish" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cbPhysics_EngineeringConcepts" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -674,7 +674,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="arts">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -685,7 +685,7 @@
             <Property name="text" type="java.lang.String" value="Arts / Creative Design"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="artsActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

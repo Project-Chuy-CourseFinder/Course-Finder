@@ -1,4 +1,3 @@
-
 package Finals;
 
 import javax.swing.*;
@@ -16,14 +15,14 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         this.studentID = studentID;
         this.email = email;
         this.username = username;
-        
+
         CurrentUser.setUser(fullName, studentID, email, username);
 
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-     RecommendationTestFrame() {
+    RecommendationTestFrame() {
         // Use CurrentUser directly
         this.fullName = CurrentUser.fullName;
         this.studentID = CurrentUser.studentID;
@@ -32,7 +31,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
 
         initComponents();
         this.setLocationRelativeTo(null);
-     }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -66,7 +65,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbLight = new javax.swing.JRadioButton();
         rbModerate = new javax.swing.JRadioButton();
         rbFullLoad = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        arts = new javax.swing.JCheckBox();
         ButtonPanel = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         btnGenerateRecommendation = new javax.swing.JButton();
@@ -274,12 +273,12 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbFullLoad.setText("Full Load (18-24 units)");
         rbFullLoad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jCheckBox1.setText("Arts / Creative Design");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        arts.setBackground(new java.awt.Color(255, 255, 255));
+        arts.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        arts.setText("Arts / Creative Design");
+        arts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                artsActionPerformed(evt);
             }
         });
 
@@ -318,7 +317,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbICT_Coding)
-                            .addComponent(jCheckBox1)
+                            .addComponent(arts)
                             .addComponent(cbSocialScience, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -373,7 +372,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(cbHospitality_FoodServices))
                 .addGap(20, 20, 20)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox1)
+                    .addComponent(arts)
                     .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cbEnglish)
                         .addComponent(cbPhysics_EngineeringConcepts)))
@@ -466,101 +465,138 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-      new DashboardFrame().setVisible(true);
+        new DashboardFrame().setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGenerateRecommendationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateRecommendationActionPerformed
-        
+
         // Q1 – Field of Interest
-    if (!rbTechnology_IT_CS.isSelected() &&
-        !rbBusiness_Management_Marketing.isSelected() &&
-        !rbEducation_Teaching.isSelected() &&
-        !rbHospitality_Tourism.isSelected() &&
-        !rbCriminology.isSelected() &&
-        !rbEngineering_Architecture_Mechanical.isSelected()) {
+        if (!rbTechnology_IT_CS.isSelected()
+                && !rbBusiness_Management_Marketing.isSelected()
+                && !rbEducation_Teaching.isSelected()
+                && !rbHospitality_Tourism.isSelected()
+                && !rbCriminology.isSelected()
+                && !rbEngineering_Architecture_Mechanical.isSelected()) {
 
-        JOptionPane.showMessageDialog(this,
-            "Please select your field of interest (Question 1).",
-            "Missing Answer",
-            JOptionPane.WARNING_MESSAGE);
-        return;
-    }
+            JOptionPane.showMessageDialog(this,
+                    "Please select your field of interest (Question 1).",
+                    "Missing Answer",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 
-    // Q3 – Difficulty
-    if (!rbBeginner.isSelected() &&
-        !rbIntermediate.isSelected() &&
-        !rbAdvanced.isSelected()) {
+        // Q3 – Difficulty
+        if (!rbBeginner.isSelected()
+                && !rbIntermediate.isSelected()
+                && !rbAdvanced.isSelected()) {
 
-        JOptionPane.showMessageDialog(this,
-            "Please select your preferred course difficulty (Question 3).",
-            "Missing Answer",
-            JOptionPane.WARNING_MESSAGE);
-        return;
-    }
+            JOptionPane.showMessageDialog(this,
+                    "Please select your preferred course difficulty (Question 3).",
+                    "Missing Answer",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 
-    // Q4 – Credit Load
-    if (!rbLight.isSelected() &&
-        !rbModerate.isSelected() &&
-        !rbFullLoad.isSelected()) {
+        // Q4 – Credit Load
+        if (!rbLight.isSelected()
+                && !rbModerate.isSelected()
+                && !rbFullLoad.isSelected()) {
 
-        JOptionPane.showMessageDialog(this,
-            "Please select your preferred credit load (Question 4).",
-            "Missing Answer",
-            JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-        
-        
+            JOptionPane.showMessageDialog(this,
+                    "Please select your preferred credit load (Question 4).",
+                    "Missing Answer",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
         ArrayList<String> recommendations = new ArrayList<>();
 
-    // Field-based recommendation
-    if (rbTechnology_IT_CS.isSelected()) {
-        recommendations.add("BSIT101 - Introduction to Computing");
-        recommendations.add("BSIT102 - Computer Programming 1");
-        recommendations.add("BSIT201 - Data Structures & Algorithms");
-        recommendations.add("BSIT202 - Database Management Systems");
-        recommendations.add("BSIT301 - Object-Oriented Programming");
-        recommendations.add("BSIT302 - Web Development");
-        recommendations.add("BSCS101 - Discrete Mathematics");
-        recommendations.add("BSCS205 - Computer Architecture");
-    }
-    if (rbBusiness_Management_Marketing.isSelected()) {
-        recommendations.add("BSBA101 - Principles of Management");
-        recommendations.add("BSBA110 - Marketing Management");
-    }
-    if (rbEducation_Teaching.isSelected()) {
-        recommendations.add("BSEd101 - Foundations of Education");
-        recommendations.add("BSEd201 - Child & Adolescent Development");
-    }
-    if (rbHospitality_Tourism.isSelected()) {
-        recommendations.add("BSHM101 - Front Office Procedures");
-        recommendations.add("BSHM201 - Food & Beverage Services");
-    }
-    if (rbCriminology.isSelected()) {
-        recommendations.add("CRIM101 - Introduction to Criminology");
-        recommendations.add("CRIM205 - Forensic Photography");
-    }
-    if (rbEngineering_Architecture_Mechanical.isSelected()) {
-        recommendations.add("ARCH101 - Introduction to Architecture");
-        recommendations.add("MECH101 - Mechanical Engineering Basics");
-    }
+        // IT / CS
+        if (rbTechnology_IT_CS.isSelected()) {
+            recommendations.add("BSIT101 - Introduction to Computing - IT");
+            recommendations.add("BSIT102 - Computer Programming 1 - IT");
+            recommendations.add("BSIT201 - Data Structures & Algorithms - IT");
+            recommendations.add("BSIT202 - Database Management Systems - IT");
+            recommendations.add("BSIT301 - Object-Oriented Programming - IT");
+            recommendations.add("BSIT302 - Web Development - IT");
+            recommendations.add("BSCS101 - Discrete Mathematics - CS");
+            recommendations.add("BSCS205 - Computer Architecture - CS");
+            recommendations.add("BSIT401 - Software Engineering - IT");
+            recommendations.add("BSCS305 - Artificial Intelligence - CS");
+        }
+        // Business / Management / Marketing
+        if (rbBusiness_Management_Marketing.isSelected()) {
+            recommendations.add("BSBA101 - Principles of Management");
+            recommendations.add("BSBA110 - Marketing Management");
+            recommendations.add("BSBA201 - Organizational Behavior");
+            recommendations.add("BSBA205 - Financial Management");
+            recommendations.add("BSBA301 - Strategic Management");
+            recommendations.add("BSBA310 - International Business");
+        }
+        // Education
+        if (rbEducation_Teaching.isSelected()) {
+            recommendations.add("BSEd101 - Foundations of Education");
+            recommendations.add("BSEd201 - Child & Adolescent Development");
+            recommendations.add("BSEd301 - Curriculum Design");
+            recommendations.add("BSEd305 - Educational Assessment");
+            recommendations.add("BSEd401 - Instructional Technology");
+        }
+        // Hospitality / Tourism
+        if (rbHospitality_Tourism.isSelected()) {
+            recommendations.add("BSHM101 - Front Office Procedures");
+            recommendations.add("BSHM201 - Food & Beverage Services");
+            recommendations.add("BSHM301 - Hospitality Marketing");
+            recommendations.add("BSHM401 - Event Management");
+            recommendations.add("BSHM405 - Hotel Operations Management");
+        }
+        // Criminology
+        if (rbCriminology.isSelected()) {
+            recommendations.add("CRIM101 - Introduction to Criminology");
+            recommendations.add("CRIM205 - Forensic Photography");
+            recommendations.add("CRIM301 - Criminal Law");
+            recommendations.add("CRIM305 - Crime Scene Investigation");
+            recommendations.add("CRIM401 - Criminal Psychology");
+        }
+        // Engineering / Architecture / Mechanical
+        if (rbEngineering_Architecture_Mechanical.isSelected()) {
+            recommendations.add("ARCH101 - Introduction to Architecture");
+            recommendations.add("MECH101 - Mechanical Engineering Basics");
+            recommendations.add("ENGR201 - Statics and Dynamics");
+            recommendations.add("ENGR301 - Thermodynamics");
+            recommendations.add("ENGR305 - Fluid Mechanics");
+            recommendations.add("ARCH201 - Building Materials and Construction");
+        }
+       // Arts / Creative Design
+        if (arts.isSelected()) { 
+            recommendations.add("ART101 - Fundamentals of Drawing");
+            recommendations.add("ART201 - Digital Illustration");
+            recommendations.add("ART301 - Graphic Design Principles");
+            recommendations.add("ART305 - Photography Basics");
+            recommendations.add("ART401 - Advanced Visual Arts");
+        }
+      // Social Science
+        if (cbSocialScience.isSelected()) {
+            recommendations.add("SOC101 - Introduction to Sociology");
+            recommendations.add("PSY101 - General Psychology");
+            recommendations.add("ANT101 - Cultural Anthropology");
+            recommendations.add("SOC201 - Social Research Methods");
+            recommendations.add("PSY205 - Developmental Psychology");
+        }
 
-    // Subject-based fine-tuning
-    if (cbICT_Coding.isSelected() && !recommendations.contains("BSIT102 - Computer Programming 1")) {
-        recommendations.add("BSIT102 - Computer Programming 1");
-    }
-    if (cbMath.isSelected() && !recommendations.contains("BSCS101 - Discrete Mathematics")) {
-        recommendations.add("BSCS101 - Discrete Mathematics");
-    }
-    if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
-        recommendations.add("BSBA110 - Marketing Management");
-    }
-    
-    
+        // Subject-based fine-tuning
+        if (cbICT_Coding.isSelected() && !recommendations.contains("BSIT102 - Computer Programming 1 - IT")) {
+            recommendations.add("BSIT102 - Computer Programming 1 - IT");
+        }
+        if (cbMath.isSelected() && !recommendations.contains("BSCS101 - Discrete Mathematics - CS")) {
+            recommendations.add("BSCS101 - Discrete Mathematics - CS");
+        }
+        if (cbManagement_Marketing.isSelected() && !recommendations.contains("BSBA110 - Marketing Management")) {
+            recommendations.add("BSBA110 - Marketing Management");
+        }
 
-    // Pass recommendations to GeneratingFrame first (for animation)
+// Pass recommendations to GeneratingFrame
         GeneratingFrame generatingFrame = new GeneratingFrame(recommendations);
         generatingFrame.setVisible(true);
         this.dispose();
@@ -571,12 +607,12 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_rbEngineering_Architecture_MechanicalActionPerformed
 
     private void cbEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEnglishActionPerformed
-         // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_cbEnglishActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void artsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_artsActionPerformed
 
     private void cbMathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMathActionPerformed
         // TODO add your handling code here:
@@ -594,7 +630,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbLightActionPerformed
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         // Sample data for testing
         CurrentUser.setUser("John Mark Germinal", "2025-00123", "juan.delacruz@example.com", "jdelacruz");
 
@@ -608,6 +644,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel HeaderPanel;
     private javax.swing.JPanel QuestionsPanel;
+    private javax.swing.JCheckBox arts;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnGenerateRecommendation;
     private javax.swing.JCheckBox cbEnglish;
@@ -618,7 +655,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbPhysics_EngineeringConcepts;
     private javax.swing.JCheckBox cbResearch;
     private javax.swing.JCheckBox cbSocialScience;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblQ1;
     private javax.swing.JLabel lblQ2;
