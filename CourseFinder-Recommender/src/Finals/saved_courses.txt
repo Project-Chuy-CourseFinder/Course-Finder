@@ -112,3 +112,9 @@ BSEd101 - Foundations of Education
 BSEd201 - Child & Adolescent Development
 BSBA110 - Marketing Management
 -----------------------------------
+BSBA101 - Principles of Management
+BSBA110 - Marketing Management
+-----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+-----------------------------------
