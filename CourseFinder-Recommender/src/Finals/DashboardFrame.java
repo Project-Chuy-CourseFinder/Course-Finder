@@ -95,7 +95,7 @@ public class DashboardFrame extends javax.swing.JFrame {
         jLabel3.setText("Academic Portal");
 
         Signout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Signout.setForeground(new java.awt.Color(255, 0, 51));
+        Signout.setForeground(new java.awt.Color(0, 102, 204));
         Signout.setText("Sign Out");
         Signout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Signout.addActionListener(new java.awt.event.ActionListener() {
