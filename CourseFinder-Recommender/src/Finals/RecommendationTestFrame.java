@@ -131,7 +131,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbCriminology.setBackground(new java.awt.Color(255, 255, 255));
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbCriminology.setText("Criminology");
-        rbCriminology.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         rbCriminology.setBorderPainted(true);
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
