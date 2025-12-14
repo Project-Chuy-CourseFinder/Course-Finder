@@ -132,7 +132,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbEngineering_Architecture_Mechanical.setBackground(new java.awt.Color(255, 255, 255));
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
-        rbEngineering_Architecture_Mechanical.setBorderPainted(true);
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         rbEngineering_Architecture_Mechanical.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
