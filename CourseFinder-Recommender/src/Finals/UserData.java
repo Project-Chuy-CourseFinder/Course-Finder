@@ -52,9 +52,7 @@ public class UserData {
         saveAllAccounts();
     }
 
-    // =========================
-    // 📝 Overwrite all accounts to file
-    // =========================
+    // Overwrite all accounts to file
     private static void saveAllAccounts() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH, false))) {
             for (Account acc : accounts.values()) {
