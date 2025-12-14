@@ -118,7 +118,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbEducation_Teaching.setBackground(new java.awt.Color(255, 255, 255));
         rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEducation_Teaching.setText("Education / Teaching");
-        rbEducation_Teaching.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         rbEducation_Teaching.setBorderPainted(true);
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -375,7 +374,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(rbLight)
                     .addComponent(rbModerate)
                     .addComponent(rbFullLoad))
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addGap(0, 27, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
