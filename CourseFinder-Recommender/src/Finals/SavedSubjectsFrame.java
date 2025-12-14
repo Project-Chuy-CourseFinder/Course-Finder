@@ -11,9 +11,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
     private final String email;
     private final String username;
 
-    // =============================
     // Default constructor uses CurrentUser
-    // =============================
     public SavedSubjectsFrame() {
         this.fullName = CurrentUser.fullName;
         this.studentID = CurrentUser.studentID;
@@ -27,9 +25,7 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         populateTable(CurrentUser.savedCourses);
     }
 
-    // =============================
     // Constructor with parameters
-    // =============================
     public SavedSubjectsFrame(String fullName, String studentID, String email, String username, ArrayList<String> courses) {
         this.fullName = fullName;
         this.studentID = studentID;
@@ -43,9 +39,8 @@ public class SavedSubjectsFrame extends javax.swing.JFrame {
         populateTable(courses);
     }
 
-    // =============================
+
     // Populate JTable from a list
-    // =============================
     private void populateTable(ArrayList<String> courses) {
         DefaultTableModel model = (DefaultTableModel) tblSavedSubjects.getModel();
         model.setRowCount(0); // clear existing rows
