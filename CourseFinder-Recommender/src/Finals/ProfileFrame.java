@@ -74,27 +74,31 @@ public class ProfileFrame extends javax.swing.JFrame {
         ProfileInfoPanel.setPreferredSize(new java.awt.Dimension(800, 380));
 
         lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullName.setForeground(new java.awt.Color(0, 102, 204));
         lblFullName.setText("Full Name:");
 
-        lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFullNameValue.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblFullNameValue.setText("<Name>");
 
         lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentID.setForeground(new java.awt.Color(0, 102, 204));
         lblStudentID.setText("Student ID:");
 
-        lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblStudentIDValue.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblStudentIDValue.setText("<ID>");
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(0, 102, 204));
         lblEmail.setText("Email:");
 
-        lblEmailValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblEmailValue.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblEmailValue.setText("<Email>");
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(0, 102, 204));
         lblUsername.setText("Username:");
 
-        lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblUsernameValue.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblUsernameValue.setText("<Username>");
 
         javax.swing.GroupLayout ProfileInfoPanelLayout = new javax.swing.GroupLayout(ProfileInfoPanel);
@@ -114,7 +118,7 @@ public class ProfileFrame extends javax.swing.JFrame {
                     .addComponent(lblFullNameValue)
                     .addComponent(lblEmailValue)
                     .addComponent(lblUsernameValue))
-                .addContainerGap(405, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
         ProfileInfoPanelLayout.setVerticalGroup(
             ProfileInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,6 +155,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         });
 
         btnBackToDasboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnBackToDasboard.setForeground(new java.awt.Color(0, 102, 204));
         btnBackToDasboard.setText("BACK TO DASHBOARD");
         btnBackToDasboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,11 +168,11 @@ public class ProfileFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(111, 111, 111)
+                .addGap(136, 136, 136)
                 .addComponent(btnBackToDasboard)
-                .addGap(100, 100, 100)
+                .addGap(85, 85, 85)
                 .addComponent(btnLogout)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

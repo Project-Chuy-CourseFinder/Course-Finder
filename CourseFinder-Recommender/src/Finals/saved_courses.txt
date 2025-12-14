@@ -46,3 +46,7 @@ MECH101 - Mechanical Engineering Basics
 ARCH101 - Introduction to Architecture
 MECH101 - Mechanical Engineering Basics
 -----------------------------------
+BSHM101 - Front Office Procedures
+BSHM201 - Food & Beverage Services
+BSIT102 - Computer Programming 1
+-----------------------------------

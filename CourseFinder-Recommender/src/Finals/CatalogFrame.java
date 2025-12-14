@@ -231,7 +231,7 @@ public class CatalogFrame extends javax.swing.JFrame {
         FooterPanel.setPreferredSize(new java.awt.Dimension(900, 100));
 
         btnBackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnBackToDashboard.setForeground(new java.awt.Color(0, 102, 255));
+        btnBackToDashboard.setForeground(new java.awt.Color(0, 102, 204));
         btnBackToDashboard.setText("BACK TO DASHBOARD");
         btnBackToDashboard.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBackToDashboard.addActionListener(new java.awt.event.ActionListener() {
