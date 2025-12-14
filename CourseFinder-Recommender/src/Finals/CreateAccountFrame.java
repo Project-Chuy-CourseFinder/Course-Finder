@@ -29,7 +29,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
                  
                 Account acc = new Account(fullName, studentID, email, username, password);
 
-                UserData.saveAccount(acc); // append new account
+                UserData.saveAccount(acc); 
 
                 JOptionPane.showMessageDialog(this, "Account created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
 
