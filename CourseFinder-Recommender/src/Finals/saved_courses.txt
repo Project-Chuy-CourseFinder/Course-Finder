@@ -67,3 +67,7 @@ MECH101 - Mechanical Engineering Basics
 CRIM101 - Introduction to Criminology
 CRIM205 - Forensic Photography
 -----------------------------------
+ARCH101 - Introduction to Architecture
+MECH101 - Mechanical Engineering Basics
+BSIT102 - Computer Programming 1
+-----------------------------------

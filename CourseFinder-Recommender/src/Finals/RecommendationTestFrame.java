@@ -53,12 +53,13 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbLight = new javax.swing.JRadioButton();
         rbModerate = new javax.swing.JRadioButton();
         rbFullLoad = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
         ButtonPanel = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         btnGenerateRecommendation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 800));
+        setPreferredSize(new java.awt.Dimension(900, 850));
         setResizable(false);
 
         HeaderPanel.setBackground(new java.awt.Color(0, 102, 204));
@@ -92,72 +93,122 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addGroup(HeaderPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblLogo)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         QuestionsPanel.setBackground(new java.awt.Color(255, 255, 255));
-        QuestionsPanel.setPreferredSize(new java.awt.Dimension(900, 450));
+        QuestionsPanel.setPreferredSize(new java.awt.Dimension(900, 500));
 
         lblQ1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ1.setForeground(new java.awt.Color(0, 102, 204));
         lblQ1.setText("1. What field are you most interested in?");
 
+        rbTechnology_IT_CS.setBackground(new java.awt.Color(255, 255, 255));
         rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbTechnology_IT_CS.setText("Technology / IT / CS");
+        rbTechnology_IT_CS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbTechnology_IT_CS.setBorderPainted(true);
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbBusiness_Management_Marketing.setBackground(new java.awt.Color(255, 255, 255));
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
+        rbBusiness_Management_Marketing.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbBusiness_Management_Marketing.setBorderPainted(true);
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbEducation_Teaching.setBackground(new java.awt.Color(255, 255, 255));
         rbEducation_Teaching.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEducation_Teaching.setText("Education / Teaching");
+        rbEducation_Teaching.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbEducation_Teaching.setBorderPainted(true);
         rbEducation_Teaching.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbHospitality_Tourism.setBackground(new java.awt.Color(255, 255, 255));
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbHospitality_Tourism.setText("Hospitality / Tourism");
+        rbHospitality_Tourism.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbHospitality_Tourism.setBorderPainted(true);
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbCriminology.setBackground(new java.awt.Color(255, 255, 255));
         rbCriminology.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbCriminology.setText("Criminology");
+        rbCriminology.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbCriminology.setBorderPainted(true);
         rbCriminology.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbEngineering_Architecture_Mechanical.setBackground(new java.awt.Color(255, 255, 255));
         rbEngineering_Architecture_Mechanical.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbEngineering_Architecture_Mechanical.setText("Engineering / Architecture / Mechanical");
+        rbEngineering_Architecture_Mechanical.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        rbEngineering_Architecture_Mechanical.setBorderPainted(true);
         rbEngineering_Architecture_Mechanical.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        rbEngineering_Architecture_Mechanical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbEngineering_Architecture_MechanicalActionPerformed(evt);
+            }
+        });
 
         lblQ2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblQ2.setForeground(new java.awt.Color(0, 102, 204));
         lblQ2.setText("2. Which subjects do you excel at?");
 
+        cbMath.setBackground(new java.awt.Color(255, 255, 255));
         cbMath.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbMath.setText("Math");
+        cbMath.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         cbMath.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbMath.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMathActionPerformed(evt);
+            }
+        });
 
+        cbResearch.setBackground(new java.awt.Color(255, 255, 255));
         cbResearch.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbResearch.setText("Research");
+        cbResearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         cbResearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbManagement_Marketing.setBackground(new java.awt.Color(255, 255, 255));
         cbManagement_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbManagement_Marketing.setText("Management / Marketing");
         cbManagement_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbManagement_Marketing.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbManagement_MarketingActionPerformed(evt);
+            }
+        });
 
+        cbHospitality_FoodServices.setBackground(new java.awt.Color(255, 255, 255));
         cbHospitality_FoodServices.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbHospitality_FoodServices.setText("Hospitality / Food Services");
+        cbHospitality_FoodServices.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         cbHospitality_FoodServices.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbPhysics_EngineeringConcepts.setBackground(new java.awt.Color(255, 255, 255));
         cbPhysics_EngineeringConcepts.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbPhysics_EngineeringConcepts.setText("Physics / Engineering Concepts");
+        cbPhysics_EngineeringConcepts.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         cbPhysics_EngineeringConcepts.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbEnglish.setBackground(new java.awt.Color(255, 255, 255));
         cbEnglish.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbEnglish.setText("English");
         cbEnglish.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbEnglish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEnglishActionPerformed(evt);
+            }
+        });
 
+        cbSocialScience.setBackground(new java.awt.Color(255, 255, 255));
         cbSocialScience.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbSocialScience.setText("Social Science");
         cbSocialScience.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbICT_Coding.setBackground(new java.awt.Color(255, 255, 255));
         cbICT_Coding.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cbICT_Coding.setText("ICT / Coding");
         cbICT_Coding.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -166,14 +217,17 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ3.setForeground(new java.awt.Color(0, 102, 204));
         lblQ3.setText("3. Preferred course difficulty:");
 
+        rbBeginner.setBackground(new java.awt.Color(255, 255, 255));
         rbBeginner.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbBeginner.setText("Beginner");
         rbBeginner.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbIntermediate.setBackground(new java.awt.Color(255, 255, 255));
         rbIntermediate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbIntermediate.setText("Intermediate");
         rbIntermediate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        rbAdvanced.setBackground(new java.awt.Color(255, 255, 255));
         rbAdvanced.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbAdvanced.setText("Advanced");
         rbAdvanced.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -182,17 +236,39 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         lblQ4.setForeground(new java.awt.Color(0, 102, 204));
         lblQ4.setText("4. Preferred credit load per semester:");
 
+        rbLight.setBackground(new java.awt.Color(255, 255, 255));
         rbLight.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbLight.setText("Light (9-12 units)");
         rbLight.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        rbLight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbLightActionPerformed(evt);
+            }
+        });
 
+        rbModerate.setBackground(new java.awt.Color(255, 255, 255));
         rbModerate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbModerate.setText("Moderate (12-18 units)");
         rbModerate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        rbModerate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbModerateActionPerformed(evt);
+            }
+        });
 
+        rbFullLoad.setBackground(new java.awt.Color(255, 255, 255));
         rbFullLoad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbFullLoad.setText("Full Load (18-24 units)");
         rbFullLoad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jCheckBox1.setText("Arts / Creative Design");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout QuestionsPanelLayout = new javax.swing.GroupLayout(QuestionsPanel);
         QuestionsPanel.setLayout(QuestionsPanelLayout);
@@ -201,116 +277,120 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(rbIntermediate)
-                        .addGap(57, 57, 57)
-                        .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(lblQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(rbTechnology_IT_CS, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(171, 171, 171)
-                        .addComponent(rbHospitality_Tourism, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(rbBusiness_Management_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(rbCriminology, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(rbEducation_Teaching, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(165, 165, 165)
-                        .addComponent(rbEngineering_Architecture_Mechanical, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(lblQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(lblQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(lblQ4))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(rbLight, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(rbModerate, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(rbFullLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
+                        .addGap(70, 70, 70)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbResearch, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                                .addComponent(cbManagement_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(280, 280, 280)
-                                .addComponent(cbICT_Coding))))
+                                .addComponent(rbEducation_Teaching, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(rbEngineering_Architecture_Mechanical, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbTechnology_IT_CS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbBusiness_Management_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(rbCriminology, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rbHospitality_Tourism, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)))))
                     .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(cbMath, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80)
+                        .addGap(70, 70, 70)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbHospitality_FoodServices, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbPhysics_EngineeringConcepts, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(72, 72, 72)
+                            .addComponent(lblQ2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbResearch, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbMath, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbEnglish, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cbHospitality_FoodServices, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cbPhysics_EngineeringConcepts, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cbManagement_Marketing, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbICT_Coding)
+                                    .addComponent(jCheckBox1)
+                                    .addComponent(cbSocialScience, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblQ3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                        .addComponent(rbBeginner, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(43, 43, 43)
+                                        .addComponent(rbIntermediate)))
+                                .addGap(43, 43, 43)
+                                .addComponent(rbAdvanced, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
                         .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbSocialScience, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbEnglish, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(55, 55, 55))
+                            .addComponent(lblQ4)
+                            .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                                .addComponent(rbLight, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(rbModerate)
+                                .addGap(30, 30, 30)
+                                .addComponent(rbFullLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         QuestionsPanelLayout.setVerticalGroup(
             QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuestionsPanelLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(30, 30, 30)
                 .addComponent(lblQ1)
                 .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbTechnology_IT_CS)
                     .addComponent(rbHospitality_Tourism))
-                .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbBusiness_Management_Marketing)
-                    .addComponent(rbCriminology))
-                .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(20, 20, 20)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbCriminology)
+                    .addComponent(rbBusiness_Management_Marketing))
+                .addGap(20, 20, 20)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbEducation_Teaching)
                     .addComponent(rbEngineering_Architecture_Mechanical))
-                .addGap(22, 22, 22)
+                .addGap(30, 30, 30)
                 .addComponent(lblQ2)
-                .addGap(10, 10, 10)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbMath)
-                    .addComponent(cbHospitality_FoodServices)
-                    .addComponent(cbEnglish))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbMath)
+                            .addComponent(cbManagement_Marketing)))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(cbICT_Coding)))
+                .addGap(20, 20, 20)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbResearch)
+                    .addComponent(cbSocialScience)
+                    .addComponent(cbHospitality_FoodServices))
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jCheckBox1))
+                    .addGroup(QuestionsPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbEnglish)
+                            .addComponent(cbPhysics_EngineeringConcepts))))
+                .addGap(30, 30, 30)
+                .addComponent(lblQ3)
+                .addGap(20, 20, 20)
                 .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cbPhysics_EngineeringConcepts)
-                        .addComponent(cbSocialScience))
-                    .addComponent(cbResearch))
-                .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbManagement_Marketing)
-                    .addComponent(cbICT_Coding))
-                .addGap(22, 22, 22)
-                .addComponent(lblQ3)
-                .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbBeginner)
-                    .addComponent(rbIntermediate)
-                    .addComponent(rbAdvanced))
-                .addGap(22, 22, 22)
+                        .addComponent(rbIntermediate)
+                        .addComponent(rbAdvanced))
+                    .addComponent(rbBeginner))
+                .addGap(30, 30, 30)
                 .addComponent(lblQ4)
-                .addGap(10, 10, 10)
-                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(20, 20, 20)
+                .addGroup(QuestionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbLight)
                     .addComponent(rbModerate)
                     .addComponent(rbFullLoad))
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(0, 36, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -342,41 +422,39 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(151, Short.MAX_VALUE)
+                .addGap(70, 70, 70)
                 .addComponent(btnBack)
-                .addGap(130, 130, 130)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGenerateRecommendation)
-                .addGap(134, 134, 134))
+                .addGap(100, 100, 100))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ButtonPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(0, 0, 0)
                 .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerateRecommendation)
                     .addComponent(btnBack))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(QuestionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(QuestionsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(HeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(QuestionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(ButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                .addComponent(QuestionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         HeaderPanel.getAccessibleContext().setAccessibleName("");
@@ -485,6 +563,34 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     this.dispose();
     }//GEN-LAST:event_btnGenerateRecommendationActionPerformed
 
+    private void rbEngineering_Architecture_MechanicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEngineering_Architecture_MechanicalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbEngineering_Architecture_MechanicalActionPerformed
+
+    private void cbEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEnglishActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_cbEnglishActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void cbMathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMathActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbMathActionPerformed
+
+    private void cbManagement_MarketingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbManagement_MarketingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbManagement_MarketingActionPerformed
+
+    private void rbModerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbModerateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbModerateActionPerformed
+
+    private void rbLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbLightActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbLightActionPerformed
+
     public static void main(String[] args) {
         // Sample data for testing
         String fullName = "John Mark Germinal";
@@ -512,6 +618,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbPhysics_EngineeringConcepts;
     private javax.swing.JCheckBox cbResearch;
     private javax.swing.JCheckBox cbSocialScience;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblQ1;
     private javax.swing.JLabel lblQ2;
