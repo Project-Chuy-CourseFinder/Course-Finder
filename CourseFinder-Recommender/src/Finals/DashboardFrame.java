@@ -51,11 +51,8 @@ public class DashboardFrame extends javax.swing.JFrame {
                 + "<font size='5' color='#505050'>Explore courses, track your progress, and discover new academic opportunities tailored just for you</font>"
                 + "</center></html>");
 }
-    // =========================
-    // Load saved subjects from file
-    // =========================
 
-
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
