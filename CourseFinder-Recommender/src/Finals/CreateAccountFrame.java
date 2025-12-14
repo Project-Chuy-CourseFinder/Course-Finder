@@ -111,7 +111,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         lblStudentID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblStudentID.setForeground(new java.awt.Color(0, 102, 255));
+        lblStudentID.setForeground(new java.awt.Color(0, 102, 204));
         lblStudentID.setText("Student ID:");
 
         txtStudentID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -124,7 +124,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         });
 
         lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblEmail.setForeground(new java.awt.Color(0, 102, 255));
+        lblEmail.setForeground(new java.awt.Color(0, 102, 204));
         lblEmail.setText("Email:");
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -132,7 +132,7 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         txtEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(0, 102, 255));
+        lblUsername.setForeground(new java.awt.Color(0, 102, 204));
         lblUsername.setText("Username:");
 
         txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -224,7 +224,6 @@ public class CreateAccountFrame extends javax.swing.JFrame {
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(0, 102, 204));
         btnBack.setText("BACK");
-        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 204), 3));
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

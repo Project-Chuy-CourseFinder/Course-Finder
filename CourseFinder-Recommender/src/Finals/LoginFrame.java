@@ -157,11 +157,9 @@ public class LoginFrame extends javax.swing.JFrame {
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
         ButtonPanel.setPreferredSize(new java.awt.Dimension(800, 70));
 
-        btnCreateAccount.setBackground(new java.awt.Color(255, 255, 255));
-        btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnCreateAccount.setForeground(new java.awt.Color(0, 102, 204));
         btnCreateAccount.setText("CREATE ACCOUNT");
-        btnCreateAccount.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 204), 1, true));
         btnCreateAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCreateAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,10 +183,10 @@ public class LoginFrame extends javax.swing.JFrame {
         ButtonPanelLayout.setHorizontalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ButtonPanelLayout.createSequentialGroup()
-                .addContainerGap(175, Short.MAX_VALUE)
-                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSignIn)
-                    .addComponent(btnCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(140, Short.MAX_VALUE)
+                .addGroup(ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSignIn, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCreateAccount, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(86, 86, 86))
         );
         ButtonPanelLayout.setVerticalGroup(
