@@ -246,7 +246,7 @@ public class LoginFrame extends javax.swing.JFrame {
             return;
         }
 
-        // 🔐 Use Caesar Cipher for password check
+        // Use Caesar Cipher for password check
         if (!acc.checkPassword(password)) {
             JOptionPane.showMessageDialog(this, "Incorrect password!");
             return;
