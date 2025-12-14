@@ -112,7 +112,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbBusiness_Management_Marketing.setBackground(new java.awt.Color(255, 255, 255));
         rbBusiness_Management_Marketing.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbBusiness_Management_Marketing.setText("Business / Management / Marketing");
-        rbBusiness_Management_Marketing.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         rbBusiness_Management_Marketing.setBorderPainted(true);
         rbBusiness_Management_Marketing.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -126,7 +125,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbHospitality_Tourism.setBackground(new java.awt.Color(255, 255, 255));
         rbHospitality_Tourism.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbHospitality_Tourism.setText("Hospitality / Tourism");
-        rbHospitality_Tourism.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         rbHospitality_Tourism.setBorderPainted(true);
         rbHospitality_Tourism.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -378,7 +376,7 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
                     .addComponent(rbLight)
                     .addComponent(rbModerate)
                     .addComponent(rbFullLoad))
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
 
         ButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
