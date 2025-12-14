@@ -146,7 +146,7 @@ public class ProfileFrame extends javax.swing.JFrame {
         ButtonPanel.setPreferredSize(new java.awt.Dimension(800, 116));
 
         btnLogout.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 0, 51));
+        btnLogout.setForeground(new java.awt.Color(0, 102, 204));
         btnLogout.setText("LOGOUT");
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
