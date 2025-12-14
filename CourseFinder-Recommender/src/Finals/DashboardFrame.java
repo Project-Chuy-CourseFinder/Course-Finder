@@ -7,17 +7,14 @@ import javax.swing.SwingConstants;
 
 public class DashboardFrame extends javax.swing.JFrame {
 
-   // =========================
     // User info variables
-    // =========================
     private final String fullName;
     private final String studentID;
     private final String email;
     private final String username;
 
-    // =========================
+
     // Constructor
-    // =========================
      public DashboardFrame(String fullName, String studentID, String email, String username) {
         this.fullName = fullName;
         this.studentID = studentID;

@@ -33,9 +33,8 @@ public class Account {
         return username + "|" + password + "|" + fullName + "|" + studentID + "|" + email;
     }
 
-    // =========================
-    // 📂 Load from file
-    // =========================
+
+    //  Load from file
     public static Account fromString(String data) {
         String[] parts = data.split("\\|");
         if (parts.length != 5) return null;
@@ -48,7 +47,7 @@ public class Account {
                 ""         // password placeholder
         );
 
-        // ⚠️ Override encrypted password from file
+        // ️ Override encrypted password from file
         acc.password = parts[1];
         return acc;
     }
