@@ -106,7 +106,6 @@ public class RecommendationTestFrame extends javax.swing.JFrame {
         rbTechnology_IT_CS.setBackground(new java.awt.Color(255, 255, 255));
         rbTechnology_IT_CS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         rbTechnology_IT_CS.setText("Technology / IT / CS");
-        rbTechnology_IT_CS.setBorderPainted(true);
         rbTechnology_IT_CS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         rbBusiness_Management_Marketing.setBackground(new java.awt.Color(255, 255, 255));
