@@ -154,6 +154,19 @@ public class CatalogFrame extends javax.swing.JFrame {
     private void bubbleSortCourses(ArrayList<String[]> list) {
         int n = list.size();
         boolean swapped;
+        
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+
+            for (int j = 0; j < n - i - 1; j++) {
+                if (list.get(j)[0].compareToIgnoreCase(list.get(j + 1)[0]) > 0) {
+                    // swap
+                    String[] temp = list.get(j);
+                    list.set(j, list.get(j + 1));
+                    list.set(j + 1, temp);
+                    swapped = true;
+                }
+            }
 
     public static void main(String[] args) {
         // Set a sample user (for testing)
