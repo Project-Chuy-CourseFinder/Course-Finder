@@ -167,6 +167,12 @@ public class CatalogFrame extends javax.swing.JFrame {
                     swapped = true;
                 }
             }
+            
+            if (!swapped) {
+                break;
+            }
+        }
+    }
 
     public static void main(String[] args) {
         // Set a sample user (for testing)
