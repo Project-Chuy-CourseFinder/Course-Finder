@@ -124,6 +124,8 @@ public class CatalogFrame extends javax.swing.JFrame {
         courseList.add(new String[]{"SOC305", "Political Sociology", "Social Science"});
         courseList.add(new String[]{"PSY310", "Cognitive Psychology", "Social Science"});
         courseList.add(new String[]{"ANT310", "Global Cultural Studies", "Social Science"});
+        
+        bubbleSortCourses(courseList);
     }
 
     private void displayCourses(ArrayList<String[]> list) {
