@@ -149,6 +149,11 @@ public class CatalogFrame extends javax.swing.JFrame {
         }
         return results;
     }
+    
+    // BUBBLE SORT IMPLEMENTATION
+    private void bubbleSortCourses(ArrayList<String[]> list) {
+        int n = list.size();
+        boolean swapped;
 
     public static void main(String[] args) {
         // Set a sample user (for testing)
