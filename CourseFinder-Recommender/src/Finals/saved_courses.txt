@@ -187,3 +187,25 @@ ART301 - Graphic Design Principles
 ART305 - Photography Basics
 ART401 - Advanced Visual Arts
 -----------------------------------
+BSIT101 - Introduction to Computing - IT
+BSIT102 - Computer Programming 1 - IT
+BSIT201 - Data Structures & Algorithms - IT
+BSIT202 - Database Management Systems - IT
+BSIT301 - Object-Oriented Programming - IT
+BSIT302 - Web Development - IT
+BSCS101 - Discrete Mathematics - CS
+BSCS205 - Computer Architecture - CS
+BSIT401 - Software Engineering - IT
+BSCS305 - Artificial Intelligence - CS
+BSHM101 - Front Office Procedures
+BSHM201 - Food & Beverage Services
+BSHM301 - Hospitality Marketing
+BSHM401 - Event Management
+BSHM405 - Hotel Operations Management
+CRIM101 - Introduction to Criminology
+CRIM205 - Forensic Photography
+CRIM301 - Criminal Law
+CRIM305 - Crime Scene Investigation
+CRIM401 - Criminal Psychology
+BSBA110 - Marketing Management
+-----------------------------------
